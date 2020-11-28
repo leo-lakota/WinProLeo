@@ -1,0 +1,17 @@
+NAME 'UVOZTRANS' GUI
+IMAGE_BASE 7000000h
+EXPORTS
+;Start of initialisation function
+  UVOZTRANS:INIT@F18PDTYPPICERRORCLASS8INICLASS           @?
+    UVOZTRANS:KILL@F                                        @?
+;End of initialisation functions
+
+;Start of Exported Procedures
+; Multi-Proj comment : ExpMod = 0
+ SQL_PREPISVOZIL@F                                       @?
+ SQL_PREPISDELAVCEV@F                                    @?
+ SQL_PREPISPARTNERJEV@F                                  @?
+ SQL_PREPISNAROCIL@F                                     @?
+ SQL_PREPISFAKTUR@F                                      @?
+ SQL_PREPISODPRTE@F                                      @?
+;End of Exported Procedures

@@ -1,0 +1,1252 @@
+[DICTIONARY]
+VERSION '1.0'
+CREATED '23 JUN 2010' ' 7:13:09AM'
+MODIFIED '20 OCT 2020' ' 7:16:58AM'
+
+[FILES]
+[LONGDESC]
+!3. dodana polja za leto 2010 - 15.12.2009
+!
+!5. dodana polja PDV CRO
+!
+!6. dodana polja PDV CRO 01.07.2013
+[USEROPTION]
+!Version(12)
+OBRACUN FILE,DRIVER('ORACLE',Glo:DriverOptions),OEM,OWNER(Glo:ConnectString),NAME(Dat:OBRACUN),PRE(OBR),BINDABLE,CREATE,THREAD  !OBRACUN DDV
+!!> IDENT(129),USAGE(File)
+IOBRACUNA KEY(OBR:FIRMA,OBR:LETO,OBR:MESEC),NOCASE,OPT,PRIMARY
+!!> IDENT(415)
+Record                   RECORD
+[SCREENCONTROLS]
+! PROMPT('SIFRAF:'),USE(?OBR:FIRMA:Prompt)
+! ENTRY(@n_4),USE(OBR:FIRMA),RIGHT(1),MSG('FIRMA'),TIP('FIRMA')
+[REPORTCONTROLS]
+! STRING(@n_4),USE(OBR:FIRMA),RIGHT(1)
+FIRMA                      LONG !FIRMA
+!!> IDENT(4797),PROMPT('SIFRAF:'),HEADER('SIFRAF'),MESSAGE('FIRMA'),TOOLTIP('FIRMA'),PICTURE(@n_4),JUSTIFY(RIGHT,1),DERIVEDFROM('KNF:SIFRAF')
+[SCREENCONTROLS]
+! PROMPT('LETO:'),USE(?OBR:LETO:Prompt)
+! ENTRY(@n_4),USE(OBR:LETO),DECIMAL(12),MSG('Leto obraèuna'),TIP('Leto obraèuna')
+[REPORTCONTROLS]
+! STRING(@n_4),USE(OBR:LETO),DECIMAL(12)
+LETO                       PDECIMAL(5) !Leto obraèuna
+!!> IDENT(2003),PROMPT('LETO:'),HEADER('LETO'),MESSAGE('Leto obraèuna'),TOOLTIP('Leto obraèuna'),PICTURE(@n_4),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('MESEC:'),USE(?OBR:MESEC:Prompt)
+! ENTRY(@n_2),USE(OBR:MESEC),DECIMAL(12),MSG('mesec obraèuna'),TIP('mesec obraèuna')
+[REPORTCONTROLS]
+! STRING(@n_2),USE(OBR:MESEC),DECIMAL(12)
+MESEC                      PDECIMAL(3) !mesec obraèuna
+!!> IDENT(2004),PROMPT('MESEC:'),HEADER('MESEC'),MESSAGE('mesec obraèuna'),TOOLTIP('mesec obraèuna'),PICTURE(@n_2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('OBVEZNIK:'),USE(?OBR:OBVEZNIK:Prompt)
+! ENTRY(@n_8),USE(OBR:OBVEZNIK),DECIMAL(12),MSG('Davèna <154>tevilka'),TIP('Davèna <154>tevilka')
+[REPORTCONTROLS]
+! STRING(@n_8),USE(OBR:OBVEZNIK),DECIMAL(12)
+OBVEZNIK                   PDECIMAL(9) !Davèna številka
+!!> IDENT(2005),PROMPT('OBVEZNIK:'),HEADER('OBVEZNIK'),MESSAGE('Davèna <154>tevilka'),TOOLTIP('Davèna <154>tevilka'),PICTURE(@n_8),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('DATUM:'),USE(?OBR:DATUM:Prompt)
+! ENTRY(@s8),USE(OBR:DATUM),MSG('DATUM OBRAÈUNA DDV'),TIP('DATUM OBRAÈUNA DDV')
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUM)
+DATUM                      STRING(8) !DATUM OBRAÈUNA DDV
+!!> IDENT(2006),PROMPT('DATUM:'),HEADER('DATUM'),MESSAGE('DATUM OBRAÈUNA DDV'),TOOLTIP('DATUM OBRAÈUNA DDV'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUM GROUP:'),USE(?OBR:DATUM_GROUP:Prompt)
+! ENTRY(@s8),USE(OBR:DATUM_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUM_GROUP)
+DATUM_GROUP                GROUP,OVER(DATUM)
+!!> IDENT(2035),PROMPT('DATUM GROUP:'),HEADER('DATUM GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUM D:'),USE(?OBR:DATUM_D:Prompt)
+! ENTRY(@d06.),USE(OBR:DATUM_D),MSG('DATUM OBRAÈUNA'),TIP('DATUM OBRAÈUNA')
+[REPORTCONTROLS]
+! STRING(@d06.),USE(OBR:DATUM_D)
+DATUM_D                      DATE !DATUM OBRAÈUNA
+!!> IDENT(2037),PROMPT('DATUM D:'),HEADER('DATUM D'),MESSAGE('DATUM OBRAÈUNA'),TOOLTIP('DATUM OBRAÈUNA'),PICTURE(@d06.)
+[SCREENCONTROLS]
+! PROMPT('DATUM T:'),USE(?OBR:DATUM_T:Prompt)
+! ENTRY(@t7),USE(OBR:DATUM_T)
+[REPORTCONTROLS]
+! STRING(@t7),USE(OBR:DATUM_T)
+DATUM_T                      TIME
+!!> IDENT(2038),PROMPT('DATUM T:'),HEADER('DATUM T'),PICTURE(@t7)
+                           END
+!!> IDENT(2036)
+[SCREENCONTROLS]
+! PROMPT('Obdavèen promet:'),USE(?OBR:R11:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:R11),DECIMAL(12),MSG('Obdavèen promet'),TIP('Obdavèen promet')
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:R11),DECIMAL(12)
+R11                        PDECIMAL(22,2) !Obdavèen promet
+!!> IDENT(2007),PROMPT('Obdavèen promet:'),HEADER('R11'),MESSAGE('Obdavèen promet'),TOOLTIP('Obdavèen promet'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Izvoz blaga:'),USE(?OBR:R12:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:R12),DECIMAL(12),MSG('Izvoz blaga'),TIP('Izvoz blaga')
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:R12),DECIMAL(12)
+R12                        PDECIMAL(22,2) !Izvoz blaga
+!!> IDENT(2008),PROMPT('Izvoz blaga:'),HEADER('R12'),MESSAGE('Izvoz blaga'),TOOLTIP('Izvoz blaga'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Drug promet:'),USE(?OBR:R13:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R13),DECIMAL(12),MSG('Drug promet'),TIP('Drug promet')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R13),DECIMAL(12)
+R13                        PDECIMAL(22,2) !Drug promet
+!!> IDENT(2009),PROMPT('Drug promet:'),HEADER('R13'),MESSAGE('Drug promet'),TOOLTIP('Drug promet'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Drug prom.brez vstopnega Ddv:'),USE(?OBR:R14:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R14),DECIMAL(12),MSG('Drug promet brez pravice do odbitka vstopnega Ddv'),TIP('Drug promet brez pravice do odbitka vstopnega Ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R14),DECIMAL(12)
+R14                        PDECIMAL(22,2) !Drug promet brez pravice do odbitka vstopnega Ddv
+!!> IDENT(2010),PROMPT('Drug prom.brez vstopnega Ddv:'),HEADER('R14'),MESSAGE('Drug promet brez pravice do odbitka vstopnega Ddv'),TOOLTIP('Drug promet brez pravice do odbitka vstopnega Ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('R15:'),USE(?OBR:R15:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R15),DECIMAL(12),MSG('Lastna uporaba'),TIP('Lastna uporaba')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R15),DECIMAL(12)
+R15                        PDECIMAL(22,2) !Lastna uporaba
+!!> IDENT(2011),PROMPT('R15:'),HEADER('R15'),MESSAGE('Lastna uporaba'),TOOLTIP('Lastna uporaba'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Obdavèene nabave:'),USE(?OBR:R21:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R21),DECIMAL(12),MSG('Obdavèene nabave'),TIP('Obdavèene nabave')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R21),DECIMAL(12)
+R21                        PDECIMAL(22,2) !Obdavèene nabave
+!!> IDENT(2012),PROMPT('Obdavèene nabave:'),HEADER('R21'),MESSAGE('Obdavèene nabave'),TOOLTIP('Obdavèene nabave'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Nabava uvoz:'),USE(?OBR:R22:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R22),DECIMAL(12),MSG('Nabava uvoz'),TIP('Nabava uvoz')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R22),DECIMAL(12)
+R22                        PDECIMAL(22,2) !Nabava uvoz
+!!> IDENT(2013),PROMPT('Nabava uvoz:'),HEADER('R22'),MESSAGE('Nabava uvoz'),TOOLTIP('Nabava uvoz'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Opro<154>èene nabave:'),USE(?OBR:R23:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R23),DECIMAL(12),MSG('Opro<154>èene nabave'),TIP('Opro<154>èene nabave')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R23),DECIMAL(12)
+R23                        PDECIMAL(22,2) !Oprošèene nabave
+!!> IDENT(2014),PROMPT('Opro<154>èene nabave:'),HEADER('R23'),MESSAGE('Opro<154>èene nabave'),TOOLTIP('Opro<154>èene nabave'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Nabavna vrednost nepremiènin:'),USE(?OBR:R24:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R24),DECIMAL(12),MSG('Nabavna vrednos nepremiènin'),TIP('Nabavna vrednos nepremiènin')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R24),DECIMAL(12)
+R24                        PDECIMAL(22,2) !Nabavna vrednost nepremiènin
+!!> IDENT(2015),PROMPT('Nabavna vrednost nepremiènin:'),HEADER('R24'),MESSAGE('Nabavna vrednos nepremiènin'),TOOLTIP('Nabavna vrednos nepremiènin'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Druga nabava osnovnih sredstev:'),USE(?OBR:R25:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R25),DECIMAL(12),MSG('Druga nabava osnovnih sredstev'),TIP('Druga nabava osnovnih sredstev')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R25),DECIMAL(12)
+R25                        PDECIMAL(22,2) !Druga nabava osnovnih sredstev
+!!> IDENT(2016),PROMPT('Druga nabava osnovnih sredstev:'),HEADER('R25'),MESSAGE('Druga nabava osnovnih sredstev'),TOOLTIP('Druga nabava osnovnih sredstev'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Zav. za Ddv 8%:'),USE(?OBR:R31:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R31),DECIMAL(12),MSG('Zav. za Ddv 8%'),TIP('Zav. za Ddv 8%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R31),DECIMAL(12)
+R31                        PDECIMAL(22,2) !Zav. za Ddv 8%
+!!> IDENT(2017),PROMPT('Zav. za Ddv 8%:'),HEADER('R31'),MESSAGE('Zav. za Ddv 8%'),TOOLTIP('Zav. za Ddv 8%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Zav. za Ddv 19%:'),USE(?OBR:R32:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R32),DECIMAL(12),MSG('Zav. za Ddv 19%'),TIP('Zav. za Ddv 19%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R32),DECIMAL(12)
+R32                        PDECIMAL(22,2) !Zav. za Ddv 19%
+!!> IDENT(2018),PROMPT('Zav. za Ddv 19%:'),HEADER('R32'),MESSAGE('Zav. za Ddv 19%'),TOOLTIP('Zav. za Ddv 19%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Konèni potro<154>niki 8%:'),USE(?OBR:R33:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R33),DECIMAL(12),MSG('Konèni potro<154>niki 8%'),TIP('Konèni potro<154>niki 8%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R33),DECIMAL(12)
+R33                        PDECIMAL(22,2) !Konèni potrošniki 8%
+!!> IDENT(2019),PROMPT('Konèni potro<154>niki 8%:'),HEADER('R33'),MESSAGE('Konèni potro<154>niki 8%'),TOOLTIP('Konèni potro<154>niki 8%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Konèni potro<154>niki 19%:'),USE(?OBR:R34:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R34),DECIMAL(12),MSG('Konèni potro<154>niki 19%'),TIP('Konèni potro<154>niki 19%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R34),DECIMAL(12)
+R34                        PDECIMAL(22,2) !Konèni potrošniki 19%
+!!> IDENT(2020),PROMPT('Konèni potro<154>niki 19%:'),HEADER('R34'),MESSAGE('Konèni potro<154>niki 19%'),TOOLTIP('Konèni potro<154>niki 19%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Prejemniki kot plaèniki Ddv:'),USE(?OBR:R35:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R35),DECIMAL(12),MSG('Prejemniki kot plaèniki Ddv'),TIP('Prejemniki kot plaèniki Ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R35),DECIMAL(12)
+R35                        PDECIMAL(22,2) !Prejemniki kot plaèniki Ddv
+!!> IDENT(2021),PROMPT('Prejemniki kot plaèniki Ddv:'),HEADER('R35'),MESSAGE('Prejemniki kot plaèniki Ddv'),TOOLTIP('Prejemniki kot plaèniki Ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Nabave 8%:'),USE(?OBR:R41:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R41),DECIMAL(12),MSG('Nabave 8%'),TIP('Nabave 8%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R41),DECIMAL(12)
+R41                        PDECIMAL(22,2) !Nabave v Sloveniji 8%
+!!> IDENT(2023),PROMPT('Nabave 8%:'),HEADER('R41'),MESSAGE('Nabave 8%'),TOOLTIP('Nabave 8%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Nabave 19%:'),USE(?OBR:R42:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R42),DECIMAL(12),MSG('Nabave 19%'),TIP('Nabave 19%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R42),DECIMAL(12)
+R42                        PDECIMAL(22,2) !Nabave v Slovenije 19%
+!!> IDENT(2024),PROMPT('Nabave 19%:'),HEADER('R42'),MESSAGE('Nabave 19%'),TOOLTIP('Nabave 19%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('pri uvozu 8%'),USE(?OBR:R43:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R43),DECIMAL(12),MSG('pri uvozu 8%'),TIP('pri uvozu 8%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R43),DECIMAL(12)
+R43                        PDECIMAL(22,2) !pri uvozu 8%
+!!> IDENT(2025),PROMPT('pri uvozu 8%'),HEADER('R43'),MESSAGE('pri uvozu 8%'),TOOLTIP('pri uvozu 8%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('pri uvozu 19%:'),USE(?OBR:R44:Prompt)
+! ENTRY(@n-19.2),USE(OBR:R44),DECIMAL(12),MSG('pri uvozu 19%'),TIP('pri uvozu 19%')
+[REPORTCONTROLS]
+! STRING(@n-19.2),USE(OBR:R44),DECIMAL(12)
+R44                        PDECIMAL(22,2) !pri uvozu 19%
+!!> IDENT(2026),PROMPT('pri uvozu 19%:'),HEADER('R44'),MESSAGE('pri uvozu 19%'),TOOLTIP('pri uvozu 19%'),PICTURE(@n-19.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Pav<154>alno nadomestilo 4%:'),USE(?OBR:R45:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R45),DECIMAL(12),MSG('Pav<154>alno nadomestilo 4%'),TIP('Pav<154>alno nadomestilo 4%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R45),DECIMAL(12)
+R45                        PDECIMAL(22,2) !Pavšalno nadomestilo 4%
+!!> IDENT(2027),PROMPT('Pav<154>alno nadomestilo 4%:'),HEADER('R45'),MESSAGE('Pav<154>alno nadomestilo 4%'),TOOLTIP('Pav<154>alno nadomestilo 4%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Prejemniki blaga kot plaèniki Ddv:'),USE(?OBR:R46:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R46),DECIMAL(12),MSG('Prejemniki blaga kot plaèniki Ddv'),TIP('Prejemniki blaga kot plaèniki Ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R46),DECIMAL(12)
+R46                        PDECIMAL(22,2) !Prejemniki blaga kot plaèniki Ddv
+!!> IDENT(2028),PROMPT('Prejemniki blaga kot plaèniki Ddv:'),HEADER('R46'),MESSAGE('Prejemniki blaga kot plaèniki Ddv'),TOOLTIP('Prejemniki blaga kot plaèniki Ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Prenos iz preteklega obdobja:'),USE(?OBR:R61:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R61),DECIMAL(12),MSG('Prenos iz preteklega obdobja'),TIP('Prenos iz preteklega obdobja')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R61),DECIMAL(12)
+R61                        PDECIMAL(22,2) !Prenos iz preteklega obdobja
+!!> IDENT(2029),PROMPT('Prenos iz preteklega obdobja:'),HEADER('R61'),MESSAGE('Prenos iz preteklega obdobja'),TOOLTIP('Prenos iz preteklega obdobja'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('R51:'),USE(?OBR:R51:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R51),DECIMAL(12),MSG('Obveznost'),TIP('Obveznost')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R51),DECIMAL(12)
+R51                        PDECIMAL(22,2) !Obveznost
+!!> IDENT(2030),PROMPT('R51:'),HEADER('R51'),MESSAGE('Obveznost'),TOOLTIP('Obveznost'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('R52:'),USE(?OBR:R52:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R52),DECIMAL(12),MSG('Prese<158>ek ddv'),TIP('Prese<158>ek ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R52),DECIMAL(12)
+R52                        PDECIMAL(22,2) !Presežek ddv
+!!> IDENT(2031),PROMPT('R52:'),HEADER('R52'),MESSAGE('Prese<158>ek ddv'),TOOLTIP('Prese<158>ek ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Plaèilo ddv:'),USE(?OBR:R71:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R71),DECIMAL(12),MSG('Plaèilo ddv'),TIP('Plaèilo ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R71),DECIMAL(12)
+R71                        PDECIMAL(22,2) !Plaèilo ddv
+!!> IDENT(2032),PROMPT('Plaèilo ddv:'),HEADER('R71'),MESSAGE('Plaèilo ddv'),TOOLTIP('Plaèilo ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('Vraèilo ddv:'),USE(?OBR:R72:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R72),DECIMAL(12),MSG('Vraèilo ddv'),TIP('Vraèilo ddv')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R72),DECIMAL(12)
+R72                        PDECIMAL(22,2) !Vraèilo ddv
+!!> IDENT(2033),PROMPT('Vraèilo ddv:'),HEADER('R72'),MESSAGE('Vraèilo ddv'),TOOLTIP('Vraèilo ddv'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('ODPOSLAN:'),USE(?OBR:ODPOSLAN:Prompt)
+! ENTRY(@n1),USE(OBR:ODPOSLAN),DECIMAL(12),MSG('Odposlan'),TIP('Odposlan')
+[REPORTCONTROLS]
+! STRING(@n1),USE(OBR:ODPOSLAN),DECIMAL(12)
+ODPOSLAN                   PDECIMAL(2) !Odposlan
+!!> IDENT(2034),PROMPT('ODPOSLAN:'),HEADER('ODPOSLAN'),MESSAGE('Odposlan'),TOOLTIP('Odposlan'),PICTURE(@n1),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('R 16:'),USE(?OBR:R16:Prompt)
+! ENTRY(@n-19`2),USE(OBR:R16),RIGHT(2),MSG('Dobave znotraj skupnosti'),TIP('Dobave znotraj skupnosti')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:R16),RIGHT(2)
+R16                        PDECIMAL(22,2) !Dobave znotraj skupnosti
+!!> IDENT(4058),PROMPT('R 16:'),HEADER('R 16'),MESSAGE('Dobave znotraj skupnosti'),TOOLTIP('Dobave znotraj skupnosti'),PICTURE(@n-19`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 17:'),USE(?OBR:R17:Prompt)
+! ENTRY(@n-19`2),USE(OBR:R17),RIGHT(2),MSG('Promet v drugih clanicah'),TIP('Promet v drugih clanicah')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:R17),RIGHT(2)
+R17                        PDECIMAL(22,2) !Promet v drugih clanicah
+!!> IDENT(4060),PROMPT('R 17:'),HEADER('R 17'),MESSAGE('Promet v drugih clanicah'),TOOLTIP('Promet v drugih clanicah'),PICTURE(@n-19`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 26:'),USE(?OBR:R26:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R26),DECIMAL(12),MSG('Pridobitve blaga znotraj skupnosti'),TIP('Pridobitve blaga znotraj skupnosti')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R26),DECIMAL(12)
+R26                        PDECIMAL(22,2) !Pridobitve blaga znotraj skupnosti
+!!> IDENT(4061),PROMPT('R 26:'),HEADER('R 26'),MESSAGE('Pridobitve blaga znotraj skupnosti'),TOOLTIP('Pridobitve blaga znotraj skupnosti'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('R 27:'),USE(?OBR:R27:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R27),RIGHT(2),MSG('Tristranske znotraj'),TIP('Tristranske znotraj')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R27),RIGHT(2)
+R27                        PDECIMAL(22,2) !Tristranske znotraj
+!!> IDENT(4062),PROMPT('R 27:'),HEADER('R 27'),MESSAGE('Tristranske znotraj'),TOOLTIP('Tristranske znotraj'),PICTURE(@n-19.`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 36:'),USE(?OBR:R36:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R36),RIGHT(2),MSG('Pridobitve blaga znotraj skupnosti'),TIP('Pridobitve blaga znotraj skupnosti')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R36),RIGHT(2)
+R36                        PDECIMAL(22,2) !Pridobitve blaga znotraj skupnosti 8.5%
+!!> IDENT(4064),PROMPT('R 36:'),HEADER('R 36'),MESSAGE('Pridobitve blaga znotraj skupnosti'),TOOLTIP('Pridobitve blaga znotraj skupnosti'),PICTURE(@n-19.`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 37:'),USE(?OBR:R37:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R37),RIGHT(2),MSG('Pridobitve blaga znotraj skupnosti 20%'),TIP('Pridobitve blaga znotraj skupnosti 20%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R37),RIGHT(2)
+R37                        PDECIMAL(22,2) !Pridobitve blaga znotraj skupnosti 20%
+!!> IDENT(4065),PROMPT('R 37:'),HEADER('R 37'),MESSAGE('Pridobitve blaga znotraj skupnosti 20%'),TOOLTIP('Pridobitve blaga znotraj skupnosti 20%'),PICTURE(@n-19.`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 47:'),USE(?OBR:R47:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R47),RIGHT(2),MSG('Pridobitve znotraj skupnost'),TIP('Pridobitve znotraj skupnost')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R47),RIGHT(2)
+R47                        PDECIMAL(22,2) !Pridobitve znotraj skupnost
+!!> IDENT(4068),PROMPT('R 47:'),HEADER('R 47'),MESSAGE('Pridobitve znotraj skupnost'),TOOLTIP('Pridobitve znotraj skupnost'),PICTURE(@n-19.`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 48:'),USE(?OBR:R48:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R48),RIGHT(2),MSG('Pridobitev znotraj skupnosti'),TIP('Pridobitev znotraj skupnosti')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R48),RIGHT(2)
+R48                        PDECIMAL(22,2) !Pridobitev znotraj skupnosti
+!!> IDENT(4069),PROMPT('R 48:'),HEADER('R 48'),MESSAGE('Pridobitev znotraj skupnosti'),TOOLTIP('Pridobitev znotraj skupnosti'),PICTURE(@n-19.`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('R 13 N:'),USE(?OBR:R13N:Prompt)
+! ENTRY(@N-19`2),USE(OBR:R13N),DECIMAL(14),MSG('Prodaja blaga na daljavo'),TIP('Prodaja blaga na daljavo')
+[REPORTCONTROLS]
+! STRING(@N-19`2),USE(OBR:R13N),DECIMAL(14)
+R13N                       REAL !Prodaja blaga na daljavo
+!!> IDENT(18101),PROMPT('R 13 N:'),HEADER('R 13 N'),MESSAGE('Prodaja blaga na daljavo'),TOOLTIP('Prodaja blaga na daljavo'),PICTURE(@N-19`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 14 N:'),USE(?OBR:R14N:Prompt)
+! ENTRY(@N-19`2),USE(OBR:R14N),DECIMAL(14),MSG('Monta<158>a v drugi dr<158>avi èlanici'),TIP('Monta<158>a v drugi dr<158>avi èlanici')
+[REPORTCONTROLS]
+! STRING(@N-19`2),USE(OBR:R14N),DECIMAL(14)
+R14N                       REAL !Montaža v drugi državi èlanici
+!!> IDENT(18102),PROMPT('R 14 N:'),HEADER('R 14 N'),MESSAGE('Monta<158>a v drugi dr<158>avi èlanici'),TOOLTIP('Monta<158>a v drugi dr<158>avi èlanici'),PICTURE(@N-19`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 26 N:'),USE(?OBR:R26N:Prompt)
+! ENTRY(@N-19`2),USE(OBR:R26N),DECIMAL(14),MSG('Samoobdavèitve na podlagi uvoz'),TIP('Samoobdavèitve na podlagi uvoz')
+[REPORTCONTROLS]
+! STRING(@N-19`2),USE(OBR:R26N),DECIMAL(14)
+R26N                       REAL !Samoobdavèitve na podlagi uvoz
+!!> IDENT(18103),PROMPT('R 26 N:'),HEADER('R 26 N'),MESSAGE('Samoobdavèitve na podlagi uvoz'),TOOLTIP('Samoobdavèitve na podlagi uvoz'),PICTURE(@N-19`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 11 A:'),USE(?OBR:R11A:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:R11A),DECIMAL(14),MSG('dobave blaga in sto. v SLO od katerih obracuna DDV prejemnik'),TIP('dobave blaga in sto. v SLO od katerih obracuna DDV prejemnik')
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:R11A),DECIMAL(14)
+R11A                       REAL !dobave blaga in sto. v SLO od katerih obracuna DDV prejemnik
+!!> IDENT(22444),PROMPT('R 11 A:'),HEADER('R 11 A'),MESSAGE('dobave blaga in sto. v SLO od katerih obracuna DDV prejemnik'),TOOLTIP('dobave blaga in sto. v SLO od katerih obracuna DDV prejemnik'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 23 A:'),USE(?OBR:R23A:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R23A),DECIMAL(14),MSG('obraèunani DDV od prejetih storitev iz EU po 20%'),TIP('obraèunani DDV od prejetih storitev iz EU po 20%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R23A),DECIMAL(14)
+R23A                       REAL !obraèunani DDV od prejetih storitev iz EU po 20%
+!!> IDENT(22446),PROMPT('R 23 A:'),HEADER('R 23 A'),MESSAGE('obraèunani DDV od prejetih storitev iz EU po 20%'),TOOLTIP('obraèunani DDV od prejetih storitev iz EU po 20%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 24 A:'),USE(?OBR:R24A:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R24A),DECIMAL(14),MSG('obraèunani DDV od prejetih storitev iz EU po 8,5%'),TIP('obraèunani DDV od prejetih storitev iz EU po 8,5%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R24A),DECIMAL(14)
+R24A                       REAL !obraèunani DDV od prejetih storitev iz EU po 8,5%
+!!> IDENT(22447),PROMPT('R 24 A:'),HEADER('R 24 A'),MESSAGE('obraèunani DDV od prejetih storitev iz EU po 8,5%'),TOOLTIP('obraèunani DDV od prejetih storitev iz EU po 8,5%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 25 A:'),USE(?OBR:R25A:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R25A),DECIMAL(14),MSG('obraèunani DDV na podlagi samoobd. po 8,5%'),TIP('obraèunani DDV na podlagi samoobd. po 8,5%')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R25A),DECIMAL(14)
+R25A                       REAL !obraèunani DDV na podlagi samoobd. po 8,5%
+!!> IDENT(22448),PROMPT('R 25 A:'),HEADER('R 25 A'),MESSAGE('obraèunani DDV na podlagi samoobd. po 8,5%'),TOOLTIP('obraèunani DDV na podlagi samoobd. po 8,5%'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 31 A:'),USE(?OBR:R31A:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R31A),DECIMAL(14),MSG('nabave blaga in sto. v SLO'),TIP('nabave blaga in sto. v SLO')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R31A),DECIMAL(14)
+R31A                       REAL !nabave blaga in sto. v SLO od katerih obracuna DDV prejemnik
+!!> IDENT(22449),PROMPT('R 31 A:'),HEADER('R 31 A'),MESSAGE('nabave blaga in sto. v SLO'),TOOLTIP('nabave blaga in sto. v SLO'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('R 32 A:'),USE(?OBR:R32A:Prompt)
+! ENTRY(@n-19.`2),USE(OBR:R32A),DECIMAL(14),MSG('prejete storitve iz drugih èlanic EU'),TIP('prejete storitve iz drugih èlanic EU')
+[REPORTCONTROLS]
+! STRING(@n-19.`2),USE(OBR:R32A),DECIMAL(14)
+R32A                       REAL !prejete storitve iz drugih èlanic EU
+!!> IDENT(22450),PROMPT('R 32 A:'),HEADER('R 32 A'),MESSAGE('prejete storitve iz drugih èlanic EU'),TOOLTIP('prejete storitve iz drugih èlanic EU'),PICTURE(@n-19.`2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('DATUMOD:'),USE(?OBR:DATUMOD:Prompt)
+! ENTRY(@s8),USE(OBR:DATUMOD),MSG('Obdobje poroèanja'),TIP('Obdobje poroèanja')
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUMOD)
+DATUMOD                    STRING(8) !Obdobje poroèanja
+!!> IDENT(22540),PROMPT('DATUMOD:'),HEADER('DATUMOD'),MESSAGE('Obdobje poroèanja'),TOOLTIP('Obdobje poroèanja'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUMOD G:'),USE(?OBR:DATUMOD_G:Prompt)
+! ENTRY(@s8),USE(OBR:DATUMOD_G)
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUMOD_G)
+DATUMOD_G                  GROUP,OVER(DATUMOD)
+!!> IDENT(22541),PROMPT('DATUMOD G:'),HEADER('DATUMOD G'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUMOD D:'),USE(?OBR:DATUMOD_D:Prompt)
+! ENTRY(@d06.B),USE(OBR:DATUMOD_D)
+[REPORTCONTROLS]
+! STRING(@d06.B),USE(OBR:DATUMOD_D)
+DATUMOD_D                    DATE
+!!> IDENT(22543),PROMPT('DATUMOD D:'),HEADER('DATUMOD D'),PICTURE(@d06.B)
+[SCREENCONTROLS]
+! PROMPT('DATUMOD T:'),USE(?OBR:DATUMOD_T:Prompt)
+! ENTRY(@t7),USE(OBR:DATUMOD_T)
+[REPORTCONTROLS]
+! STRING(@t7),USE(OBR:DATUMOD_T)
+DATUMOD_T                    TIME
+!!> IDENT(22544),PROMPT('DATUMOD T:'),HEADER('DATUMOD T'),PICTURE(@t7)
+                           END
+!!> IDENT(22542)
+[SCREENCONTROLS]
+! PROMPT('DATUMDO:'),USE(?OBR:DATUMDO:Prompt)
+! ENTRY(@s8),USE(OBR:DATUMDO),MSG('Do obdobja poroèanja'),TIP('Do obdobja poroèanja')
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUMDO)
+DATUMDO                    STRING(8) !Do obdobja poroèanja
+!!> IDENT(22545),PROMPT('DATUMDO:'),HEADER('DATUMDO'),MESSAGE('Do obdobja poroèanja'),TOOLTIP('Do obdobja poroèanja'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUMDO G:'),USE(?OBR:DATUMDO_G:Prompt)
+! ENTRY(@s8),USE(OBR:DATUMDO_G)
+[REPORTCONTROLS]
+! STRING(@s8),USE(OBR:DATUMDO_G)
+DATUMDO_G                  GROUP,OVER(DATUMDO)
+!!> IDENT(22546),PROMPT('DATUMDO G:'),HEADER('DATUMDO G'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DATUMDO D:'),USE(?OBR:DATUMDO_D:Prompt)
+! ENTRY(@d06.B),USE(OBR:DATUMDO_D)
+[REPORTCONTROLS]
+! STRING(@d06.B),USE(OBR:DATUMDO_D)
+DATUMDO_D                    DATE
+!!> IDENT(22548),PROMPT('DATUMDO D:'),HEADER('DATUMDO D'),PICTURE(@d06.B)
+[SCREENCONTROLS]
+! PROMPT('DATUMDO T:'),USE(?OBR:DATUMDO_T:Prompt)
+! ENTRY(@t7),USE(OBR:DATUMDO_T)
+[REPORTCONTROLS]
+! STRING(@t7),USE(OBR:DATUMDO_T)
+DATUMDO_T                    TIME
+!!> IDENT(22549),PROMPT('DATUMDO T:'),HEADER('DATUMDO T'),PICTURE(@t7)
+                           END
+!!> IDENT(22547)
+[SCREENCONTROLS]
+! PROMPT('UK_I:'),USE(?OBR:UK_I:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:UK_I),DECIMAL(12),MSG('Ukupno isporuke osnova'),TIP('Ukupno isporuke osnova')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:UK_I),DECIMAL(12)
+UK_I                       PDECIMAL(19,2) !Ukupno isporuke osnova
+!!> IDENT(25015),PROMPT('UK_I:'),HEADER('UK_I'),MESSAGE('Ukupno isporuke osnova'),TOOLTIP('Ukupno isporuke osnova'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('UK_P:'),USE(?OBR:UK_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:UK_P),DECIMAL(12),MSG('Ukupno isporuke porez'),TIP('Ukupno isporuke porez')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:UK_P),DECIMAL(12)
+UK_P                       PDECIMAL(19,2) !Ukupno isporuke porez
+!!> IDENT(25016),PROMPT('UK_P:'),HEADER('UK_P'),MESSAGE('Ukupno isporuke porez'),TOOLTIP('Ukupno isporuke porez'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I_I:'),USE(?OBR:I_I:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:I_I),DECIMAL(12),MSG('Ukupno Isporuke osloboðene'),TIP('Ukupno Isporuke osloboðene')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:I_I),DECIMAL(12)
+I_I                        PDECIMAL(19,2) !Ukupno Isporuke osloboðene 1+2+3
+!!> IDENT(25017),PROMPT('I_I:'),HEADER('I_I'),MESSAGE('Ukupno Isporuke osloboðene'),TOOLTIP('Ukupno Isporuke osloboðene'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I1_I:'),USE(?OBR:I1_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I1_I),DECIMAL(12),MSG('Osloboðeno èl.2 u svezi èl.5 i èl.8'),TIP('Osloboðeno èl.2 u svezi èl.5 i èl.8')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I1_I),DECIMAL(12)
+I1_I                       PDECIMAL(19,2) !Osloboðeno èl.2 u svezi èl.5 i èl.8
+!!> IDENT(25018),PROMPT('I1_I:'),HEADER('I1_I'),MESSAGE('Osloboðeno èl.2 u svezi èl.5 i èl.8'),TOOLTIP('Osloboðeno èl.2 u svezi èl.5 i èl.8'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I2_I:'),USE(?OBR:I2_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I2_I),DECIMAL(12),MSG('Osloboðene preza 2.1+2.2+2.3+2.4'),TIP('Osloboðene preza 2.1+2.2+2.3+2.4')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I2_I),DECIMAL(12)
+I2_I                       PDECIMAL(19,2) !Osloboðene preza 2.1+2.2+2.3+2.4
+!!> IDENT(25019),PROMPT('I2_I:'),HEADER('I2_I'),MESSAGE('Osloboðene preza 2.1+2.2+2.3+2.4'),TOOLTIP('Osloboðene preza 2.1+2.2+2.3+2.4'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I21_I:'),USE(?OBR:I21_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I21_I),DECIMAL(12),MSG('Osloboðeno Izvoz sa pravo na odbitak'),TIP('Osloboðeno Izvoz sa pravo na odbitak')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I21_I),DECIMAL(12)
+I21_I                      PDECIMAL(19,2) !Osloboðeno Izvoz sa pravo na odbitak
+!!> IDENT(25020),PROMPT('I21_I:'),HEADER('I21_I'),MESSAGE('Osloboðeno Izvoz sa pravo na odbitak'),TOOLTIP('Osloboðeno Izvoz sa pravo na odbitak'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I22_I:'),USE(?OBR:I22_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I22_I),DECIMAL(12),MSG('Osloboðeno meðunarodni prijevoz èl. 13b Zakona'),TIP('Osloboðeno meðunarodni prijevoz èl. 13b Zakona')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I22_I),DECIMAL(12)
+I22_I                      PDECIMAL(19,2) !Osloboðeno meðunarodni prijevoz èl. 13b Zakona
+!!> IDENT(25021),PROMPT('I22_I:'),HEADER('I22_I'),MESSAGE('Osloboðeno meðunarodni prijevoz èl. 13b Zakona'),TOOLTIP('Osloboðeno meðunarodni prijevoz èl. 13b Zakona'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I23_I:'),USE(?OBR:I23_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I23_I),DECIMAL(12),MSG('Osloboðeno tuzemne bez prava na odbitak'),TIP('Osloboðeno tuzemne bez prava na odbitak')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I23_I),DECIMAL(12)
+I23_I                      PDECIMAL(19,2) !Osloboðeno tuzemne bez prava na odbitak
+!!> IDENT(25022),PROMPT('I23_I:'),HEADER('I23_I'),MESSAGE('Osloboðeno tuzemne bez prava na odbitak'),TOOLTIP('Osloboðeno tuzemne bez prava na odbitak'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I24_I:'),USE(?OBR:I24_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I24_I),DECIMAL(12),MSG('Osloboðene ostalo'),TIP('Osloboðene ostalo')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I24_I),DECIMAL(12)
+I24_I                      PDECIMAL(19,2) !Osloboðene ostalo
+!!> IDENT(25023),PROMPT('I24_I:'),HEADER('I24_I'),MESSAGE('Osloboðene ostalo'),TOOLTIP('Osloboðene ostalo'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I3_I:'),USE(?OBR:I3_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:I3_I),DECIMAL(12),MSG('Isporuke po stopi 0% (èl. 10a Zakona)'),TIP('Isporuke po stopi 0% (èl. 10a Zakona)')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:I3_I),DECIMAL(12)
+I3_I                       PDECIMAL(19,2) !Isporuke po stopi 0% (èl. 10a Zakona)
+!!> IDENT(25024),PROMPT('I3_I:'),HEADER('I3_I'),MESSAGE('Isporuke po stopi 0% (èl. 10a Zakona)'),TOOLTIP('Isporuke po stopi 0% (èl. 10a Zakona)'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II_I:'),USE(?OBR:II_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II_I),DECIMAL(12),MSG('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 OSNOVA'),TIP('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 OSNOVA')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II_I),DECIMAL(12)
+II_I                       PDECIMAL(19,2) !OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 OSNOVA
+!!> IDENT(25025),PROMPT('II_I:'),HEADER('II_I'),MESSAGE('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 OSNOVA'),TOOLTIP('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 OSNOVA'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II_P:'),USE(?OBR:II_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II_P),DECIMAL(12),MSG('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 PDV'),TIP('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II_P),DECIMAL(12)
+II_P                       PDECIMAL(19,2) !OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 PDV
+!!> IDENT(25026),PROMPT('II_P:'),HEADER('II_P'),MESSAGE('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 PDV'),TOOLTIP('OPOREZIVANE ISPORUKE UKUPNO 1+2+3+4 PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II1_I:'),USE(?OBR:II1_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II1_I),DECIMAL(12),MSG('Izdani raèuni 10% Osnova'),TIP('Izdani raèuni 10% Osnova')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II1_I),DECIMAL(12)
+II1_I                      PDECIMAL(19,2) !Izdani raèuni 5% Osnova
+!!> IDENT(25027),PROMPT('II1_I:'),HEADER('II1_I'),MESSAGE('Izdani raèuni 10% Osnova'),TOOLTIP('Izdani raèuni 10% Osnova'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II1_P:'),USE(?OBR:II1_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II1_P),DECIMAL(12),MSG('Izdani raèuni 10% Pdv'),TIP('Izdani raèuni 10% Pdv')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II1_P),DECIMAL(12)
+II1_P                      PDECIMAL(19,2) !Izdani raèuni 5% Pdv
+!!> IDENT(25028),PROMPT('II1_P:'),HEADER('II1_P'),MESSAGE('Izdani raèuni 10% Pdv'),TOOLTIP('Izdani raèuni 10% Pdv'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II2_I:'),USE(?OBR:II2_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II2_I),DECIMAL(12),MSG('Izdati raèuni 22% Osnovica'),TIP('Izdati raèuni 22% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II2_I),DECIMAL(12)
+II2_I                      PDECIMAL(19,2) !Izdati raèuni 10% Osnovica
+!!> IDENT(25029),PROMPT('II2_I:'),HEADER('II2_I'),MESSAGE('Izdati raèuni 22% Osnovica'),TOOLTIP('Izdati raèuni 22% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II2_P:'),USE(?OBR:II2_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:II2_P),DECIMAL(12),MSG('Izdati raèuni 22% PDV'),TIP('Izdati raèuni 22% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:II2_P),DECIMAL(12)
+II2_P                      PDECIMAL(19,2) !Izdati raèuni 10% PDV
+!!> IDENT(25030),PROMPT('II2_P:'),HEADER('II2_P'),MESSAGE('Izdati raèuni 22% PDV'),TOOLTIP('Izdati raèuni 22% PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II3_I:'),USE(?OBR:II3_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II3_I),DECIMAL(12),MSG('Izdati raèuna 23% Osnovica'),TIP('Izdati raèuna 23% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II3_I),DECIMAL(12)
+II3_I                      PDECIMAL(19,2) !Izdati raèuna 25% Osnovica
+!!> IDENT(25031),PROMPT('II3_I:'),HEADER('II3_I'),MESSAGE('Izdati raèuna 23% Osnovica'),TOOLTIP('Izdati raèuna 23% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II3_P:'),USE(?OBR:II3_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II3_P),DECIMAL(12),MSG('Izdati raèuna 23% PDV'),TIP('Izdati raèuna 23% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II3_P),DECIMAL(12)
+II3_P                      PDECIMAL(19,2) !Izdati raèuna 25% PDV
+!!> IDENT(25032),PROMPT('II3_P:'),HEADER('II3_P'),MESSAGE('Izdati raèuna 23% PDV'),TOOLTIP('Izdati raèuna 23% PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II4_I:'),USE(?OBR:II4_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II4_I),DECIMAL(12),MSG('Naknadno oslobaðanje izvoza'),TIP('Naknadno oslobaðanje izvoza')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II4_I),DECIMAL(12)
+II4_I                      PDECIMAL(19,2) !Naknadno oslobaðanje izvoza osnova
+!!> IDENT(25033),PROMPT('II4_I:'),HEADER('II4_I'),MESSAGE('Naknadno oslobaðanje izvoza'),TOOLTIP('Naknadno oslobaðanje izvoza'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II4_P:'),USE(?OBR:II4_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:II4_P),DECIMAL(12),MSG('Naknadno oslobaðanje izvoza PDV'),TIP('Naknadno oslobaðanje izvoza PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:II4_P),DECIMAL(12)
+II4_P                      PDECIMAL(19,2) !Naknadno oslobaðanje izvoza PDV
+!!> IDENT(25034),PROMPT('II4_P:'),HEADER('II4_P'),MESSAGE('Naknadno oslobaðanje izvoza PDV'),TOOLTIP('Naknadno oslobaðanje izvoza PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II5_I:'),USE(?OBR:II5_I:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:II5_I),DECIMAL(12),MSG('stjevanje dobava eu po stopi 5%'),TIP('stjevanje dobava eu po stopi 5%')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:II5_I),DECIMAL(12)
+II5_I                      PDECIMAL(19,2) !stjevanje dobava eu po stopi 5%
+!!> IDENT(25035),PROMPT('II5_I:'),HEADER('II5_I'),MESSAGE('stjevanje dobava eu po stopi 5%'),TOOLTIP('stjevanje dobava eu po stopi 5%'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II5_P:'),USE(?OBR:II5_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:II5_P),DECIMAL(12),MSG('Stjecanje dobara EU po stopi 5%'),TIP('Stjecanje dobara EU po stopi 5%')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:II5_P),DECIMAL(12)
+II5_P                      PDECIMAL(19,2) !Stjecanje dobara EU po stopi 5%
+!!> IDENT(25036),PROMPT('II5_P:'),HEADER('II5_P'),MESSAGE('Stjecanje dobara EU po stopi 5%'),TOOLTIP('Stjecanje dobara EU po stopi 5%'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III_I:'),USE(?OBR:III_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III_I),DECIMAL(12),MSG('OBRACUNATI PREDPOREZ UKUPNO OSNOVA'),TIP('OBRACUNATI PREDPOREZ UKUPNO OSNOVA')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III_I),DECIMAL(12)
+III_I                      PDECIMAL(19,2) !OBRACUNATI PREDPOREZ UKUPNO OSNOVA
+!!> IDENT(25037),PROMPT('III_I:'),HEADER('III_I'),MESSAGE('OBRACUNATI PREDPOREZ UKUPNO OSNOVA'),TOOLTIP('OBRACUNATI PREDPOREZ UKUPNO OSNOVA'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III_P:'),USE(?OBR:III_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III_P),DECIMAL(12),MSG('OBRACUNATI PREDPOREZ UKUPNO PDV'),TIP('OBRACUNATI PREDPOREZ UKUPNO PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III_P),DECIMAL(12)
+III_P                      PDECIMAL(19,2) !OBRACUNATI PREDPOREZ UKUPNO PDV
+!!> IDENT(25038),PROMPT('III_P:'),HEADER('III_P'),MESSAGE('OBRACUNATI PREDPOREZ UKUPNO PDV'),TOOLTIP('OBRACUNATI PREDPOREZ UKUPNO PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III1_I:'),USE(?OBR:III1_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III1_I),DECIMAL(12),MSG('Predpored stopa 10% Osnovica'),TIP('Predpored stopa 10% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III1_I),DECIMAL(12)
+III1_I                     PDECIMAL(19,2) !Predpored stopa 10% Osnovica
+!!> IDENT(25039),PROMPT('III1_I:'),HEADER('III1_I'),MESSAGE('Predpored stopa 10% Osnovica'),TOOLTIP('Predpored stopa 10% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III1_P:'),USE(?OBR:III1_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III1_P),DECIMAL(12),MSG('Predporez stopa 10% PDV'),TIP('Predporez stopa 10% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III1_P),DECIMAL(12)
+III1_P                     PDECIMAL(19,2) !Predporez stopa 10% PDV
+!!> IDENT(25040),PROMPT('III1_P:'),HEADER('III1_P'),MESSAGE('Predporez stopa 10% PDV'),TOOLTIP('Predporez stopa 10% PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III2_I:'),USE(?OBR:III2_I:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III2_I),DECIMAL(12),MSG('Predporez 22% Osnovica'),TIP('Predporez 22% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III2_I),DECIMAL(12)
+III2_I                     PDECIMAL(19,2) !Predporez 22% Osnovica
+!!> IDENT(25041),PROMPT('III2_I:'),HEADER('III2_I'),MESSAGE('Predporez 22% Osnovica'),TOOLTIP('Predporez 22% Osnovica'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III2_P:'),USE(?OBR:III2_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III2_P),DECIMAL(12),MSG('Predporez 22% PDV'),TIP('Predporez 22% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III2_P),DECIMAL(12)
+III2_P                     PDECIMAL(19,2) !Predporez 22% PDV
+!!> IDENT(25042),PROMPT('III2_P:'),HEADER('III2_P'),MESSAGE('Predporez 22% PDV'),TOOLTIP('Predporez 22% PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III3_I:'),USE(?OBR:III3_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III3_I),DECIMAL(12),MSG('Predporez 23% Osnovica'),TIP('Predporez 23% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III3_I),DECIMAL(12)
+III3_I                     PDECIMAL(19,2) !Predporez 23% Osnovica
+!!> IDENT(25043),PROMPT('III3_I:'),HEADER('III3_I'),MESSAGE('Predporez 23% Osnovica'),TOOLTIP('Predporez 23% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III3_P:'),USE(?OBR:III3_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III3_P),DECIMAL(12),MSG('Predporez 23% PDV'),TIP('Predporez 23% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III3_P),DECIMAL(12)
+III3_P                     PDECIMAL(19,2) !Predporez 23% PDV
+!!> IDENT(25044),PROMPT('III3_P:'),HEADER('III3_P'),MESSAGE('Predporez 23% PDV'),TOOLTIP('Predporez 23% PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III4_I:'),USE(?OBR:III4_I:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III4_I),DECIMAL(12),MSG('Plaæeni predpored uvoz'),TIP('Plaæeni predpored uvoz')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III4_I),DECIMAL(12)
+III4_I                     PDECIMAL(19,2) !Plaæeni predpored uvoz Osnovica
+!!> IDENT(25045),PROMPT('III4_I:'),HEADER('III4_I'),MESSAGE('Plaæeni predpored uvoz'),TOOLTIP('Plaæeni predpored uvoz'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III4_P:'),USE(?OBR:III4_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III4_P),DECIMAL(12),MSG('Plaæeni predporez uvpz PDV'),TIP('Plaæeni predporez uvpz PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III4_P),DECIMAL(12)
+III4_P                     PDECIMAL(19,2) !Plaæeni predporez uvoz PDV
+!!> IDENT(25046),PROMPT('III4_P:'),HEADER('III4_P'),MESSAGE('Plaæeni predporez uvpz PDV'),TOOLTIP('Plaæeni predporez uvpz PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III5_I:'),USE(?OBR:III5_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III5_I),DECIMAL(12),MSG('Predpored usluge ino.poduzetnika 10% Osnovica'),TIP('Predpored usluge ino.poduzetnika 10% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III5_I),DECIMAL(12)
+III5_I                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 10% Osnovica
+!!> IDENT(25047),PROMPT('III5_I:'),HEADER('III5_I'),MESSAGE('Predpored usluge ino.poduzetnika 10% Osnovica'),TOOLTIP('Predpored usluge ino.poduzetnika 10% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III5_P:'),USE(?OBR:III5_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III5_P),DECIMAL(12),MSG('Predporez usluge ino.poduzetnika 10% PDV'),TIP('Predporez usluge ino.poduzetnika 10% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III5_P),DECIMAL(12)
+III5_P                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 10% PDV
+!!> IDENT(25048),PROMPT('III5_P:'),HEADER('III5_P'),MESSAGE('Predporez usluge ino.poduzetnika 10% PDV'),TOOLTIP('Predporez usluge ino.poduzetnika 10% PDV'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III6_P:'),USE(?OBR:III6_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III6_I),DECIMAL(12),MSG('Predporez usluge ino.poduzetnika 22% Osnovica'),TIP('Predporez usluge ino.poduzetnika 22% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III6_I),DECIMAL(12)
+III6_I                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 22% Osnovica
+!!> IDENT(25049),PROMPT('III6_P:'),HEADER('III6_P'),MESSAGE('Predporez usluge ino.poduzetnika 22% Osnovica'),TOOLTIP('Predporez usluge ino.poduzetnika 22% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III6_P:'),USE(?OBR:III6_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III6_P),DECIMAL(12),MSG('Predporez usluge ino.poduzetnika 22% PDV'),TIP('Predporez usluge ino.poduzetnika 22% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III6_P),DECIMAL(12)
+III6_P                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 22% PDV
+!!> IDENT(25050),PROMPT('III6_P:'),HEADER('III6_P'),MESSAGE('Predporez usluge ino.poduzetnika 22% PDV'),TOOLTIP('Predporez usluge ino.poduzetnika 22% PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III7_I:'),USE(?OBR:III7_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III7_I),DECIMAL(12),MSG('Predporez usluge ino.poduzetnika 23% Osnovica'),TIP('Predporez usluge ino.poduzetnika 23% Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III7_I),DECIMAL(12)
+III7_I                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 23% Osnovica
+!!> IDENT(25051),PROMPT('III7_I:'),HEADER('III7_I'),MESSAGE('Predporez usluge ino.poduzetnika 23% Osnovica'),TOOLTIP('Predporez usluge ino.poduzetnika 23% Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III7_P:'),USE(?OBR:III7_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III7_P),DECIMAL(12),MSG('Predporez usluge ino.poduzetnika 23% PDV'),TIP('Predporez usluge ino.poduzetnika 23% PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III7_P),DECIMAL(12)
+III7_P                     PDECIMAL(19,2) !Predporez usluge ino.poduzetnika 23% PDV
+!!> IDENT(25052),PROMPT('III7_P:'),HEADER('III7_P'),MESSAGE('Predporez usluge ino.poduzetnika 23% PDV'),TOOLTIP('Predporez usluge ino.poduzetnika 23% PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III8_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III8_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III8_I),DECIMAL(12)
+III8_I                     PDECIMAL(19,2) !Ispravci predporeza èl.20 Osnovica
+!!> IDENT(25053),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_P:'),USE(?OBR:III8_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:III8_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 PDV'),TIP('Ispravci predporeza èl.20 PDV')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:III8_P),DECIMAL(12)
+III8_P                     PDECIMAL(19,2) !Ispravci predporeza èl.20 PDV
+!!> IDENT(25054),PROMPT('III8_P:'),HEADER('III8_P'),MESSAGE('Ispravci predporeza èl.20 PDV'),TOOLTIP('Ispravci predporeza èl.20 PDV'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('IV_P:'),USE(?OBR:IV_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:IV_P),DECIMAL(12),MSG('POREZNA OBAVEZA O OBAÈUNSKOM RAZDOBLJU'),TIP('POREZNA OBAVEZA O OBAÈUNSKOM RAZDOBLJU')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:IV_P),DECIMAL(12)
+IV_P                       PDECIMAL(19,2) !POREZNA OBAVEZA O OBAÈUNSKOM RAZDOBLJU
+!!> IDENT(25055),PROMPT('IV_P:'),HEADER('IV_P'),MESSAGE('POREZNA OBAVEZA O OBAÈUNSKOM RAZDOBLJU'),TOOLTIP('POREZNA OBAVEZA O OBAÈUNSKOM RAZDOBLJU'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('V_P:'),USE(?OBR:V_P:Prompt)
+! ENTRY(@n-19`.2),USE(OBR:V_P),DECIMAL(12),MSG('NEUPLAÈENI POREZ'),TIP('NEUPLAÈENI POREZ')
+[REPORTCONTROLS]
+! STRING(@n-19`.2),USE(OBR:V_P),DECIMAL(12)
+V_P                        PDECIMAL(19,2) !NEUPLAÈENI POREZ
+!!> IDENT(25056),PROMPT('V_P:'),HEADER('V_P'),MESSAGE('NEUPLAÈENI POREZ'),TOOLTIP('NEUPLAÈENI POREZ'),PICTURE(@n-19`.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VI_P:'),USE(?OBR:VI_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:VI_P),DECIMAL(12),MSG('UKUPNA RAZLIKA'),TIP('UKUPNA RAZLIKA')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:VI_P),DECIMAL(12)
+VI_P                       PDECIMAL(19,2) !UKUPNA RAZLIKA ZA UPLATU ILI ZA POVRAT
+!!> IDENT(25057),PROMPT('VI_P:'),HEADER('VI_P'),MESSAGE('UKUPNA RAZLIKA'),TOOLTIP('UKUPNA RAZLIKA'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('POVRAT:'),USE(?OBR:POVRAT:Prompt)
+! ENTRY(@n-19`2),USE(OBR:POVRAT),DECIMAL(12),MSG('POVRAT'),TIP('POVRAT')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:POVRAT),DECIMAL(12)
+POVRAT                     PDECIMAL(19,2) !POVRAT
+!!> IDENT(25058),PROMPT('POVRAT:'),HEADER('POVRAT'),MESSAGE('POVRAT'),TOOLTIP('POVRAT'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('PREDUJAM:'),USE(?OBR:PREDUJAM:Prompt)
+! ENTRY(@n-19`2),USE(OBR:PREDUJAM),DECIMAL(12),MSG('PREDUJAM'),TIP('PREDUJAM')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:PREDUJAM),DECIMAL(12)
+PREDUJAM                   PDECIMAL(19,2) !PREDUJAM
+!!> IDENT(25059),PROMPT('PREDUJAM:'),HEADER('PREDUJAM'),MESSAGE('PREDUJAM'),TOOLTIP('PREDUJAM'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('USTUP:'),USE(?OBR:USTUP:Prompt)
+! ENTRY(@n-19`2),USE(OBR:USTUP),DECIMAL(12),MSG('USTUP'),TIP('USTUP')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:USTUP),DECIMAL(12)
+USTUP                      PDECIMAL(19,2) !USTUP
+!!> IDENT(25060),PROMPT('USTUP:'),HEADER('USTUP'),MESSAGE('USTUP'),TOOLTIP('USTUP'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('PRENOS:'),USE(?OBR:PRENOS:Prompt)
+! ENTRY(@n-19`2),USE(OBR:PRENOS),DECIMAL(12),MSG('PRENOS'),TIP('PRENOS')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:PRENOS),DECIMAL(12)
+PRENOS                     PDECIMAL(19,2) !PRENOS
+!!> IDENT(25061),PROMPT('PRENOS:'),HEADER('PRENOS'),MESSAGE('PRENOS'),TOOLTIP('PRENOS'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('unclaimed:'),USE(?OBR:unclaimed:Prompt)
+! ENTRY(@n-19`2),USE(OBR:unclaimed),RIGHT(2),MSG('Promet v drugih clanicah'),TIP('Promet v drugih clanicah')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:unclaimed),RIGHT(2)
+unclaimed                  PDECIMAL(22,2) !neuveljavljen
+!!> IDENT(27157),PROMPT('unclaimed:'),HEADER('unclaimed'),MESSAGE('Promet v drugih clanicah'),TOOLTIP('Promet v drugih clanicah'),PICTURE(@n-19`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('increased:'),USE(?OBR:increased:Prompt)
+! ENTRY(@n-19`2),USE(OBR:increased),RIGHT(2),MSG('Promet v drugih clanicah'),TIP('Promet v drugih clanicah')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:increased),RIGHT(2)
+increased                  PDECIMAL(22,2) !poveèan
+!!> IDENT(27158),PROMPT('increased:'),HEADER('increased'),MESSAGE('Promet v drugih clanicah'),TOOLTIP('Promet v drugih clanicah'),PICTURE(@n-19`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('decreased:'),USE(?OBR:decreased:Prompt)
+! ENTRY(@n-19`2),USE(OBR:decreased),RIGHT(2),MSG('Promet v drugih clanicah'),TIP('Promet v drugih clanicah')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:decreased),RIGHT(2)
+decreased                  PDECIMAL(22,2) !zmanjšan
+!!> IDENT(27159),PROMPT('decreased:'),HEADER('decreased'),MESSAGE('Promet v drugih clanicah'),TOOLTIP('Promet v drugih clanicah'),PICTURE(@n-19`2),JUSTIFY(RIGHT,2)
+[SCREENCONTROLS]
+! PROMPT('I 4 I:'),USE(?OBR:I4_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I4_I),DECIMAL(12),MSG('Obavljene usluge unutar EU'),TIP('Obavljene usluge unutar EU')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I4_I),DECIMAL(12)
+I4_I                       PDECIMAL(19,2) !Obavljene usluge unutar EU
+!!> IDENT(30795),PROMPT('I 4 I:'),HEADER('I 4 I'),MESSAGE('Obavljene usluge unutar EU'),TOOLTIP('Obavljene usluge unutar EU'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 5 I:'),USE(?OBR:I5_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I5_I),DECIMAL(12),MSG('Obavljene usluge osobama bez sjedi<154>ta u HR'),TIP('Obavljene usluge osobama bez sjedi<154>ta u HR')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I5_I),DECIMAL(12)
+I5_I                       PDECIMAL(19,2) !Obavljene usluge osobama bez sjedišta u HR
+!!> IDENT(30796),PROMPT('I 5 I:'),HEADER('I 5 I'),MESSAGE('Obavljene usluge osobama bez sjedi<154>ta u HR'),TOOLTIP('Obavljene usluge osobama bez sjedi<154>ta u HR'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 6 I:'),USE(?OBR:I6_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I6_I),DECIMAL(12),MSG('Sastavljenje i postavljana u drugoj èlaniic EU'),TIP('Sastavljenje i postavljana u drugoj èlaniic EU')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I6_I),DECIMAL(12)
+I6_I                       PDECIMAL(19,2) !Sastavljenje i postavljana u drugoj èlaniic EU
+!!> IDENT(30798),PROMPT('I 6 I:'),HEADER('I 6 I'),MESSAGE('Sastavljenje i postavljana u drugoj èlaniic EU'),TOOLTIP('Sastavljenje i postavljana u drugoj èlaniic EU'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 7 I:'),USE(?OBR:I7_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I7_I),DECIMAL(12),MSG('Isporuke novih prijevoznih sredstava u EU'),TIP('Isporuke novih prijevoznih sredstava u EU')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I7_I),DECIMAL(12)
+I7_I                       PDECIMAL(19,2) !Isporuke novih prijevoznih sredstava u EU
+!!> IDENT(30799),PROMPT('I 7 I:'),HEADER('I 7 I'),MESSAGE('Isporuke novih prijevoznih sredstava u EU'),TOOLTIP('Isporuke novih prijevoznih sredstava u EU'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 8 I:'),USE(?OBR:I8_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I8_I),DECIMAL(12),MSG('Tuzemskle isporuke'),TIP('Tuzemskle isporuke')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I8_I),DECIMAL(12)
+I8_I                       PDECIMAL(19,2) !Tuzemskle isporuke
+!!> IDENT(30800),PROMPT('I 8 I:'),HEADER('I 8 I'),MESSAGE('Tuzemskle isporuke'),TOOLTIP('Tuzemskle isporuke'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 9 I:'),USE(?OBR:I9_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I9_I),DECIMAL(12),MSG('izvozne isporuke'),TIP('izvozne isporuke')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I9_I),DECIMAL(12)
+I9_I                       PDECIMAL(19,2) !izvozne isporuke
+!!> IDENT(30801),PROMPT('I 9 I:'),HEADER('I 9 I'),MESSAGE('izvozne isporuke'),TOOLTIP('izvozne isporuke'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('I 10 I:'),USE(?OBR:I10_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:I10_I),DECIMAL(12),MSG('Ostala osloboðenja'),TIP('Ostala osloboðenja')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:I10_I),DECIMAL(12)
+I10_I                      PDECIMAL(19,2) !Ostala osloboðenja
+!!> IDENT(30802),PROMPT('I 10 I:'),HEADER('I 10 I'),MESSAGE('Ostala osloboðenja'),TOOLTIP('Ostala osloboðenja'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 6 I:'),USE(?OBR:II6_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II6_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II6_I),DECIMAL(12)
+II6_I                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 10%
+!!> IDENT(30804),PROMPT('II 6 I:'),HEADER('II 6 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 6 P:'),USE(?OBR:II6_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II6_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II6_P),DECIMAL(12)
+II6_P                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 10%
+!!> IDENT(30806),PROMPT('II 6 P:'),HEADER('II 6 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 7 I:'),USE(?OBR:II7_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II7_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II7_I),DECIMAL(12)
+II7_I                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 25%
+!!> IDENT(30807),PROMPT('II 7 I:'),HEADER('II 7 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 7 P:'),USE(?OBR:II7_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II7_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II7_P),DECIMAL(12)
+II7_P                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 25%
+!!> IDENT(30808),PROMPT('II 7 P:'),HEADER('II 7 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 8 I:'),USE(?OBR:II8_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II8_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II8_I),DECIMAL(12)
+II8_I                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 5%
+!!> IDENT(30809),PROMPT('II 8 I:'),HEADER('II 8 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 8 P:'),USE(?OBR:II8_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II8_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II8_P),DECIMAL(12)
+II8_P                      PDECIMAL(19,2) !Stjecanje dobava unutar EU stopa 5%
+!!> IDENT(30810),PROMPT('II 8 P:'),HEADER('II 8 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 9 I:'),USE(?OBR:II9_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II9_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II9_I),DECIMAL(12)
+II9_I                      PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30811),PROMPT('II 9 I:'),HEADER('II 9 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 9 P:'),USE(?OBR:II9_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II9_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II9_P),DECIMAL(12)
+II9_P                      PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30812),PROMPT('II 9 P:'),HEADER('II 9 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 10 I:'),USE(?OBR:II10_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II10_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II10_I),DECIMAL(12)
+II10_I                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 25%
+!!> IDENT(30813),PROMPT('II 10 I:'),HEADER('II 10 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 10 P:'),USE(?OBR:II10_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II10_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II10_P),DECIMAL(12)
+II10_P                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 25%
+!!> IDENT(30814),PROMPT('II 10 P:'),HEADER('II 10 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 11 I:'),USE(?OBR:II11_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II11_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II11_I),DECIMAL(12)
+II11_I                     PDECIMAL(19,2) !Primljene DOBARA I usluge unutar EU stopa 10%
+!!> IDENT(30816),PROMPT('II 11 I:'),HEADER('II 11 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 11 P:'),USE(?OBR:II11_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II11_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II11_P),DECIMAL(12)
+II11_P                     PDECIMAL(19,2) !Primljene usluE i dobara od porez.obavenika bez sjedišta u RH
+!!> IDENT(30817),PROMPT('II 11 P:'),HEADER('II 11 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 12 I:'),USE(?OBR:II12_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II12_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II12_I),DECIMAL(12)
+II12_I                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30818),PROMPT('II 12 I:'),HEADER('II 12 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 12 P:'),USE(?OBR:II12_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II12_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II12_P),DECIMAL(12)
+II12_P                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30819),PROMPT('II 12 P:'),HEADER('II 12 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 13 I:'),USE(?OBR:II13_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II13_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II13_I),DECIMAL(12)
+II13_I                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30820),PROMPT('II 13 I:'),HEADER('II 13 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 13 P:'),USE(?OBR:II13_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II13_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II13_P),DECIMAL(12)
+II13_P                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30821),PROMPT('II 13 P:'),HEADER('II 13 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 14 I:'),USE(?OBR:II14_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II14_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II14_I),DECIMAL(12)
+II14_I                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30822),PROMPT('II 14 I:'),HEADER('II 14 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 14 P:'),USE(?OBR:II14_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II14_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II14_P),DECIMAL(12)
+II14_P                     PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30823),PROMPT('II 14 P:'),HEADER('II 14 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VII:'),USE(?OBR:VII:Prompt)
+! ENTRY(@n-26.2),USE(OBR:VII),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:VII),DECIMAL(12)
+VII                        PDECIMAL(19,2) !Primljene usluge unutar EU stopa 10%
+!!> IDENT(30824),PROMPT('VII:'),HEADER('VII'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 15 I:'),USE(?OBR:II15_I:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II15_I),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II15_I),DECIMAL(12)
+II15_I                     PDECIMAL(19,2) !OBRAÈUNANI PDV PRI UVOZU
+!!> IDENT(31386),PROMPT('II 15 I:'),HEADER('II 15 I'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('II 15 P:'),USE(?OBR:II15_P:Prompt)
+! ENTRY(@n-26.2),USE(OBR:II15_P),DECIMAL(12),MSG('Stjecanje dobava unutar EU stopa 10%'),TIP('Stjecanje dobava unutar EU stopa 10%')
+[REPORTCONTROLS]
+! STRING(@n-26.2),USE(OBR:II15_P),DECIMAL(12)
+II15_P                     PDECIMAL(19,2) !OBRAÈUNANI PDV PRI UVOZU
+!!> IDENT(31387),PROMPT('II 15 P:'),HEADER('II 15 P'),MESSAGE('Stjecanje dobava unutar EU stopa 10%'),TOOLTIP('Stjecanje dobava unutar EU stopa 10%'),PICTURE(@n-26.2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III9_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III9_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III9_I),DECIMAL(12)
+III9_I                     PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH USLUGA IZ EU po stopi 13%
+!!> IDENT(31388),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III9_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III9_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III9_P),DECIMAL(12)
+III9_P                     PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH USLUGA IZ EU po stopi 13%
+!!> IDENT(31389),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III10_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III10_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III10_I),DECIMAL(12)
+III10_I                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH USLUGA IZ EU po stopi 25%
+!!> IDENT(31390),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III10_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III10_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III10_P),DECIMAL(12)
+III10_P                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH USLUGA IZ EU po stopi 25%
+!!> IDENT(31391),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III11_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III11_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III11_I),DECIMAL(12)
+III11_I                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 5%
+!!> IDENT(31392),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III11_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III11_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III11_P),DECIMAL(12)
+III11_P                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 5%
+!!> IDENT(31393),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III12_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III12_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III12_I),DECIMAL(12)
+III12_I                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 13%
+!!> IDENT(31394),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III12_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III12_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III12_P),DECIMAL(12)
+III12_P                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 13%
+!!> IDENT(31395),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III13_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III13_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III13_I),DECIMAL(12)
+III13_I                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 25%
+!!> IDENT(31396),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III13_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III13_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III13_P),DECIMAL(12)
+III13_P                    PDECIMAL(19,2) !PRETPOREZ OD PRIMLJENIH ISPORUKA DOBARA I USLUGA OD POREZNIH OBVEZNIKA BEZ SJEDIŠTA U RH po stopi 25%
+!!> IDENT(31397),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III14_I:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III14_I),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III14_I),DECIMAL(12)
+III14_I                    PDECIMAL(19,2) !PRETPOREZ PRI UVOZUPRETPOREZ PRI UVOZU
+!!> IDENT(31398),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III14_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III14_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III14_P),DECIMAL(12)
+III14_P                    PDECIMAL(19,2) !PRETPOREZ PRI UVOZUPRETPOREZ PRI UVOZU
+!!> IDENT(31399),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('III8_I:'),USE(?OBR:III15_P:Prompt)
+! ENTRY(@n-19`2),USE(OBR:III15_P),DECIMAL(12),MSG('Ispravci predporeza èl.20 Osnovica'),TIP('Ispravci predporeza èl.20 Osnovica')
+[REPORTCONTROLS]
+! STRING(@n-19`2),USE(OBR:III15_P),DECIMAL(12)
+III15_P                    PDECIMAL(19,2) !ISPRAVCI PRETPOREZA
+!!> IDENT(31400),PROMPT('III8_I:'),HEADER('III8_I'),MESSAGE('Ispravci predporeza èl.20 Osnovica'),TOOLTIP('Ispravci predporeza èl.20 Osnovica'),PICTURE(@n-19`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('PDV 5 R 2:'),USE(?OBR:PDV5R2:Prompt)
+! ENTRY(@n10.2),USE(OBR:PDV5R2),DECIMAL(14)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(OBR:PDV5R2),DECIMAL(14)
+PDV5R2                     REAL
+!!> IDENT(31419),PROMPT('PDV 5 R 2:'),HEADER('PDV 5 R 2'),PICTURE(@n10.2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('PDV 10 R 2:'),USE(?OBR:PDV10R2:Prompt)
+! ENTRY(@n10.2),USE(OBR:PDV10R2),DECIMAL(14)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(OBR:PDV10R2),DECIMAL(14)
+PDV10R2                    REAL
+!!> IDENT(31421),PROMPT('PDV 10 R 2:'),HEADER('PDV 10 R 2'),PICTURE(@n10.2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('PDV 25 R 2:'),USE(?OBR:PDV25R2:Prompt)
+! ENTRY(@n10.2),USE(OBR:PDV25R2),DECIMAL(14)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(OBR:PDV25R2),DECIMAL(14)
+PDV25R2                    REAL
+!!> IDENT(31422),PROMPT('PDV 25 R 2:'),HEADER('PDV 25 R 2'),PICTURE(@n10.2),JUSTIFY(DECIMAL,14)
+[SCREENCONTROLS]
+! PROMPT('VIII 1 I:'),USE(?OBR:VIII1_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII1_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII1_I),DECIMAL(12)
+VIII1_I                    PDECIMAL(19,2)
+!!> IDENT(31975),PROMPT('VIII 1 I:'),HEADER('VIII 1 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 11 I:'),USE(?OBR:VIII11_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII11_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII11_I),DECIMAL(12)
+VIII11_I                   PDECIMAL(19,2)
+!!> IDENT(31976),PROMPT('VIII 11 I:'),HEADER('VIII 11 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 12 I:'),USE(?OBR:VIII12_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII12_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII12_I),DECIMAL(12)
+VIII12_I                   PDECIMAL(19,2)
+!!> IDENT(31977),PROMPT('VIII 12 I:'),HEADER('VIII 12 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 13 I:'),USE(?OBR:VIII13_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII13_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII13_I),DECIMAL(12)
+VIII13_I                   PDECIMAL(19,2)
+!!> IDENT(31978),PROMPT('VIII 13 I:'),HEADER('VIII 13 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 14 I:'),USE(?OBR:VIII14_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII14_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII14_I),DECIMAL(12)
+VIII14_I                   PDECIMAL(19,2)
+!!> IDENT(31979),PROMPT('VIII 14 I:'),HEADER('VIII 14 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 15 I:'),USE(?OBR:VIII15_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII15_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII15_I),DECIMAL(12)
+VIII15_I                   PDECIMAL(19,2)
+!!> IDENT(31980),PROMPT('VIII 15 I:'),HEADER('VIII 15 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 2 I:'),USE(?OBR:VIII2_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII2_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII2_I),DECIMAL(12)
+VIII2_I                    PDECIMAL(19,2)
+!!> IDENT(31981),PROMPT('VIII 2 I:'),HEADER('VIII 2 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 3 I:'),USE(?OBR:VIII3_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII3_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII3_I),DECIMAL(12)
+VIII3_I                    PDECIMAL(19,2)
+!!> IDENT(31982),PROMPT('VIII 3 I:'),HEADER('VIII 3 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 31 I:'),USE(?OBR:VIII31_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII31_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII31_I),DECIMAL(12)
+VIII31_I                   PDECIMAL(19,2)
+!!> IDENT(31983),PROMPT('VIII 31 I:'),HEADER('VIII 31 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 32 I:'),USE(?OBR:VIII32_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII32_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII32_I),DECIMAL(12)
+VIII32_I                   PDECIMAL(19,2)
+!!> IDENT(31984),PROMPT('VIII 32 I:'),HEADER('VIII 32 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 33 I:'),USE(?OBR:VIII33_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII33_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII33_I),DECIMAL(12)
+VIII33_I                   PDECIMAL(19,2)
+!!> IDENT(31985),PROMPT('VIII 33 I:'),HEADER('VIII 33 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 4 I:'),USE(?OBR:VIII4_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII4_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII4_I),DECIMAL(12)
+VIII4_I                    PDECIMAL(19,2)
+!!> IDENT(31986),PROMPT('VIII 4 I:'),HEADER('VIII 4 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 5 I:'),USE(?OBR:VIII5_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII5_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII5_I),DECIMAL(12)
+VIII5_I                    PDECIMAL(19,2)
+!!> IDENT(31987),PROMPT('VIII 5 I:'),HEADER('VIII 5 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 6 I:'),USE(?OBR:VIII6_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII6_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII6_I),DECIMAL(12)
+VIII6_I                    PDECIMAL(19,2)
+!!> IDENT(31988),PROMPT('VIII 6 I:'),HEADER('VIII 6 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 7 I:'),USE(?OBR:VIII7_I:Prompt)
+! ENTRY(@n3),USE(OBR:VIII7_I)
+[REPORTCONTROLS]
+! STRING(@n3),USE(OBR:VIII7_I)
+VIII7_I                    BYTE
+!!> IDENT(31989),PROMPT('VIII 7 I:'),HEADER('VIII 7 I'),PICTURE(@n3)
+[SCREENCONTROLS]
+! PROMPT('VIII 16 I:'),USE(?OBR:VIII16_I:Prompt)
+! ENTRY(@N-19.`2),USE(OBR:VIII16_I),DECIMAL(12)
+[REPORTCONTROLS]
+! STRING(@N-19.`2),USE(OBR:VIII16_I),DECIMAL(12)
+VIII16_I                   PDECIMAL(19,2)
+!!> IDENT(31996),PROMPT('VIII 16 I:'),HEADER('VIII 16 I'),PICTURE(@N-19.`2),JUSTIFY(DECIMAL,12)
+[SCREENCONTROLS]
+! PROMPT('VIII 31 BROJ:'),USE(?OBR:VIII31_BROJ:Prompt)
+! ENTRY(@n_5),USE(OBR:VIII31_BROJ),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n_5),USE(OBR:VIII31_BROJ),RIGHT(1)
+VIII31_BROJ                LONG
+!!> IDENT(31991),PROMPT('VIII 31 BROJ:'),HEADER('VIII 31 BROJ'),PICTURE(@n_5),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('VIII 32 BROJ:'),USE(?OBR:VIII32_BROJ:Prompt)
+! ENTRY(@n_5),USE(OBR:VIII32_BROJ),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n_5),USE(OBR:VIII32_BROJ),RIGHT(1)
+VIII32_BROJ                LONG
+!!> IDENT(31993),PROMPT('VIII 32 BROJ:'),HEADER('VIII 32 BROJ'),PICTURE(@n_5),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('VIII 33 BROJ:'),USE(?OBR:VIII33_BROJ:Prompt)
+! ENTRY(@n_5),USE(OBR:VIII33_BROJ),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n_5),USE(OBR:VIII33_BROJ),RIGHT(1)
+VIII33_BROJ                LONG
+!!> IDENT(31992),PROMPT('VIII 33 BROJ:'),HEADER('VIII 33 BROJ'),PICTURE(@n_5),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('KNJIZENO:'),USE(?OBR:KNJIZENO:Prompt)
+! ENTRY(@n-14),USE(OBR:KNJIZENO),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(OBR:KNJIZENO),RIGHT(1)
+KNJIZENO                   LONG
+!!> IDENT(33377),PROMPT('KNJIZENO:'),HEADER('KNJIZENO'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('F 04:'),USE(?OBR:F04:Prompt)
+! ENTRY(@n-14),USE(OBR:F04),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(OBR:F04),RIGHT(1)
+F04                        LONG
+!!> IDENT(33378),PROMPT('F 04:'),HEADER('F 04'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+                         END
+                       END

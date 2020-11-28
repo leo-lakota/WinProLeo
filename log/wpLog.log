@@ -1,0 +1,1660 @@
+[ZadnjaProc]
+1=Main
+2=PrometM
+3=IzpFakFerbit
+4=IzpFakFerbit
+5=IzpFakFerbit
+6=IzpFakFerbit
+7=IzpFakFerbit
+8=IzpFakFerbit
+9=IzpFakFerbit
+10=IzpFakFerbit
+[StevilkaNit]
+1=193
+2=119
+3=6
+4=1
+5=1
+6=1
+7=1
+8=1
+9=1
+10=1
+[1 Nit]
+1=Main
+2=LogInWindow
+3=Main
+4=LogInWindow
+5=Main
+6=LogInWindow
+7=Main
+8=LogInWindow
+9=Main
+10=LogInWindow
+11=Main
+12=LogInWindow
+13=Main
+14=LogInWindow
+15=Main
+16=LogInWindow
+17=Main
+18=LogInWindow
+19=Main
+20=LogInWindow
+21=Main
+22=LogInWindow
+23=Main
+24=LogInWindow
+25=Main
+26=LogInWindow
+27=Main
+28=LogInWindow
+29=Main
+30=LogInWindow
+31=Main
+32=LogInWindow
+33=Main
+34=LogInWindow
+35=Main
+36=LogInWindow
+37=Main
+38=LogInWindow
+39=Main
+40=LogInWindow
+41=Main
+42=LogInWindow
+43=Main
+44=LogInWindow
+45=Main
+46=LogInWindow
+47=Main
+48=LogInWindow
+49=Main
+50=LogInWindow
+51=Main
+52=LogInWindow
+53=Main
+54=LogInWindow
+55=Main
+56=LogInWindow
+57=Main
+58=LogInWindow
+59=Main
+60=LogInWindow
+61=Main
+62=LogInWindow
+63=Main
+64=LogInWindow
+65=Main
+66=LogInWindow
+67=Main
+68=LogInWindow
+69=Main
+70=LogInWindow
+71=Main
+72=LogInWindow
+73=Main
+74=LogInWindow
+75=Main
+76=LogInWindow
+77=Main
+78=LogInWindow
+79=Main
+80=LogInWindow
+81=Main
+82=LogInWindow
+83=Main
+84=LogInWindow
+85=Main
+86=LogInWindow
+87=Main
+88=LogInWindow
+89=Main
+90=LogInWindow
+91=Main
+92=LogInWindow
+93=Main
+94=LogInWindow
+95=Main
+96=LogInWindow
+97=Main
+98=LogInWindow
+99=Main
+100=LogInWindow
+101=Main
+102=LogInWindow
+103=Main
+104=LogInWindow
+105=Main
+106=LogInWindow
+107=Main
+108=LogInWindow
+109=Main
+110=LogInWindow
+111=Main
+112=LogInWindow
+113=Main
+114=LogInWindow
+115=Main
+116=LogInWindow
+117=Main
+118=LogInWindow
+119=Main
+120=LogInWindow
+121=Main
+122=LogInWindow
+123=Main
+124=LogInWindow
+125=Main
+126=LogInWindow
+127=Main
+128=LogInWindow
+129=Main
+130=LogInWindow
+131=Main
+132=LogInWindow
+133=Main
+134=LogInWindow
+135=Main
+136=LogInWindow
+137=Main
+138=LogInWindow
+139=Main
+140=LogInWindow
+141=Main
+142=LogInWindow
+143=Main
+144=LogInWindow
+145=Main
+146=LogInWindow
+147=Main
+148=LogInWindow
+149=Main
+150=LogInWindow
+151=Main
+152=LogInWindow
+153=Main
+154=LogInWindow
+155=Main
+156=LogInWindow
+157=Main
+158=LogInWindow
+159=Main
+160=LogInWindow
+161=Main
+162=LogInWindow
+163=Main
+164=LogInWindow
+165=Main
+166=LogInWindow
+167=Main
+168=LogInWindow
+169=Main
+170=LogInWindow
+171=Main
+172=LogInWindow
+173=Main
+174=LogInWindow
+175=Main
+176=LogInWindow
+177=Main
+178=LogInWindow
+179=Main
+180=LogInWindow
+181=Main
+182=LogInWindow
+183=Main
+184=LogInWindow
+185=Main
+186=LogInWindow
+187=Main
+188=LogInWindow
+189=Main
+190=LogInWindow
+191=Main
+192=LogInWindow
+193=Main
+[11:05:47- 1 Nit 01 - Main]
+Procedura=Main
+[Open SoftCount 1 nit:]
+1 Oso: FERBIT.NASTAVI=1
+1 Oso: FERBIT.KONFIG=1
+1 Oso: FERBIT.DELAVCI=1
+1 Oso: FERBIT.SIFRANT=1
+1 Oso: FERBIT.ANYFONT_MODULI=1
+2 Oso: FERBIT.ELIST=1
+2 Oso: FERBIT.KLIENTI=1
+2 Oso: FERBIT.FAKTURA=1
+2 Oso: FERBIT.NALOGD=1
+2 Oso: FERBIT.PROMET=1
+2 Oso: FERBIT.STROSKI=1
+2 Oso: FERBIT.KATERI=1
+2 Oso: FERBIT.STROSKIV=1
+2 Oso: FERBIT.PREJEM=1
+2 Oso: FERBIT.ARTIKLI=1
+2 Oso: FERBIT.SUMPOSTPOGCENE=1
+2 Oso: FERBIT.ROLLMON=1
+2 Oso: FERBIT.NSKUPINE=1
+2 Oso: FERBIT.SUMSKUPIN=1
+2 Oso: FERBIT.POTENCIAL=1
+2 Oso: FERBIT.STANJE=1
+2 Oso: FERBIT.STANJE_SUROVIN_VRED=1
+2 Oso: FERBIT.POGODBEP=1
+2 Oso: FERBIT.SUMPOSTPOG=1
+2 Oso: FERBIT.POGODBE=1
+2 Oso: FERBIT.POSTAVKE=1
+2 Oso: FERBIT.STORITEV=1
+2 Oso: FERBIT.SKLAD=1
+2 Oso: FERBIT.DOBAVNICA=1
+2 Oso: FERBIT.NAPAKE=1
+2 Oso: FERBIT.PROJEKT=1
+2 Oso: FERBIT.OSEBET=1
+2 Oso: FERBIT.TELEFONI=1
+2 Oso: FERBIT.NALOGA=1
+2 Oso: FERBIT.STATUS=1
+2 Oso: FERBIT.DODNALOGE=1
+3 Oso: FERBIT.ARTIKLI=1
+3 Oso: FERBIT.SUMPOSTPOGCENE=1
+3 Oso: FERBIT.ROLLMON=1
+3 Oso: FERBIT.NSKUPINE=1
+3 Oso: FERBIT.SUMSKUPIN=1
+3 Oso: FERBIT.POTENCIAL=1
+3 Oso: FERBIT.STANJE=1
+3 Oso: FERBIT.STANJE_SUROVIN_VRED=1
+3 Oso: FERBIT.POGODBEP=1
+3 Oso: FERBIT.SUMPOSTPOG=1
+3 Oso: FERBIT.POGODBE=1
+3 Oso: FERBIT.POSTAVKE=1
+3 Oso: FERBIT.STORITEV=1
+3 Oso: FERBIT.PROMET=1
+3 Oso: FERBIT.STROSKI=1
+3 Oso: FERBIT.KATERI=1
+3 Oso: FERBIT.STROSKIV=1
+3 Oso: FERBIT.PREJEM=1
+3 Oso: FERBIT.NALOGD=1
+3 Oso: FERBIT.NAPAKE=1
+3 Oso: FERBIT.PROJEKT=1
+3 Oso: FERBIT.OSEBET=1
+3 Oso: FERBIT.TELEFONI=1
+3 Oso: FERBIT.NALOGA=2
+3 Oso: FERBIT.STATUS=2
+3 Oso: FERBIT.DODNALOGE=2
+3 Oso: FERBIT.DOBAVNICA=2
+3 Oso: FERBIT.SKLAD=2
+3 Oso: FERBIT.DELAVCI=1
+3 Oso: FERBIT.DOBROPIS=1
+3 Oso: FERBIT.FAKTURA=1
+3 Oso: FERBIT.KLAVZULEP=1
+3 Oso: FERBIT.KLIENTI=1
+3 Oso: FERBIT.KONFIG=1
+3 Oso: FERBIT.SIFRANT=1
+3 Oso: FERBIT.IZPISI=1
+3 Oso: FERBIT.POSTAJA=1
+3 Oso: FERBIT.DOC_TIP=1
+3 Oso: FERBIT.DOC_X_ELEMENT=1
+3 Oso: FERBIT.DOC_PODTIPS=1
+3 Oso: FERBIT.DOC_AKCIJA=1
+3 Oso: FERBIT.DOC_XS_RELACIJA=1
+4 Oso: FERBIT.ARTIKLI=2
+4 Oso: FERBIT.SUMPOSTPOGCENE=2
+4 Oso: FERBIT.ROLLMON=2
+4 Oso: FERBIT.NSKUPINE=2
+4 Oso: FERBIT.SUMSKUPIN=2
+4 Oso: FERBIT.POTENCIAL=2
+4 Oso: FERBIT.STANJE=2
+4 Oso: FERBIT.STANJE_SUROVIN_VRED=2
+4 Oso: FERBIT.POGODBEP=2
+4 Oso: FERBIT.SUMPOSTPOG=2
+4 Oso: FERBIT.POGODBE=2
+4 Oso: FERBIT.POSTAVKE=2
+4 Oso: FERBIT.STORITEV=2
+4 Oso: FERBIT.PROMET=2
+4 Oso: FERBIT.STROSKI=2
+4 Oso: FERBIT.KATERI=2
+4 Oso: FERBIT.STROSKIV=2
+4 Oso: FERBIT.PREJEM=2
+4 Oso: FERBIT.NALOGD=2
+4 Oso: FERBIT.NAPAKE=2
+4 Oso: FERBIT.PROJEKT=2
+4 Oso: FERBIT.OSEBET=2
+4 Oso: FERBIT.TELEFONI=2
+4 Oso: FERBIT.NALOGA=2
+4 Oso: FERBIT.STATUS=2
+4 Oso: FERBIT.DODNALOGE=2
+4 Oso: FERBIT.DOBAVNICA=2
+4 Oso: FERBIT.SKLAD=2
+4 Oso: FERBIT.DELAVCI=1
+4 Oso: FERBIT.DOBROPIS=1
+4 Oso: FERBIT.FAKTURA=1
+4 Oso: FERBIT.KLAVZULEP=1
+4 Oso: FERBIT.KLIENTI=1
+4 Oso: FERBIT.KONFIG=1
+4 Oso: FERBIT.SIFRANT=1
+4 Oso: FERBIT.IZPISI=1
+4 Oso: FERBIT.POSTAJA=1
+4 Oso: FERBIT.DOC_TIP=1
+4 Oso: FERBIT.DOC_X_ELEMENT=1
+4 Oso: FERBIT.DOC_PODTIPS=1
+4 Oso: FERBIT.DOC_AKCIJA=1
+4 Oso: FERBIT.DOC_XS_RELACIJA=1
+5 Oso: FERBIT.ARTIKLI=2
+5 Oso: FERBIT.SUMPOSTPOGCENE=2
+5 Oso: FERBIT.ROLLMON=2
+5 Oso: FERBIT.NSKUPINE=2
+5 Oso: FERBIT.SUMSKUPIN=2
+5 Oso: FERBIT.POTENCIAL=2
+5 Oso: FERBIT.STANJE=2
+5 Oso: FERBIT.STANJE_SUROVIN_VRED=2
+5 Oso: FERBIT.POGODBEP=2
+5 Oso: FERBIT.SUMPOSTPOG=2
+5 Oso: FERBIT.POGODBE=2
+5 Oso: FERBIT.POSTAVKE=2
+5 Oso: FERBIT.STORITEV=2
+5 Oso: FERBIT.PROMET=2
+5 Oso: FERBIT.STROSKI=2
+5 Oso: FERBIT.KATERI=2
+5 Oso: FERBIT.STROSKIV=2
+5 Oso: FERBIT.PREJEM=2
+5 Oso: FERBIT.NALOGD=2
+5 Oso: FERBIT.NAPAKE=2
+5 Oso: FERBIT.PROJEKT=2
+5 Oso: FERBIT.OSEBET=2
+5 Oso: FERBIT.TELEFONI=2
+5 Oso: FERBIT.NALOGA=2
+5 Oso: FERBIT.STATUS=2
+5 Oso: FERBIT.DODNALOGE=2
+5 Oso: FERBIT.DOBAVNICA=2
+5 Oso: FERBIT.SKLAD=2
+5 Oso: FERBIT.DELAVCI=1
+5 Oso: FERBIT.DOBROPIS=1
+5 Oso: FERBIT.FAKTURA=1
+5 Oso: FERBIT.KLAVZULEP=1
+5 Oso: FERBIT.KLIENTI=1
+5 Oso: FERBIT.KONFIG=1
+5 Oso: FERBIT.SIFRANT=1
+5 Oso: FERBIT.IZPISI=1
+5 Oso: FERBIT.POSTAJA=1
+5 Oso: FERBIT.DOC_TIP=1
+5 Oso: FERBIT.DOC_X_ELEMENT=1
+5 Oso: FERBIT.DOC_PODTIPS=1
+5 Oso: FERBIT.DOC_AKCIJA=1
+5 Oso: FERBIT.DOC_XS_RELACIJA=1
+6 Oso: FERBIT.ARTIKLI=2
+6 Oso: FERBIT.SUMPOSTPOGCENE=2
+6 Oso: FERBIT.ROLLMON=2
+6 Oso: FERBIT.NSKUPINE=2
+6 Oso: FERBIT.SUMSKUPIN=2
+6 Oso: FERBIT.POTENCIAL=2
+6 Oso: FERBIT.STANJE=2
+6 Oso: FERBIT.STANJE_SUROVIN_VRED=2
+6 Oso: FERBIT.POGODBEP=2
+6 Oso: FERBIT.SUMPOSTPOG=2
+6 Oso: FERBIT.POGODBE=2
+6 Oso: FERBIT.POSTAVKE=2
+6 Oso: FERBIT.STORITEV=2
+6 Oso: FERBIT.PROMET=2
+6 Oso: FERBIT.STROSKI=2
+6 Oso: FERBIT.KATERI=2
+6 Oso: FERBIT.STROSKIV=2
+6 Oso: FERBIT.PREJEM=2
+6 Oso: FERBIT.NALOGD=2
+6 Oso: FERBIT.NAPAKE=2
+6 Oso: FERBIT.PROJEKT=2
+6 Oso: FERBIT.OSEBET=2
+6 Oso: FERBIT.TELEFONI=2
+6 Oso: FERBIT.NALOGA=2
+6 Oso: FERBIT.STATUS=2
+6 Oso: FERBIT.DODNALOGE=2
+6 Oso: FERBIT.DOBAVNICA=2
+6 Oso: FERBIT.SKLAD=2
+6 Oso: FERBIT.DELAVCI=1
+6 Oso: FERBIT.DOBROPIS=1
+6 Oso: FERBIT.FAKTURA=1
+6 Oso: FERBIT.KLAVZULEP=1
+6 Oso: FERBIT.KLIENTI=1
+6 Oso: FERBIT.KONFIG=1
+6 Oso: FERBIT.SIFRANT=1
+6 Oso: FERBIT.IZPISI=1
+6 Oso: FERBIT.POSTAJA=1
+6 Oso: FERBIT.DOC_TIP=1
+6 Oso: FERBIT.DOC_X_ELEMENT=1
+6 Oso: FERBIT.DOC_PODTIPS=1
+6 Oso: FERBIT.DOC_AKCIJA=1
+6 Oso: FERBIT.DOC_XS_RELACIJA=1
+7 Oso: FERBIT.ARTIKLI=2
+7 Oso: FERBIT.SUMPOSTPOGCENE=2
+7 Oso: FERBIT.ROLLMON=2
+7 Oso: FERBIT.NSKUPINE=2
+7 Oso: FERBIT.SUMSKUPIN=2
+7 Oso: FERBIT.POTENCIAL=2
+7 Oso: FERBIT.STANJE=2
+7 Oso: FERBIT.STANJE_SUROVIN_VRED=2
+7 Oso: FERBIT.POGODBEP=2
+7 Oso: FERBIT.SUMPOSTPOG=2
+7 Oso: FERBIT.POGODBE=2
+7 Oso: FERBIT.POSTAVKE=2
+7 Oso: FERBIT.STORITEV=2
+7 Oso: FERBIT.PROMET=2
+7 Oso: FERBIT.STROSKI=2
+7 Oso: FERBIT.KATERI=2
+7 Oso: FERBIT.STROSKIV=2
+7 Oso: FERBIT.PREJEM=2
+7 Oso: FERBIT.NALOGD=2
+7 Oso: FERBIT.NAPAKE=2
+7 Oso: FERBIT.PROJEKT=2
+7 Oso: FERBIT.OSEBET=2
+7 Oso: FERBIT.TELEFONI=2
+7 Oso: FERBIT.NALOGA=2
+7 Oso: FERBIT.STATUS=2
+7 Oso: FERBIT.DODNALOGE=2
+7 Oso: FERBIT.DOBAVNICA=2
+7 Oso: FERBIT.SKLAD=2
+7 Oso: FERBIT.DELAVCI=1
+7 Oso: FERBIT.DOBROPIS=1
+7 Oso: FERBIT.FAKTURA=1
+7 Oso: FERBIT.KLAVZULEP=1
+7 Oso: FERBIT.KLIENTI=1
+7 Oso: FERBIT.KONFIG=1
+7 Oso: FERBIT.SIFRANT=1
+7 Oso: FERBIT.IZPISI=1
+7 Oso: FERBIT.POSTAJA=1
+7 Oso: FERBIT.DOC_TIP=1
+7 Oso: FERBIT.DOC_X_ELEMENT=1
+7 Oso: FERBIT.DOC_PODTIPS=1
+7 Oso: FERBIT.DOC_AKCIJA=1
+7 Oso: FERBIT.DOC_XS_RELACIJA=1
+8 Oso: FERBIT.ARTIKLI=2
+8 Oso: FERBIT.SUMPOSTPOGCENE=2
+8 Oso: FERBIT.ROLLMON=2
+8 Oso: FERBIT.NSKUPINE=2
+8 Oso: FERBIT.SUMSKUPIN=2
+8 Oso: FERBIT.POTENCIAL=2
+8 Oso: FERBIT.STANJE=2
+8 Oso: FERBIT.STANJE_SUROVIN_VRED=2
+8 Oso: FERBIT.POGODBEP=2
+8 Oso: FERBIT.SUMPOSTPOG=2
+8 Oso: FERBIT.POGODBE=2
+8 Oso: FERBIT.POSTAVKE=2
+8 Oso: FERBIT.STORITEV=2
+8 Oso: FERBIT.PROMET=2
+8 Oso: FERBIT.STROSKI=2
+8 Oso: FERBIT.KATERI=2
+8 Oso: FERBIT.STROSKIV=2
+8 Oso: FERBIT.PREJEM=2
+8 Oso: FERBIT.NALOGD=2
+8 Oso: FERBIT.NAPAKE=2
+8 Oso: FERBIT.PROJEKT=2
+8 Oso: FERBIT.OSEBET=2
+8 Oso: FERBIT.TELEFONI=2
+8 Oso: FERBIT.NALOGA=2
+8 Oso: FERBIT.STATUS=2
+8 Oso: FERBIT.DODNALOGE=2
+8 Oso: FERBIT.DOBAVNICA=2
+8 Oso: FERBIT.SKLAD=2
+8 Oso: FERBIT.DELAVCI=1
+8 Oso: FERBIT.DOBROPIS=1
+8 Oso: FERBIT.FAKTURA=1
+8 Oso: FERBIT.KLAVZULEP=1
+8 Oso: FERBIT.KLIENTI=1
+8 Oso: FERBIT.KONFIG=1
+8 Oso: FERBIT.SIFRANT=1
+8 Oso: FERBIT.IZPISI=1
+8 Oso: FERBIT.POSTAJA=1
+8 Oso: FERBIT.DOC_TIP=1
+8 Oso: FERBIT.DOC_X_ELEMENT=1
+8 Oso: FERBIT.DOC_PODTIPS=1
+8 Oso: FERBIT.DOC_AKCIJA=1
+8 Oso: FERBIT.DOC_XS_RELACIJA=1
+9 Oso: FERBIT.ARTIKLI=1
+9 Oso: FERBIT.SUMPOSTPOGCENE=1
+9 Oso: FERBIT.ROLLMON=1
+9 Oso: FERBIT.NSKUPINE=1
+9 Oso: FERBIT.SUMSKUPIN=1
+9 Oso: FERBIT.POTENCIAL=1
+9 Oso: FERBIT.STANJE=1
+9 Oso: FERBIT.STANJE_SUROVIN_VRED=1
+9 Oso: FERBIT.POGODBEP=1
+9 Oso: FERBIT.SUMPOSTPOG=1
+9 Oso: FERBIT.POGODBE=1
+9 Oso: FERBIT.POSTAVKE=1
+9 Oso: FERBIT.STORITEV=1
+9 Oso: FERBIT.PROMET=1
+9 Oso: FERBIT.STROSKI=1
+9 Oso: FERBIT.KATERI=1
+2 Oso: FERBIT.IZPISI=1
+2 Oso: FERBIT.KONFIG=1
+2 Oso: FERBIT.POSTAJA=1
+2 Oso: FERBIT.DOC_TIP=8
+2 Oso: FERBIT.DOC_X_ELEMENT=8
+2 Oso: FERBIT.DOC_PODTIPS=8
+2 Oso: FERBIT.DOC_AKCIJA=8
+2 Oso: FERBIT.DOC_XS_RELACIJA=8
+2 Oso: FERBIT.DELAVCI=1
+2 Oso: FERBIT.DOBROPIS=1
+2 Oso: FERBIT.KLAVZULEP=1
+2 Oso: FERBIT.SIFRANT=1
+2 Oso: FERBIT.DOC_EN_REKORD=1
+2 Oso: FERBIT.DOC_POGLED=1
+2 Oso: FERBIT.DOC_PREGLED=1
+2 Oso: FERBIT.DSSW21=1
+2 Oso: FERBIT.DOC_TAG=2
+2 Oso: FERBIT.OSNOVNA=2
+2 Oso: FERBIT.TEMODPISOV=2
+2 Oso: FERBIT.OTIPSPREMEMBE=2
+2 Oso: FERBIT.SERIJE=1
+2 Oso: DUAL=1
+2 Oso: FERBIT.KOLICNIKI=1
+2 Oso: FERBIT.LOKACIJA=1
+2 Oso: FERBIT.PROCLIST=1
+2 Oso: FERBIT.PROCLISTSPR=2
+2 Oso: FERBIT.APPLIKACIJE=1
+2 Oso: FERBIT.VRSTAPROC=1
+2 Oso: FERBIT.STEVEC=1
+3 Oso: FERBIT.SKANI=2
+2 Oso: FERBIT.KNJIGA=1
+2 Oso: FERBIT.SKLADISCA=1
+2 Oso: FERBIT.LOKACIJAVSKL=1
+2 Oso: FERBIT.VRSTAFAK=1
+2 Oso: FERBIT.AKREDITIV=1
+2 Oso: PROMETM=1
+2 Oso: MPROMET=1
+2 Oso: FERBIT1.KLIENTI=1
+2 Oso: TEST=3
+[TimesOpened nit:]
+1 Tab: FERBIT.NASTAVI=147
+1 Tab: FERBIT.KONFIG=147
+1 Tab: FERBIT.DELAVCI=96
+1 Tab: FERBIT.SIFRANT=96
+1 Tab: FERBIT.ANYFONT_MODULI=96
+2 Tab: FERBIT.ELIST=2
+2 Tab: FERBIT.FAKTURA=26
+2 Tab: FERBIT.KLIENTI=22
+2 Tab: FERBIT.NALOGD=2
+2 Tab: FERBIT.PREJEM=2
+3 Tab: FERBIT.ARTIKLI=2
+3 Tab: FERBIT.DELAVCI=1
+3 Tab: FERBIT.DOBROPIS=1
+3 Tab: FERBIT.FAKTURA=1
+3 Tab: FERBIT.KLAVZULEP=1
+3 Tab: FERBIT.KLIENTI=1
+3 Tab: FERBIT.KONFIG=1
+3 Tab: FERBIT.PROMET=1
+3 Tab: FERBIT.SIFRANT=1
+3 Tab: FERBIT.IZPISI=2
+3 Tab: FERBIT.POSTAJA=2
+3 Tab: FERBIT.DOC_TIP=2
+4 Tab: FERBIT.ARTIKLI=1
+4 Tab: FERBIT.DELAVCI=1
+4 Tab: FERBIT.DOBROPIS=1
+4 Tab: FERBIT.FAKTURA=1
+4 Tab: FERBIT.KLAVZULEP=1
+4 Tab: FERBIT.KLIENTI=1
+4 Tab: FERBIT.KONFIG=1
+4 Tab: FERBIT.PROMET=1
+4 Tab: FERBIT.SIFRANT=1
+4 Tab: FERBIT.IZPISI=1
+4 Tab: FERBIT.POSTAJA=1
+4 Tab: FERBIT.DOC_TIP=1
+5 Tab: FERBIT.ARTIKLI=1
+5 Tab: FERBIT.DELAVCI=1
+5 Tab: FERBIT.DOBROPIS=1
+5 Tab: FERBIT.FAKTURA=1
+5 Tab: FERBIT.KLAVZULEP=1
+5 Tab: FERBIT.KLIENTI=1
+5 Tab: FERBIT.KONFIG=1
+5 Tab: FERBIT.PROMET=1
+5 Tab: FERBIT.SIFRANT=1
+5 Tab: FERBIT.IZPISI=1
+5 Tab: FERBIT.POSTAJA=1
+5 Tab: FERBIT.DOC_TIP=1
+6 Tab: FERBIT.ARTIKLI=1
+6 Tab: FERBIT.DELAVCI=1
+6 Tab: FERBIT.DOBROPIS=1
+6 Tab: FERBIT.FAKTURA=1
+6 Tab: FERBIT.KLAVZULEP=1
+6 Tab: FERBIT.KLIENTI=1
+6 Tab: FERBIT.KONFIG=1
+6 Tab: FERBIT.PROMET=1
+6 Tab: FERBIT.SIFRANT=1
+6 Tab: FERBIT.IZPISI=1
+6 Tab: FERBIT.POSTAJA=1
+6 Tab: FERBIT.DOC_TIP=1
+7 Tab: FERBIT.ARTIKLI=1
+7 Tab: FERBIT.DELAVCI=1
+7 Tab: FERBIT.DOBROPIS=1
+7 Tab: FERBIT.FAKTURA=1
+7 Tab: FERBIT.KLAVZULEP=1
+7 Tab: FERBIT.KLIENTI=1
+7 Tab: FERBIT.KONFIG=1
+7 Tab: FERBIT.PROMET=1
+7 Tab: FERBIT.SIFRANT=1
+7 Tab: FERBIT.IZPISI=1
+7 Tab: FERBIT.POSTAJA=1
+7 Tab: FERBIT.DOC_TIP=1
+8 Tab: FERBIT.ARTIKLI=1
+8 Tab: FERBIT.DELAVCI=1
+8 Tab: FERBIT.DOBROPIS=1
+8 Tab: FERBIT.FAKTURA=1
+8 Tab: FERBIT.KLAVZULEP=1
+8 Tab: FERBIT.KLIENTI=1
+8 Tab: FERBIT.KONFIG=1
+8 Tab: FERBIT.PROMET=1
+8 Tab: FERBIT.SIFRANT=1
+8 Tab: FERBIT.IZPISI=1
+8 Tab: FERBIT.POSTAJA=1
+8 Tab: FERBIT.DOC_TIP=1
+9 Tab: FERBIT.ARTIKLI=1
+2 Tab: FERBIT.IZPISI=26
+2 Tab: FERBIT.KONFIG=11
+2 Tab: FERBIT.POSTAJA=24
+2 Tab: FERBIT.DOC_TIP=19
+2 Tab: FERBIT.ARTIKLI=74
+2 Tab: FERBIT.DELAVCI=10
+2 Tab: FERBIT.DOBROPIS=10
+2 Tab: FERBIT.KLAVZULEP=10
+2 Tab: FERBIT.PROMET=22
+2 Tab: FERBIT.SIFRANT=10
+2 Tab: FERBIT.DOC_EN_REKORD=15
+2 Tab: FERBIT.DOC_X_ELEMENT=22
+2 Tab: FERBIT.DOC_XS_RELACIJA=18
+2 Tab: FERBIT.DOC_PODTIPS=14
+2 Tab: FERBIT.DOC_AKCIJA=4
+2 Tab: FERBIT.DOC_POGLED=4
+2 Tab: FERBIT.DOC_PREGLED=4
+2 Tab: FERBIT.DSSW21=4
+2 Tab: FERBIT.DOC_TAG=8
+2 Tab: FERBIT.OSNOVNA=4
+2 Tab: FERBIT.TEMODPISOV=4
+2 Tab: FERBIT.SERIJE=219
+2 Tab: DUAL=14
+2 Tab: FERBIT.KOLICNIKI=1
+2 Tab: FERBIT.LOKACIJA=1
+2 Tab: FERBIT.PROCLIST=163
+2 Tab: FERBIT.PROCLISTSPR=207
+2 Tab: FERBIT.PROJEKT=4
+2 Tab: FERBIT.STATUS=25
+2 Tab: FERBIT.NALOGA=102
+2 Tab: FERBIT.APPLIKACIJE=116
+2 Tab: FERBIT.VRSTAPROC=22
+2 Tab: FERBIT.DODNALOGE=8
+2 Tab: FERBIT.STEVEC=223
+3 Tab: FERBIT.PROJEKT=1
+3 Tab: FERBIT.STATUS=1
+3 Tab: FERBIT.NALOGA=2
+2 Tab: FERBIT.OSEBET=1
+2 Tab: FERBIT.TELEFONI=1
+3 Tab: FERBIT.SKANI=2
+2 Tab: FERBIT.KNJIGA=1
+2 Tab: FERBIT.SKLADISCA=2
+2 Tab: FERBIT.VRSTAFAK=2
+2 Tab: FERBIT.AKREDITIV=1
+2 Tab: PROMETM=1
+2 Tab: MPROMET=91
+2 Tab: FERBIT1.KLIENTI=38
+2 Tab: TEST=4
+[11:05:47- 1 Nit 02 - LogInWindow]
+Procedura=LogInWindow
+[Close HardCount 1 nit:]
+1 Zho: FERBIT.DELAVCI=1
+1 Zho: FERBIT.SIFRANT=1
+1 Zho: FERBIT.KONFIG=1
+3 Zho: FERBIT.DOC_TIP=1
+4 Zho: FERBIT.DOC_TIP=1
+5 Zho: FERBIT.DOC_TIP=1
+6 Zho: FERBIT.DOC_TIP=1
+7 Zho: FERBIT.DOC_TIP=1
+8 Zho: FERBIT.DOC_TIP=1
+2 Zho: FERBIT.IZPISI=1
+2 Zho: FERBIT.KONFIG=1
+2 Zho: FERBIT.POSTAJA=1
+2 Zho: FERBIT.DOC_TIP=1
+1 Zho: FERBIT.ANYFONT_MODULI=1
+1 Zho: FERBIT.NASTAVI=1
+2 Zho: FERBIT.DOC_EN_REKORD=1
+2 Zho: FERBIT.DOC_X_ELEMENT=1
+2 Zho: FERBIT.DOC_XS_RELACIJA=1
+2 Zho: FERBIT.DOC_PODTIPS=1
+2 Zho: FERBIT.ARTIKLI=1
+2 Zho: FERBIT.PROMET=1
+2 Zho: FERBIT.PREJEM=1
+2 Zho: FERBIT.NALOGD=1
+2 Zho: FERBIT.DELAVCI=1
+2 Zho: FERBIT.DOBROPIS=1
+2 Zho: FERBIT.FAKTURA=1
+2 Zho: FERBIT.KLAVZULEP=1
+2 Zho: FERBIT.KLIENTI=1
+2 Zho: FERBIT.SIFRANT=1
+2 Zho: FERBIT.ELIST=1
+2 Zho: FERBIT.DOC_TAG=1
+2 Zho: FERBIT.DOC_AKCIJA=1
+2 Zho: FERBIT.DOC_POGLED=1
+2 Zho: FERBIT.DOC_PREGLED=1
+2 Zho: FERBIT.DSSW21=1
+2 Zho: FERBIT.OSNOVNA=1
+2 Zho: FERBIT.TEMODPISOV=1
+2 Zho: FERBIT.SERIJE=1
+2 Zho: DUAL=1
+2 Zho: FERBIT.KOLICNIKI=1
+2 Zho: FERBIT.LOKACIJA=1
+2 Zho: FERBIT.PROCLIST=1
+2 Zho: FERBIT.PROCLISTSPR=1
+2 Zho: FERBIT.PROJEKT=1
+2 Zho: FERBIT.STATUS=1
+2 Zho: FERBIT.NALOGA=1
+2 Zho: FERBIT.APPLIKACIJE=1
+2 Zho: FERBIT.VRSTAPROC=1
+2 Zho: FERBIT.DODNALOGE=1
+2 Zho: FERBIT.STEVEC=1
+3 Zho: FERBIT.PROJEKT=1
+3 Zho: FERBIT.STATUS=1
+3 Zho: FERBIT.NALOGA=1
+2 Zho: FERBIT.TELEFONI=1
+2 Zho: FERBIT.OSEBET=1
+3 Zho: FERBIT.IZPISI=1
+3 Zho: FERBIT.POSTAJA=1
+3 Zho: FERBIT.SKANI=1
+2 Zho: FERBIT.KNJIGA=1
+2 Zho: FERBIT1.KLIENTI=1
+2 Zho: MPROMET=1
+2 Zho: TEST=1
+[2 Nit]
+1=IzpVvrsti
+2=SeznamIzpisov
+3=UrejanjeNastavitveIzpisa
+4=IzpVvrsti
+5=IzpFakFerbit
+6=Drevo_dokumentov_rr
+7=BrowseTemOdpisov
+8=AmorObr
+9=BrowseTemOdpisov
+10=IzpOsAmOb
+11=Projekti
+12=ProjektDrevo
+13=tAPPLIKACIJE
+14=Projekti
+15=ProjektDrevo
+16=AzNaloga
+17=Artikli
+18=AzNaloga
+19=tAPPLIKACIJE
+20=AzNaloga
+21=tAPPLIKACIJE
+22=AzNaloga
+23=tAPPLIKACIJE
+24=AzNaloga
+25=ProcessLevels
+26=AzNaloga
+27=tAPPLIKACIJE
+28=AzNaloga
+29=tAPPLIKACIJE
+30=AzNaloga
+31=tAPPLIKACIJE
+32=AzProcSpr
+33=tAPPLIKACIJE
+34=AzProcSpr
+35=tAPPLIKACIJE
+36=AzProcSpr
+37=tAPPLIKACIJE
+38=AzProcSpr
+39=tAPPLIKACIJE
+40=AzNaloga
+41=tAPPLIKACIJE
+42=AzNaloga
+43=ProjektDrevo
+44=AzNaloga
+45=UpdateProject
+46=Klienti
+47=AzNaloga
+48=tAPPLIKACIJE
+49=IzpisSprememb
+50=tAPPLIKACIJE
+51=IzpisSprememb
+52=tAPPLIKACIJE
+53=ProjectForDateRange
+54=tAPPLIKACIJE
+55=ProjectForDateRange
+56=tAPPLIKACIJE
+57=ProjectForDateRange
+58=tAPPLIKACIJE
+59=ProjectForDateRange
+60=tAPPLIKACIJE
+61=ProjectForDateRange
+62=tAPPLIKACIJE
+63=ProjectForDateRange
+64=tAPPLIKACIJE
+65=AzProcSpr
+66=ProjectForDateRange
+67=tAPPLIKACIJE
+68=AzProcSpr
+69=tAPPLIKACIJE
+70=AzProcSpr
+71=ProjectForDateRange
+72=tAPPLIKACIJE
+73=AzProcSpr
+74=tAPPLIKACIJE
+75=AzApp
+76=Drevo_dokumentov_rr
+77=Browseknjiga
+78=Drevo_dokumentov_rr
+79=tfakture
+80=AzFak
+81=tAPPLIKACIJE
+82=AzProcSpr
+83=tAPPLIKACIJE
+84=AzNaloga
+85=tAPPLIKACIJE
+86=AzProcSpr
+87=PrometM
+88=AzProm
+89=PrometM
+90=AzProm
+91=PrometM
+92=AzProm
+93=PrometM
+94=AzProm
+95=PrometM
+96=AzProm
+97=PrometM
+98=AzProm
+99=PrometM
+100=AzProm
+101=PrometM
+102=AzProm
+103=test
+104=Updatetest
+105=PrometM
+106=AzProm
+107=PrometM
+108=AzProm
+109=PrometM
+110=AzProm
+111=PrometM
+112=AzProm
+113=PrometM
+114=AzProm
+115=PrometM
+116=AzProm
+117=PrometM
+118=AzProm
+119=PrometM
+[11:05:55- 2 Nit 01 - IzpVvrsti]
+Procedura=IzpVvrsti
+[Open HardOpen nit:]
+2=2
+3=1
+4=1
+5=1
+6=1
+7=1
+8=1
+[Open HardCount 1 nit:]
+2 Oho: FERBIT.NALOGD=1
+3 Oho: FERBIT.ARTIKLI=1
+4 Oho: FERBIT.ARTIKLI=1
+5 Oho: FERBIT.ARTIKLI=1
+6 Oho: FERBIT.ARTIKLI=1
+7 Oho: FERBIT.ARTIKLI=1
+8 Oho: FERBIT.ARTIKLI=1
+2 Oho: FERBIT.IZPISI=2
+2 Oho: FERBIT.PREJEM=1
+2 Oho: FERBIT.FAKTURA=1
+2 Oho: FERBIT.KLIENTI=1
+2 Oho: FERBIT.ARTIKLI=1
+2 Oho: FERBIT.DOC_X_ELEMENT=1
+2 Oho: FERBIT.DOC_XS_RELACIJA=1
+2 Oho: FERBIT.DOC_AKCIJA=1
+2 Oho: FERBIT.DOC_PODTIPS=1
+2 Oho: FERBIT.DOC_TAG=1
+2 Oho: FERBIT.OSNOVNA=1
+2 Oho: FERBIT.TEMODPISOV=1
+2 Oho: FERBIT.PROJEKT=1
+2 Oho: FERBIT.NALOGA=1
+2 Oho: FERBIT.STATUS=1
+2 Oho: FERBIT.PROCLISTSPR=1
+2 Oho: FERBIT.DODNALOGE=1
+3 Oho: FERBIT.PROJEKT=1
+3 Oho: FERBIT.NALOGA=1
+2 Oho: FERBIT.OSEBET=1
+2 Oho: FERBIT.APPLIKACIJE=1
+3 Oho: FERBIT.SKANI=1
+2 Oho: MPROMET=2
+2 Oho: TEST=2
+[3 Nit]
+1=IzpFakFerbit
+2=Projekti
+3=ProjektDrevo
+4=SeznamSkanov
+5=UrejanjeNastavitveSkena
+6=IzpFakFerbit
+[11:06:14- 3 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[4 Nit]
+1=IzpFakFerbit
+[11:06:15- 4 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[5 Nit]
+1=IzpFakFerbit
+[11:06:17- 5 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[6 Nit]
+1=IzpFakFerbit
+[11:06:18- 6 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[7 Nit]
+1=IzpFakFerbit
+[11:06:20- 7 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[8 Nit]
+1=IzpFakFerbit
+[11:06:22- 8 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[9 Nit]
+1=IzpFakFerbit
+[11:06:24- 9 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[10 Nit]
+1=IzpFakFerbit
+[11:06:24-10 Nit 01 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[11:06:39- 1 Nit 03 - Main]
+Procedura=Main
+[11:06:40- 1 Nit 04 - LogInWindow]
+Procedura=LogInWindow
+[11:06:47- 2 Nit 02 - SeznamIzpisov]
+Procedura=SeznamIzpisov
+[11:06:56- 2 Nit 03 - UrejanjeNastavitveIzpisa]
+Procedura=UrejanjeNastavitveIzpisa
+[Close SoftCount 1 nit:]
+2 Zod: FERBIT.IZPISI=1
+2 Zod: FERBIT.DOC_X_ELEMENT=1
+2 Zod: FERBIT.DOC_XS_RELACIJA=1
+2 Zod: FERBIT.DOC_PODTIPS=1
+2 Zod: FERBIT.DOC_TIP=1
+2 Zod: FERBIT.DOC_AKCIJA=1
+2 Zod: FERBIT.ARTIKLI=1
+2 Zod: FERBIT.SUMPOSTPOGCENE=1
+2 Zod: FERBIT.ROLLMON=1
+2 Zod: FERBIT.NSKUPINE=1
+2 Zod: FERBIT.SUMSKUPIN=1
+2 Zod: FERBIT.POTENCIAL=1
+2 Zod: FERBIT.STANJE=1
+2 Zod: FERBIT.STANJE_SUROVIN_VRED=1
+2 Zod: FERBIT.POGODBEP=1
+2 Zod: FERBIT.SUMPOSTPOG=1
+2 Zod: FERBIT.POGODBE=1
+2 Zod: FERBIT.POSTAVKE=1
+2 Zod: FERBIT.STORITEV=1
+2 Zod: FERBIT.PROMET=1
+2 Zod: FERBIT.STROSKI=1
+2 Zod: FERBIT.KATERI=1
+2 Zod: FERBIT.STROSKIV=1
+2 Zod: FERBIT.PREJEM=1
+2 Zod: FERBIT.NALOGD=1
+2 Zod: FERBIT.NAPAKE=1
+2 Zod: FERBIT.PROJEKT=1
+2 Zod: FERBIT.OSEBET=1
+2 Zod: FERBIT.TELEFONI=1
+2 Zod: FERBIT.NALOGA=1
+2 Zod: FERBIT.STATUS=1
+2 Zod: FERBIT.DODNALOGE=1
+2 Zod: FERBIT.DOBAVNICA=1
+2 Zod: FERBIT.SKLAD=1
+2 Zod: FERBIT.FAKTURA=1
+2 Zod: FERBIT.KLIENTI=1
+2 Zod: FERBIT.DOC_TAG=1
+2 Zod: FERBIT.OSNOVNA=1
+2 Zod: FERBIT.TEMODPISOV=1
+2 Zod: FERBIT.OTIPSPREMEMBE=1
+2 Zod: FERBIT.PROCLISTSPR=1
+3 Zod: FERBIT.PROJEKT=1
+3 Zod: FERBIT.NAPAKE=1
+3 Zod: FERBIT.OSEBET=1
+3 Zod: FERBIT.TELEFONI=1
+3 Zod: FERBIT.NALOGA=1
+3 Zod: FERBIT.STATUS=1
+3 Zod: FERBIT.NALOGD=1
+3 Zod: FERBIT.PROMET=1
+3 Zod: FERBIT.STROSKI=1
+3 Zod: FERBIT.KATERI=1
+3 Zod: FERBIT.STROSKIV=1
+3 Zod: FERBIT.PREJEM=1
+3 Zod: FERBIT.ARTIKLI=1
+3 Zod: FERBIT.SUMPOSTPOGCENE=1
+3 Zod: FERBIT.ROLLMON=1
+3 Zod: FERBIT.NSKUPINE=1
+3 Zod: FERBIT.SUMSKUPIN=1
+3 Zod: FERBIT.POTENCIAL=1
+3 Zod: FERBIT.STANJE=1
+3 Zod: FERBIT.STANJE_SUROVIN_VRED=1
+3 Zod: FERBIT.POGODBEP=1
+3 Zod: FERBIT.SUMPOSTPOG=1
+3 Zod: FERBIT.POGODBE=1
+3 Zod: FERBIT.POSTAVKE=1
+3 Zod: FERBIT.STORITEV=1
+3 Zod: FERBIT.SKLAD=1
+3 Zod: FERBIT.DOBAVNICA=1
+3 Zod: FERBIT.DODNALOGE=1
+2 Zod: FERBIT.APPLIKACIJE=1
+3 Zod: FERBIT.SKANI=1
+2 Zod: MPROMET=1
+2 Zod: TEST=1
+[11:09:23- 1 Nit 05 - Main]
+Procedura=Main
+[11:09:23- 1 Nit 06 - LogInWindow]
+Procedura=LogInWindow
+[11:09:37- 2 Nit 04 - IzpVvrsti]
+Procedura=IzpVvrsti
+[11:09:46- 2 Nit 05 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[11:13:51- 1 Nit 07 - Main]
+Procedura=Main
+[11:13:51- 1 Nit 08 - LogInWindow]
+Procedura=LogInWindow
+[11:14:03- 2 Nit 06 - Drevo_dokumentov_rr]
+Procedura=Drevo_dokumentov_rr
+[11:32:10- 1 Nit 09 - Main]
+Procedura=Main
+[11:32:10- 1 Nit 10 - LogInWindow]
+Procedura=LogInWindow
+[11:32:25- 2 Nit 07 - BrowseTemOdpisov]
+Procedura=BrowseTemOdpisov
+[11:32:40- 2 Nit 08 - AmorObr]
+Procedura=AmorObr
+[11:33:02- 2 Nit 09 - BrowseTemOdpisov]
+Procedura=BrowseTemOdpisov
+[11:33:08- 2 Nit 10 - IzpOsAmOb]
+Procedura=IzpOsAmOb
+[12:18:35- 1 Nit 11 - Main]
+Procedura=Main
+[12:18:35- 1 Nit 12 - LogInWindow]
+Procedura=LogInWindow
+[15:27:12- 1 Nit 13 - Main]
+Procedura=Main
+[15:27:13- 1 Nit 14 - LogInWindow]
+Procedura=LogInWindow
+[15:28:50- 1 Nit 15 - Main]
+Procedura=Main
+[15:28:51- 1 Nit 16 - LogInWindow]
+Procedura=LogInWindow
+[15:33:42- 1 Nit 17 - Main]
+Procedura=Main
+[15:33:42- 1 Nit 18 - LogInWindow]
+Procedura=LogInWindow
+[16:09:11- 1 Nit 19 - Main]
+Procedura=Main
+[16:09:12- 1 Nit 20 - LogInWindow]
+Procedura=LogInWindow
+[16:34:48- 1 Nit 21 - Main]
+Procedura=Main
+[16:34:48- 1 Nit 22 - LogInWindow]
+Procedura=LogInWindow
+[16:41:41- 1 Nit 23 - Main]
+Procedura=Main
+[16:41:42- 1 Nit 24 - LogInWindow]
+Procedura=LogInWindow
+[16:44:02- 2 Nit 11 - Projekti]
+Procedura=Projekti
+[16:44:17- 2 Nit 12 - ProjektDrevo]
+Procedura=ProjektDrevo
+[16:53:40- 1 Nit 25 - Main]
+Procedura=Main
+[16:53:40- 1 Nit 26 - LogInWindow]
+Procedura=LogInWindow
+[17:16:22- 1 Nit 27 - Main]
+Procedura=Main
+[17:16:22- 1 Nit 28 - LogInWindow]
+Procedura=LogInWindow
+[17:18:22- 1 Nit 29 - Main]
+Procedura=Main
+[17:18:22- 1 Nit 30 - LogInWindow]
+Procedura=LogInWindow
+[17:21:44- 1 Nit 31 - Main]
+Procedura=Main
+[17:21:44- 1 Nit 32 - LogInWindow]
+Procedura=LogInWindow
+[17:24:23- 1 Nit 33 - Main]
+Procedura=Main
+[17:24:23- 1 Nit 34 - LogInWindow]
+Procedura=LogInWindow
+[17:29:08- 1 Nit 35 - Main]
+Procedura=Main
+[17:29:09- 1 Nit 36 - LogInWindow]
+Procedura=LogInWindow
+[17:36:10- 1 Nit 37 - Main]
+Procedura=Main
+[17:36:11- 1 Nit 38 - LogInWindow]
+Procedura=LogInWindow
+[17:39:05- 1 Nit 39 - Main]
+Procedura=Main
+[17:39:05- 1 Nit 40 - LogInWindow]
+Procedura=LogInWindow
+[17:53:04- 1 Nit 41 - Main]
+Procedura=Main
+[17:53:04- 1 Nit 42 - LogInWindow]
+Procedura=LogInWindow
+[17:54:50- 1 Nit 43 - Main]
+Procedura=Main
+[17:54:50- 1 Nit 44 - LogInWindow]
+Procedura=LogInWindow
+[17:59:30- 1 Nit 45 - Main]
+Procedura=Main
+[17:59:30- 1 Nit 46 - LogInWindow]
+Procedura=LogInWindow
+[8:29:21- 1 Nit 47 - Main]
+Procedura=Main
+[8:29:22- 1 Nit 48 - LogInWindow]
+Procedura=LogInWindow
+[8:46:17- 1 Nit 49 - Main]
+Procedura=Main
+[8:46:18- 1 Nit 50 - LogInWindow]
+Procedura=LogInWindow
+[8:49:23- 1 Nit 51 - Main]
+Procedura=Main
+[8:49:23- 1 Nit 52 - LogInWindow]
+Procedura=LogInWindow
+[8:50:29- 1 Nit 53 - Main]
+Procedura=Main
+[8:50:30- 1 Nit 54 - LogInWindow]
+Procedura=LogInWindow
+[8:58:17- 1 Nit 55 - Main]
+Procedura=Main
+[8:58:17- 1 Nit 56 - LogInWindow]
+Procedura=LogInWindow
+[9:01:44- 1 Nit 57 - Main]
+Procedura=Main
+[9:01:44- 1 Nit 58 - LogInWindow]
+Procedura=LogInWindow
+[9:04:01- 1 Nit 59 - Main]
+Procedura=Main
+[9:04:01- 1 Nit 60 - LogInWindow]
+Procedura=LogInWindow
+[9:06:48- 1 Nit 61 - Main]
+Procedura=Main
+[9:06:48- 1 Nit 62 - LogInWindow]
+Procedura=LogInWindow
+[9:10:11- 1 Nit 63 - Main]
+Procedura=Main
+[9:10:11- 1 Nit 64 - LogInWindow]
+Procedura=LogInWindow
+[9:13:37- 1 Nit 65 - Main]
+Procedura=Main
+[9:13:37- 1 Nit 66 - LogInWindow]
+Procedura=LogInWindow
+[9:19:46- 1 Nit 67 - Main]
+Procedura=Main
+[9:19:46- 1 Nit 68 - LogInWindow]
+Procedura=LogInWindow
+[9:21:16- 1 Nit 69 - Main]
+Procedura=Main
+[9:21:16- 1 Nit 70 - LogInWindow]
+Procedura=LogInWindow
+[9:25:00- 1 Nit 71 - Main]
+Procedura=Main
+[9:25:00- 1 Nit 72 - LogInWindow]
+Procedura=LogInWindow
+[9:59:25- 1 Nit 73 - Main]
+Procedura=Main
+[9:59:25- 1 Nit 74 - LogInWindow]
+Procedura=LogInWindow
+[9:59:35- 2 Nit 13 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[10:05:26- 1 Nit 75 - Main]
+Procedura=Main
+[10:05:27- 1 Nit 76 - LogInWindow]
+Procedura=LogInWindow
+[10:10:59- 1 Nit 77 - Main]
+Procedura=Main
+[10:10:59- 1 Nit 78 - LogInWindow]
+Procedura=LogInWindow
+[10:16:51- 1 Nit 79 - Main]
+Procedura=Main
+[10:16:51- 1 Nit 80 - LogInWindow]
+Procedura=LogInWindow
+[10:26:42- 1 Nit 81 - Main]
+Procedura=Main
+[10:26:43- 1 Nit 82 - LogInWindow]
+Procedura=LogInWindow
+[10:44:12- 1 Nit 83 - Main]
+Procedura=Main
+[10:44:12- 1 Nit 84 - LogInWindow]
+Procedura=LogInWindow
+[10:47:14- 1 Nit 85 - Main]
+Procedura=Main
+[10:47:14- 1 Nit 86 - LogInWindow]
+Procedura=LogInWindow
+[10:53:09- 1 Nit 87 - Main]
+Procedura=Main
+[10:53:09- 1 Nit 88 - LogInWindow]
+Procedura=LogInWindow
+[10:57:42- 1 Nit 89 - Main]
+Procedura=Main
+[10:57:42- 1 Nit 90 - LogInWindow]
+Procedura=LogInWindow
+[11:14:40- 1 Nit 91 - Main]
+Procedura=Main
+[11:14:40- 1 Nit 92 - LogInWindow]
+Procedura=LogInWindow
+[11:17:53- 1 Nit 93 - Main]
+Procedura=Main
+[11:17:53- 1 Nit 94 - LogInWindow]
+Procedura=LogInWindow
+[11:28:22- 1 Nit 95 - Main]
+Procedura=Main
+[11:28:22- 1 Nit 96 - LogInWindow]
+Procedura=LogInWindow
+[11:37:31- 1 Nit 97 - Main]
+Procedura=Main
+[11:37:31- 1 Nit 98 - LogInWindow]
+Procedura=LogInWindow
+[11:39:48- 1 Nit 99 - Main]
+Procedura=Main
+[11:39:48- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[11:43:32- 1 Nit ## - Main]
+Procedura=Main
+[11:43:32- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[11:44:32- 2 Nit 14 - Projekti]
+Procedura=Projekti
+[11:44:40- 2 Nit 15 - ProjektDrevo]
+Procedura=ProjektDrevo
+[11:44:46- 2 Nit 16 - AzNaloga]
+Procedura=AzNaloga
+[11:45:13- 2 Nit 17 - Artikli]
+Procedura=Artikli
+[11:46:00- 2 Nit 18 - AzNaloga]
+Procedura=AzNaloga
+[12:54:03- 2 Nit 19 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[13:15:24- 1 Nit ## - Main]
+Procedura=Main
+[13:15:24- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:16:43- 1 Nit ## - Main]
+Procedura=Main
+[13:16:43- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:19:49- 1 Nit ## - Main]
+Procedura=Main
+[13:19:50- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:22:20- 1 Nit ## - Main]
+Procedura=Main
+[13:22:20- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:24:22- 1 Nit ## - Main]
+Procedura=Main
+[13:24:22- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:25:51- 1 Nit ## - Main]
+Procedura=Main
+[13:25:51- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:30:42- 1 Nit ## - Main]
+Procedura=Main
+[13:30:42- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:32:05- 1 Nit ## - Main]
+Procedura=Main
+[13:32:05- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:37:44- 1 Nit ## - Main]
+Procedura=Main
+[13:37:44- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[13:40:25- 1 Nit ## - Main]
+Procedura=Main
+[13:40:25- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:03:02- 1 Nit ## - Main]
+Procedura=Main
+[14:03:02- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:16:57- 1 Nit ## - Main]
+Procedura=Main
+[14:16:57- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:17:21- 2 Nit 20 - AzNaloga]
+Procedura=AzNaloga
+[14:26:23- 1 Nit ## - Main]
+Procedura=Main
+[14:26:23- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:26:33- 2 Nit 21 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[14:26:41- 2 Nit 22 - AzNaloga]
+Procedura=AzNaloga
+[14:26:50- 2 Nit 23 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[14:26:58- 2 Nit 24 - AzNaloga]
+Procedura=AzNaloga
+[14:27:01- 2 Nit 25 - ProcessLevels]
+Procedura=ProcessLevels
+[14:27:06- 2 Nit 26 - AzNaloga]
+Procedura=AzNaloga
+[14:28:52- 2 Nit 27 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[14:29:17- 2 Nit 28 - AzNaloga]
+Procedura=AzNaloga
+[14:46:14- 1 Nit ## - Main]
+Procedura=Main
+[14:46:14- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:46:47- 2 Nit 29 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[14:51:47- 1 Nit ## - Main]
+Procedura=Main
+[14:51:48- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:57:39- 1 Nit ## - Main]
+Procedura=Main
+[14:57:39- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[14:57:51- 2 Nit 30 - AzNaloga]
+Procedura=AzNaloga
+[15:03:56- 2 Nit 31 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:02:58- 1 Nit ## - Main]
+Procedura=Main
+[16:02:58- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[16:03:51- 2 Nit 32 - AzProcSpr]
+Procedura=AzProcSpr
+[16:09:02- 1 Nit ## - Main]
+Procedura=Main
+[16:09:02- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[16:09:11- 2 Nit 33 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:09:15- 2 Nit 34 - AzProcSpr]
+Procedura=AzProcSpr
+[16:11:33- 1 Nit ## - Main]
+Procedura=Main
+[16:11:33- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[16:11:46- 2 Nit 35 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:12:07- 2 Nit 36 - AzProcSpr]
+Procedura=AzProcSpr
+[16:12:50- 2 Nit 37 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:12:59- 2 Nit 38 - AzProcSpr]
+Procedura=AzProcSpr
+[16:23:29- 1 Nit ## - Main]
+Procedura=Main
+[16:23:29- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[16:23:37- 2 Nit 39 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:23:40- 2 Nit 40 - AzNaloga]
+Procedura=AzNaloga
+[16:25:04- 1 Nit ## - Main]
+Procedura=Main
+[16:25:04- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[16:25:10- 2 Nit 41 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[16:25:15- 2 Nit 42 - AzNaloga]
+Procedura=AzNaloga
+[16:26:09- 3 Nit 02 - Projekti]
+Procedura=Projekti
+[16:26:16- 3 Nit 03 - ProjektDrevo]
+Procedura=ProjektDrevo
+[16:27:04- 2 Nit 43 - ProjektDrevo]
+Procedura=ProjektDrevo
+[16:27:11- 2 Nit 44 - AzNaloga]
+Procedura=AzNaloga
+[16:27:21- 2 Nit 45 - UpdateProject]
+Procedura=UpdateProject
+[16:27:31- 2 Nit 46 - Klienti]
+Procedura=Klienti
+[16:27:51- 2 Nit 47 - AzNaloga]
+Procedura=AzNaloga
+[16:29:34- 2 Nit 48 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:27:36- 1 Nit ## - Main]
+Procedura=Main
+[17:27:36- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:27:45- 2 Nit 49 - IzpisSprememb]
+Procedura=IzpisSprememb
+[17:29:18- 1 Nit ## - Main]
+Procedura=Main
+[17:29:18- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:29:26- 2 Nit 50 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:29:29- 2 Nit 51 - IzpisSprememb]
+Procedura=IzpisSprememb
+[17:47:02- 1 Nit ## - Main]
+Procedura=Main
+[17:47:02- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:47:09- 2 Nit 52 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:47:10- 2 Nit 53 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:49:17- 1 Nit ## - Main]
+Procedura=Main
+[17:49:17- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:49:26- 2 Nit 54 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:49:27- 2 Nit 55 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:52:28- 1 Nit ## - Main]
+Procedura=Main
+[17:52:28- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:52:41- 2 Nit 56 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:52:42- 2 Nit 57 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:55:10- 1 Nit ## - Main]
+Procedura=Main
+[17:55:10- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:55:18- 2 Nit 58 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:55:20- 2 Nit 59 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:57:03- 1 Nit ## - Main]
+Procedura=Main
+[17:57:03- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:57:24- 2 Nit 60 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:57:25- 2 Nit 61 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:59:29- 1 Nit ## - Main]
+Procedura=Main
+[17:59:29- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:59:43- 2 Nit 62 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:59:44- 2 Nit 63 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[15:29:58- 1 Nit ## - Main]
+Procedura=Main
+[15:29:58- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[15:30:06- 2 Nit 64 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[15:33:47- 1 Nit ## - Main]
+Procedura=Main
+[15:33:47- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[15:34:39- 2 Nit 65 - AzProcSpr]
+Procedura=AzProcSpr
+[15:36:26- 2 Nit 66 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[15:41:23- 1 Nit ## - Main]
+Procedura=Main
+[15:41:23- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[15:41:36- 2 Nit 67 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[15:43:07- 2 Nit 68 - AzProcSpr]
+Procedura=AzProcSpr
+[15:47:52- 1 Nit ## - Main]
+Procedura=Main
+[15:47:52- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[15:48:25- 2 Nit 69 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[15:48:31- 2 Nit 70 - AzProcSpr]
+Procedura=AzProcSpr
+[15:49:11- 2 Nit 71 - ProjectForDateRange]
+Procedura=ProjectForDateRange
+[17:01:25- 1 Nit ## - Main]
+Procedura=Main
+[17:01:25- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:10:53- 1 Nit ## - Main]
+Procedura=Main
+[17:10:53- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:11:59- 2 Nit 72 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[17:16:06- 1 Nit ## - Main]
+Procedura=Main
+[17:16:07- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:39:44- 1 Nit ## - Main]
+Procedura=Main
+[17:39:45- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:45:17- 1 Nit ## - Main]
+Procedura=Main
+[17:45:17- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:47:59- 1 Nit ## - Main]
+Procedura=Main
+[17:47:59- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:52:15- 1 Nit ## - Main]
+Procedura=Main
+[17:52:15- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:54:33- 1 Nit ## - Main]
+Procedura=Main
+[17:54:33- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[17:55:07- 2 Nit 73 - AzProcSpr]
+Procedura=AzProcSpr
+[18:03:46- 1 Nit ## - Main]
+Procedura=Main
+[18:03:46- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[18:04:23- 2 Nit 74 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[18:05:07- 2 Nit 75 - AzApp]
+Procedura=AzApp
+[18:09:46- 1 Nit ## - Main]
+Procedura=Main
+[18:09:46- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[18:09:58- 2 Nit 76 - Drevo_dokumentov_rr]
+Procedura=Drevo_dokumentov_rr
+[18:10:20- 3 Nit 04 - SeznamSkanov]
+Procedura=SeznamSkanov
+[18:10:23- 3 Nit 05 - UrejanjeNastavitveSkena]
+Procedura=UrejanjeNastavitveSkena
+[18:10:35- 2 Nit 77 - Browseknjiga]
+Procedura=Browseknjiga
+[18:10:56- 2 Nit 78 - Drevo_dokumentov_rr]
+Procedura=Drevo_dokumentov_rr
+[18:12:06- 2 Nit 79 - tfakture]
+Procedura=tfakture
+[18:12:10- 3 Nit 06 - IzpFakFerbit]
+Procedura=IzpFakFerbit
+[18:18:32- 1 Nit ## - Main]
+Procedura=Main
+[18:18:35- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[18:20:01- 2 Nit 80 - AzFak]
+Procedura=AzFak
+[19:58:04- 1 Nit ## - Main]
+Procedura=Main
+[19:58:04- 1 Nit ## - LogInWindow]
+Procedura=LogInWindow
+[19:58:20- 2 Nit 81 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[19:58:37- 2 Nit 82 - AzProcSpr]
+Procedura=AzProcSpr
+[19:59:42- 2 Nit 83 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[19:59:49- 2 Nit 84 - AzNaloga]
+Procedura=AzNaloga
+[20:02:45- 2 Nit 85 - tAPPLIKACIJE]
+Procedura=tAPPLIKACIJE
+[20:02:54- 2 Nit 86 - AzProcSpr]
+Procedura=AzProcSpr
+[6:58:15- 1 Nit ## - Main]
+Procedura=Main
+[6:59:22- 2 Nit 87 - PrometM]
+Procedura=PrometM
+[9:47:16- 2 Nit 88 - AzProm]
+Procedura=AzProm
+[9:49:02- 2 Nit 89 - PrometM]
+Procedura=PrometM
+[9:50:18- 2 Nit 90 - AzProm]
+Procedura=AzProm
+[9:52:16- 2 Nit 91 - PrometM]
+Procedura=PrometM
+[9:52:52- 2 Nit 92 - AzProm]
+Procedura=AzProm
+[9:54:05- 2 Nit 93 - PrometM]
+Procedura=PrometM
+[9:54:17- 2 Nit 94 - AzProm]
+Procedura=AzProm
+[9:57:11- 2 Nit 95 - PrometM]
+Procedura=PrometM
+[9:59:52- 2 Nit 96 - AzProm]
+Procedura=AzProm
+[10:00:56- 2 Nit 97 - PrometM]
+Procedura=PrometM
+[10:02:21- 2 Nit 98 - AzProm]
+Procedura=AzProm
+[11:34:45- 2 Nit 99 - PrometM]
+Procedura=PrometM
+[11:34:49- 2 Nit ## - AzProm]
+Procedura=AzProm
+[11:35:35- 2 Nit ## - PrometM]
+Procedura=PrometM
+[11:35:41- 2 Nit ## - AzProm]
+Procedura=AzProm
+[11:47:32- 2 Nit ## - test]
+Procedura=test
+[11:47:33- 2 Nit ## - Updatetest]
+Procedura=Updatetest
+[11:50:22- 2 Nit ## - PrometM]
+Procedura=PrometM
+[11:50:28- 2 Nit ## - AzProm]
+Procedura=AzProm
+[11:56:34- 2 Nit ## - PrometM]
+Procedura=PrometM
+[12:03:18- 2 Nit ## - AzProm]
+Procedura=AzProm
+[6:57:42- 2 Nit ## - PrometM]
+Procedura=PrometM
+[7:00:17- 2 Nit ## - AzProm]
+Procedura=AzProm
+[7:04:15- 2 Nit ## - PrometM]
+Procedura=PrometM
+[7:09:04- 2 Nit ## - AzProm]
+Procedura=AzProm
+[7:10:19- 2 Nit ## - PrometM]
+Procedura=PrometM
+[7:15:20- 2 Nit ## - AzProm]
+Procedura=AzProm
+[7:17:58- 2 Nit ## - PrometM]
+Procedura=PrometM
+[7:24:03- 2 Nit ## - AzProm]
+Procedura=AzProm
+[7:28:57- 2 Nit ## - PrometM]
+Procedura=PrometM
+[7:36:05- 2 Nit ## - AzProm]
+Procedura=AzProm
+[8:22:50- 2 Nit ## - PrometM]
+Procedura=PrometM

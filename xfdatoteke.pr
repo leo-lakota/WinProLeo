@@ -1,0 +1,4 @@
+#pragma define(_APIDllMode_=>off)
+#pragma define(_APILinkMode=>on)
+#pragma define(_COMDllMode_=>off)
+#pragma define(_COMLinkMode_=>on)

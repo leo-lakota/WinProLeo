@@ -1,0 +1,1284 @@
+[DICTIONARY]
+VERSION '1.0'
+CREATED '23 JUN 2010' ' 7:13:09AM'
+MODIFIED '15 APR 2015' ' 7:47:44AM'
+
+[FILES]
+
+DKPromet FILE,DRIVER('MSSQL'),OWNER('LOGISTIC,SAOPDK002,plojdostop,D0st0p'),NAME('dbo.DKPromet'),PRE(DKP),BINDABLE,THREAD
+!!> IDENT(2),USAGE(File)
+PK_DKPromet KEY(DKP:ZaporednaStevilkaPrometa),PRIMARY
+!!> IDENT(1)
+KEY_Dokument KEY(DKP:Dokument),DUP,NAME('Dokument')
+!!> IDENT(2)
+IndexDokument KEY(DKP:LetnicaPoslovnegaLeta,DKP:Dokument),DUP
+!!> IDENT(3)
+OdprtePostavkeKey KEY(DKP:LetnicaPoslovnegaLeta,DKP:SifraKonta,DKP:SifraStranke,DKP:Dokument),DUP
+!!> IDENT(4)
+PresifriranjeStrank KEY(DKP:SifraStranke),DUP
+!!> IDENT(5)
+SecKey KEY(DKP:LetnicaPoslovnegaLeta,DKP:SifraObdobja,DKP:SifraTemeljnice),DUP
+!!> IDENT(6)
+KEY__WA_Sys_SifraKonta_412EB0B6 KEY(DKP:SifraKonta,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraKonta_412EB0B6')
+!!> IDENT(7)
+KEY__WA_Sys_SifraObdobja_412EB0B6 KEY(DKP:SifraObdobja,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraObdobja_412EB0B6')
+!!> IDENT(8)
+KEY__WA_Sys_SifraTemeljnice_412EB0B6 KEY(DKP:SifraTemeljnice,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraTemeljnice_412EB0B6')
+!!> IDENT(9)
+KEY__WA_Sys_SifraVrstePrometa_412EB0B6 KEY(DKP:SifraVrstePrometa,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraVrstePrometa_412EB0B6')
+!!> IDENT(10)
+KEY__WA_Sys_SifraDenarneEnote_412EB0B6 KEY(DKP:SifraDenarneEnote,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraDenarneEnote_412EB0B6')
+!!> IDENT(11)
+KEY__WA_Sys_PPSklic_412EB0B6 KEY(DKP:PPSklic,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_PPSklic_412EB0B6')
+!!> IDENT(12)
+KEY__WA_Sys_DatumDokumenta_412EB0B6 KEY(DKP:DatumDokumenta,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_DatumDokumenta_412EB0B6')
+!!> IDENT(13)
+KEY__WA_Sys_DatumDUR_412EB0B6 KEY(DKP:DatumDUR,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_DatumDUR_412EB0B6')
+!!> IDENT(14)
+KEY__WA_Sys_DatumValute_412EB0B6 KEY(DKP:DatumValute,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_DatumValute_412EB0B6')
+!!> IDENT(15)
+KEY__WA_Sys_SifraReferenta_412EB0B6 KEY(DKP:SifraReferenta,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraReferenta_412EB0B6')
+!!> IDENT(16)
+KEY__WA_Sys_SifraSM_412EB0B6 KEY(DKP:SifraSM,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraSM_412EB0B6')
+!!> IDENT(17)
+KEY__WA_Sys_SifraSN_412EB0B6 KEY(DKP:SifraSN,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_SifraSN_412EB0B6')
+!!> IDENT(18)
+KEY__WA_Sys_ZnesekBremeDev_412EB0B6 KEY(DKP:ZnesekBremeDev,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_ZnesekBremeDev_412EB0B6')
+!!> IDENT(19)
+KEY__WA_Sys_ZnesekDobroDev_412EB0B6 KEY(DKP:ZnesekDobroDev,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_ZnesekDobroDev_412EB0B6')
+!!> IDENT(20)
+KEY__WA_Sys_ZnesekBreme_412EB0B6 KEY(DKP:ZnesekBreme,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_ZnesekBreme_412EB0B6')
+!!> IDENT(21)
+KEY__WA_Sys_ZnesekDobro_412EB0B6 KEY(DKP:ZnesekDobro,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_ZnesekDobro_412EB0B6')
+!!> IDENT(22)
+KEY__WA_Sys_Kompenz_Znesek_412EB0B6 KEY(DKP:Kompenz_Znesek,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_Kompenz_Znesek_412EB0B6')
+!!> IDENT(23)
+KEY__WA_Sys_EvidencnoKnj_412EB0B6 KEY(DKP:EvidencnoKnj,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_EvidencnoKnj_412EB0B6')
+!!> IDENT(24)
+KEY__WA_Sys_Priponka_412EB0B6 KEY(DKP:Priponka,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_Priponka_412EB0B6')
+!!> IDENT(25)
+KEY__WA_Sys_PRACLeto_412EB0B6 KEY(DKP:PRACLeto,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_PRACLeto_412EB0B6')
+!!> IDENT(26)
+KEY__WA_Sys_PRACSifraKnjige_412EB0B6 KEY(DKP:PRACSifraKnjige,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_PRACSifraKnjige_412EB0B6')
+!!> IDENT(27)
+KEY__WA_Sys_PRACStevilkaRacuna_412EB0B6 KEY(DKP:PRACStevilkaRacuna,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_PRACStevilkaRacuna_412EB0B6')
+!!> IDENT(28)
+KEY__WA_Sys_DatumPP_412EB0B6 KEY(DKP:DatumPP,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_DatumPP_412EB0B6')
+!!> IDENT(29)
+KEY__WA_Sys_VezniDokument_412EB0B6 KEY(DKP:VezniDokument,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_VezniDokument_412EB0B6')
+!!> IDENT(30)
+KEY__WA_Sys_Opis_412EB0B6 KEY(DKP:Opis,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_Opis_412EB0B6')
+!!> IDENT(31)
+KEY__WA_Sys_Nalog_412EB0B6 KEY(DKP:Nalog,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_Nalog_412EB0B6')
+!!> IDENT(32)
+KEY__WA_Sys_CasVnosa_412EB0B6 KEY(DKP:CasVnosa,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_CasVnosa_412EB0B6')
+!!> IDENT(33)
+KEY__WA_Sys_ZnesekDevZaprtoDobro_412EB0B6 KEY(DKP:ZnesekDevZaprtoDobro,DKP:ZaporednaStevilkaPrometa),DUP,NAME('_WA_Sys_ZnesekDevZaprtoDobro_412EB0B6')
+!!> IDENT(34)
+IX_PPSklic KEY(DKP:PPSklic),DUP
+!!> IDENT(35)
+KEY_StevilkaPaketa KEY(DKP:StevilkaPaketa),DUP,NAME('StevilkaPaketa')
+!!> IDENT(36)
+Record                   RECORD
+[SCREENCONTROLS]
+! PROMPT('ZaporednaStevilkaPrometa:'),USE(?DKP:ZaporednaStevilkaPrometa:Prompt)
+! ENTRY(@n-14),USE(DKP:ZaporednaStevilkaPrometa),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:ZaporednaStevilkaPrometa),RIGHT(1)
+ZaporednaStevilkaPrometa   LONG
+!!> IDENT(1),PROMPT('ZaporednaStevilkaPrometa:'),HEADER('ZaporednaStevilkaPrometa'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('LetnicaPoslovnegaLeta:'),USE(?DKP:LetnicaPoslovnegaLeta:Prompt)
+! ENTRY(@n-14),USE(DKP:LetnicaPoslovnegaLeta),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:LetnicaPoslovnegaLeta),RIGHT(1)
+LetnicaPoslovnegaLeta      LONG
+!!> IDENT(2),PROMPT('LetnicaPoslovnegaLeta:'),HEADER('LetnicaPoslovnegaLeta'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('SifraObdobja:'),USE(?DKP:SifraObdobja:Prompt)
+! ENTRY(@s20),USE(DKP:SifraObdobja)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraObdobja)
+SifraObdobja               CSTRING(21)
+!!> IDENT(3),PROMPT('SifraObdobja:'),HEADER('SifraObdobja'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraTemeljnice:'),USE(?DKP:SifraTemeljnice:Prompt)
+! ENTRY(@s20),USE(DKP:SifraTemeljnice)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraTemeljnice)
+SifraTemeljnice            CSTRING(21)
+!!> IDENT(4),PROMPT('SifraTemeljnice:'),HEADER('SifraTemeljnice'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraVrstePrometa:'),USE(?DKP:SifraVrstePrometa:Prompt)
+! ENTRY(@n-14),USE(DKP:SifraVrstePrometa),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:SifraVrstePrometa),RIGHT(1)
+SifraVrstePrometa          LONG
+!!> IDENT(5),PROMPT('SifraVrstePrometa:'),HEADER('SifraVrstePrometa'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('SifraKonta:'),USE(?DKP:SifraKonta:Prompt)
+! ENTRY(@s20),USE(DKP:SifraKonta)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraKonta)
+SifraKonta                 CSTRING(21)
+!!> IDENT(6),PROMPT('SifraKonta:'),HEADER('SifraKonta'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraStranke:'),USE(?DKP:SifraStranke:Prompt)
+! ENTRY(@s20),USE(DKP:SifraStranke)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraStranke)
+SifraStranke               CSTRING(21)
+!!> IDENT(7),PROMPT('SifraStranke:'),HEADER('SifraStranke'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraSplosnoStranke:'),USE(?DKP:SifraSplosnoStranke:Prompt)
+! ENTRY(@s20),USE(DKP:SifraSplosnoStranke)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraSplosnoStranke)
+SifraSplosnoStranke        CSTRING(21)
+!!> IDENT(8),PROMPT('SifraSplosnoStranke:'),HEADER('SifraSplosnoStranke'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraSM:'),USE(?DKP:SifraSM:Prompt)
+! ENTRY(@s20),USE(DKP:SifraSM)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraSM)
+SifraSM                    CSTRING(21)
+!!> IDENT(9),PROMPT('SifraSM:'),HEADER('SifraSM'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraSN:'),USE(?DKP:SifraSN:Prompt)
+! ENTRY(@s20),USE(DKP:SifraSN)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraSN)
+SifraSN                    CSTRING(21)
+!!> IDENT(10),PROMPT('SifraSN:'),HEADER('SifraSN'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraReferenta:'),USE(?DKP:SifraReferenta:Prompt)
+! ENTRY(@s20),USE(DKP:SifraReferenta)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraReferenta)
+SifraReferenta             CSTRING(21)
+!!> IDENT(11),PROMPT('SifraReferenta:'),HEADER('SifraReferenta'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('Nalog:'),USE(?DKP:Nalog:Prompt)
+! ENTRY(@s20),USE(DKP:Nalog)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:Nalog)
+Nalog                      CSTRING(21)
+!!> IDENT(12),PROMPT('Nalog:'),HEADER('Nalog'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('Dokument:'),USE(?DKP:Dokument:Prompt)
+! ENTRY(@s22),USE(DKP:Dokument)
+[REPORTCONTROLS]
+! STRING(@s22),USE(DKP:Dokument)
+Dokument                   CSTRING(23)
+!!> IDENT(13),PROMPT('Dokument:'),HEADER('Dokument'),PICTURE(@s22)
+[SCREENCONTROLS]
+! PROMPT('VezniDokument:'),USE(?DKP:VezniDokument:Prompt)
+! ENTRY(@s22),USE(DKP:VezniDokument)
+[REPORTCONTROLS]
+! STRING(@s22),USE(DKP:VezniDokument)
+VezniDokument              CSTRING(23)
+!!> IDENT(14),PROMPT('VezniDokument:'),HEADER('VezniDokument'),PICTURE(@s22)
+[SCREENCONTROLS]
+! PROMPT('VeznaZapStevPrometa:'),USE(?DKP:VeznaZapStevPrometa:Prompt)
+! ENTRY(@n-14),USE(DKP:VeznaZapStevPrometa),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:VeznaZapStevPrometa),RIGHT(1)
+VeznaZapStevPrometa        LONG
+!!> IDENT(15),PROMPT('VeznaZapStevPrometa:'),HEADER('VeznaZapStevPrometa'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opis:'),USE(?DKP:Opis:Prompt)
+! ENTRY(@s36),USE(DKP:Opis)
+[REPORTCONTROLS]
+! STRING(@s36),USE(DKP:Opis)
+Opis                       CSTRING(37)
+!!> IDENT(16),PROMPT('Opis:'),HEADER('Opis'),PICTURE(@s36)
+[SCREENCONTROLS]
+! PROMPT('DatumDokumenta:'),USE(?DKP:DatumDokumenta:Prompt)
+! ENTRY(@s8),USE(DKP:DatumDokumenta)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumDokumenta)
+DatumDokumenta             STRING(8)
+!!> IDENT(17),PROMPT('DatumDokumenta:'),HEADER('DatumDokumenta'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumDokumenta_GROUP:'),USE(?DKP:DatumDokumenta_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumDokumenta_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumDokumenta_GROUP)
+DatumDokumenta_GROUP       GROUP,OVER(DatumDokumenta)
+!!> IDENT(18),PROMPT('DatumDokumenta_GROUP:'),HEADER('DatumDokumenta_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumDokumenta_DATE:'),USE(?DKP:DatumDokumenta_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumDokumenta_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumDokumenta_DATE),RIGHT(1)
+DatumDokumenta_DATE          DATE
+!!> IDENT(19),PROMPT('DatumDokumenta_DATE:'),HEADER('DatumDokumenta_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumDokumenta_TIME:'),USE(?DKP:DatumDokumenta_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumDokumenta_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumDokumenta_TIME),RIGHT(1)
+DatumDokumenta_TIME          TIME
+!!> IDENT(20),PROMPT('DatumDokumenta_TIME:'),HEADER('DatumDokumenta_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(22)
+[SCREENCONTROLS]
+! PROMPT('DatumDUR:'),USE(?DKP:DatumDUR:Prompt)
+! ENTRY(@s8),USE(DKP:DatumDUR)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumDUR)
+DatumDUR                   STRING(8)
+!!> IDENT(21),PROMPT('DatumDUR:'),HEADER('DatumDUR'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumDUR_GROUP:'),USE(?DKP:DatumDUR_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumDUR_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumDUR_GROUP)
+DatumDUR_GROUP             GROUP,OVER(DatumDUR)
+!!> IDENT(23),PROMPT('DatumDUR_GROUP:'),HEADER('DatumDUR_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumDUR_DATE:'),USE(?DKP:DatumDUR_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumDUR_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumDUR_DATE),RIGHT(1)
+DatumDUR_DATE                DATE
+!!> IDENT(24),PROMPT('DatumDUR_DATE:'),HEADER('DatumDUR_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumDUR_TIME:'),USE(?DKP:DatumDUR_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumDUR_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumDUR_TIME),RIGHT(1)
+DatumDUR_TIME                TIME
+!!> IDENT(25),PROMPT('DatumDUR_TIME:'),HEADER('DatumDUR_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(27)
+[SCREENCONTROLS]
+! PROMPT('DatumValute:'),USE(?DKP:DatumValute:Prompt)
+! ENTRY(@s8),USE(DKP:DatumValute)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumValute)
+DatumValute                STRING(8)
+!!> IDENT(26),PROMPT('DatumValute:'),HEADER('DatumValute'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumValute_GROUP:'),USE(?DKP:DatumValute_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumValute_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumValute_GROUP)
+DatumValute_GROUP          GROUP,OVER(DatumValute)
+!!> IDENT(28),PROMPT('DatumValute_GROUP:'),HEADER('DatumValute_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumValute_DATE:'),USE(?DKP:DatumValute_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumValute_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumValute_DATE),RIGHT(1)
+DatumValute_DATE             DATE
+!!> IDENT(29),PROMPT('DatumValute_DATE:'),HEADER('DatumValute_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumValute_TIME:'),USE(?DKP:DatumValute_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumValute_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumValute_TIME),RIGHT(1)
+DatumValute_TIME             TIME
+!!> IDENT(30),PROMPT('DatumValute_TIME:'),HEADER('DatumValute_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(32)
+[SCREENCONTROLS]
+! PROMPT('ZnesekBreme:'),USE(?DKP:ZnesekBreme:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekBreme),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekBreme),RIGHT(1)
+ZnesekBreme                REAL
+!!> IDENT(31),PROMPT('ZnesekBreme:'),HEADER('ZnesekBreme'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekDobro:'),USE(?DKP:ZnesekDobro:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekDobro),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekDobro),RIGHT(1)
+ZnesekDobro                REAL
+!!> IDENT(33),PROMPT('ZnesekDobro:'),HEADER('ZnesekDobro'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('SifraTecajneListe:'),USE(?DKP:SifraTecajneListe:Prompt)
+! ENTRY(@s20),USE(DKP:SifraTecajneListe)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraTecajneListe)
+SifraTecajneListe          CSTRING(21)
+!!> IDENT(34),PROMPT('SifraTecajneListe:'),HEADER('SifraTecajneListe'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('VrstaTecaja:'),USE(?DKP:VrstaTecaja:Prompt)
+! ENTRY(@s1),USE(DKP:VrstaTecaja)
+[REPORTCONTROLS]
+! STRING(@s1),USE(DKP:VrstaTecaja)
+VrstaTecaja                CSTRING(2)
+!!> IDENT(35),PROMPT('VrstaTecaja:'),HEADER('VrstaTecaja'),PICTURE(@s1)
+[SCREENCONTROLS]
+! PROMPT('SifraDenarneEnote:'),USE(?DKP:SifraDenarneEnote:Prompt)
+! ENTRY(@s20),USE(DKP:SifraDenarneEnote)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraDenarneEnote)
+SifraDenarneEnote          CSTRING(21)
+!!> IDENT(36),PROMPT('SifraDenarneEnote:'),HEADER('SifraDenarneEnote'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('ZnesekBremeDev:'),USE(?DKP:ZnesekBremeDev:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekBremeDev),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekBremeDev),RIGHT(1)
+ZnesekBremeDev             REAL
+!!> IDENT(37),PROMPT('ZnesekBremeDev:'),HEADER('ZnesekBremeDev'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekDobroDev:'),USE(?DKP:ZnesekDobroDev:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekDobroDev),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekDobroDev),RIGHT(1)
+ZnesekDobroDev             REAL
+!!> IDENT(38),PROMPT('ZnesekDobroDev:'),HEADER('ZnesekDobroDev'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekZaprtoBreme:'),USE(?DKP:ZnesekZaprtoBreme:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekZaprtoBreme),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekZaprtoBreme),RIGHT(1)
+ZnesekZaprtoBreme          REAL
+!!> IDENT(39),PROMPT('ZnesekZaprtoBreme:'),HEADER('ZnesekZaprtoBreme'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekZaprtoDobro:'),USE(?DKP:ZnesekZaprtoDobro:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekZaprtoDobro),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekZaprtoDobro),RIGHT(1)
+ZnesekZaprtoDobro          REAL
+!!> IDENT(40),PROMPT('ZnesekZaprtoDobro:'),HEADER('ZnesekZaprtoDobro'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekZaprtoBremeDev:'),USE(?DKP:ZnesekZaprtoBremeDev:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekZaprtoBremeDev),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekZaprtoBremeDev),RIGHT(1)
+ZnesekZaprtoBremeDev       REAL
+!!> IDENT(41),PROMPT('ZnesekZaprtoBremeDev:'),HEADER('ZnesekZaprtoBremeDev'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekDevZaprtoDobro:'),USE(?DKP:ZnesekDevZaprtoDobro:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekDevZaprtoDobro),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekDevZaprtoDobro),RIGHT(1)
+ZnesekDevZaprtoDobro       REAL
+!!> IDENT(42),PROMPT('ZnesekDevZaprtoDobro:'),HEADER('ZnesekDevZaprtoDobro'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('SifraKnjige:'),USE(?DKP:SifraKnjige:Prompt)
+! ENTRY(@s20),USE(DKP:SifraKnjige)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraKnjige)
+SifraKnjige                CSTRING(21)
+!!> IDENT(43),PROMPT('SifraKnjige:'),HEADER('SifraKnjige'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('DatumTozbe:'),USE(?DKP:DatumTozbe:Prompt)
+! ENTRY(@s8),USE(DKP:DatumTozbe)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumTozbe)
+DatumTozbe                 STRING(8)
+!!> IDENT(44),PROMPT('DatumTozbe:'),HEADER('DatumTozbe'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumTozbe_GROUP:'),USE(?DKP:DatumTozbe_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumTozbe_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumTozbe_GROUP)
+DatumTozbe_GROUP           GROUP,OVER(DatumTozbe)
+!!> IDENT(45),PROMPT('DatumTozbe_GROUP:'),HEADER('DatumTozbe_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumTozbe_DATE:'),USE(?DKP:DatumTozbe_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumTozbe_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumTozbe_DATE),RIGHT(1)
+DatumTozbe_DATE              DATE
+!!> IDENT(46),PROMPT('DatumTozbe_DATE:'),HEADER('DatumTozbe_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumTozbe_TIME:'),USE(?DKP:DatumTozbe_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumTozbe_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumTozbe_TIME),RIGHT(1)
+DatumTozbe_TIME              TIME
+!!> IDENT(47),PROMPT('DatumTozbe_TIME:'),HEADER('DatumTozbe_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(49)
+[SCREENCONTROLS]
+! PROMPT('DatumKompenzacije:'),USE(?DKP:DatumKompenzacije:Prompt)
+! ENTRY(@s8),USE(DKP:DatumKompenzacije)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumKompenzacije)
+DatumKompenzacije          STRING(8)
+!!> IDENT(48),PROMPT('DatumKompenzacije:'),HEADER('DatumKompenzacije'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumKompenzacije_GROUP:'),USE(?DKP:DatumKompenzacije_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumKompenzacije_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumKompenzacije_GROUP)
+DatumKompenzacije_GROUP    GROUP,OVER(DatumKompenzacije)
+!!> IDENT(50),PROMPT('DatumKompenzacije_GROUP:'),HEADER('DatumKompenzacije_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumKompenzacije_DATE:'),USE(?DKP:DatumKompenzacije_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumKompenzacije_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumKompenzacije_DATE),RIGHT(1)
+DatumKompenzacije_DATE       DATE
+!!> IDENT(51),PROMPT('DatumKompenzacije_DATE:'),HEADER('DatumKompenzacije_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumKompenzacije_TIME:'),USE(?DKP:DatumKompenzacije_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumKompenzacije_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumKompenzacije_TIME),RIGHT(1)
+DatumKompenzacije_TIME       TIME
+!!> IDENT(52),PROMPT('DatumKompenzacije_TIME:'),HEADER('DatumKompenzacije_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(54)
+[SCREENCONTROLS]
+! PROMPT('DatumMultikompenzacije:'),USE(?DKP:DatumMultikompenzacije:Prompt)
+! ENTRY(@s8),USE(DKP:DatumMultikompenzacije)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumMultikompenzacije)
+DatumMultikompenzacije     STRING(8)
+!!> IDENT(53),PROMPT('DatumMultikompenzacije:'),HEADER('DatumMultikompenzacije'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumMultikompenzacije_GROUP:'),USE(?DKP:DatumMultikompenzacije_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumMultikompenzacije_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumMultikompenzacije_GROUP)
+DatumMultikompenzacije_GROUP GROUP,OVER(DatumMultikompenzacije)
+!!> IDENT(55),PROMPT('DatumMultikompenzacije_GROUP:'),HEADER('DatumMultikompenzacije_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumMultikompenzacije_DATE:'),USE(?DKP:DatumMultikompenzacije_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumMultikompenzacije_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumMultikompenzacije_DATE),RIGHT(1)
+DatumMultikompenzacije_DATE  DATE
+!!> IDENT(56),PROMPT('DatumMultikompenzacije_DATE:'),HEADER('DatumMultikompenzacije_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumMultikompenzacije_TIME:'),USE(?DKP:DatumMultikompenzacije_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumMultikompenzacije_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumMultikompenzacije_TIME),RIGHT(1)
+DatumMultikompenzacije_TIME  TIME
+!!> IDENT(57),PROMPT('DatumMultikompenzacije_TIME:'),HEADER('DatumMultikompenzacije_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(59)
+[SCREENCONTROLS]
+! PROMPT('DatumCesije:'),USE(?DKP:DatumCesije:Prompt)
+! ENTRY(@s8),USE(DKP:DatumCesije)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumCesije)
+DatumCesije                STRING(8)
+!!> IDENT(58),PROMPT('DatumCesije:'),HEADER('DatumCesije'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumCesije_GROUP:'),USE(?DKP:DatumCesije_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumCesije_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumCesije_GROUP)
+DatumCesije_GROUP          GROUP,OVER(DatumCesije)
+!!> IDENT(60),PROMPT('DatumCesije_GROUP:'),HEADER('DatumCesije_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumCesije_DATE:'),USE(?DKP:DatumCesije_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumCesije_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumCesije_DATE),RIGHT(1)
+DatumCesije_DATE             DATE
+!!> IDENT(61),PROMPT('DatumCesije_DATE:'),HEADER('DatumCesije_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumCesije_TIME:'),USE(?DKP:DatumCesije_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumCesije_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumCesije_TIME),RIGHT(1)
+DatumCesije_TIME             TIME
+!!> IDENT(62),PROMPT('DatumCesije_TIME:'),HEADER('DatumCesije_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(64)
+[SCREENCONTROLS]
+! PROMPT('DatumPopusta:'),USE(?DKP:DatumPopusta:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPopusta)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPopusta)
+DatumPopusta               STRING(8)
+!!> IDENT(63),PROMPT('DatumPopusta:'),HEADER('DatumPopusta'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPopusta_GROUP:'),USE(?DKP:DatumPopusta_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPopusta_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPopusta_GROUP)
+DatumPopusta_GROUP         GROUP,OVER(DatumPopusta)
+!!> IDENT(65),PROMPT('DatumPopusta_GROUP:'),HEADER('DatumPopusta_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPopusta_DATE:'),USE(?DKP:DatumPopusta_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumPopusta_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumPopusta_DATE),RIGHT(1)
+DatumPopusta_DATE            DATE
+!!> IDENT(66),PROMPT('DatumPopusta_DATE:'),HEADER('DatumPopusta_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumPopusta_TIME:'),USE(?DKP:DatumPopusta_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumPopusta_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumPopusta_TIME),RIGHT(1)
+DatumPopusta_TIME            TIME
+!!> IDENT(67),PROMPT('DatumPopusta_TIME:'),HEADER('DatumPopusta_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(69)
+[SCREENCONTROLS]
+! PROMPT('DatumAPP:'),USE(?DKP:DatumAPP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumAPP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumAPP)
+DatumAPP                   STRING(8)
+!!> IDENT(68),PROMPT('DatumAPP:'),HEADER('DatumAPP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumAPP_GROUP:'),USE(?DKP:DatumAPP_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumAPP_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumAPP_GROUP)
+DatumAPP_GROUP             GROUP,OVER(DatumAPP)
+!!> IDENT(70),PROMPT('DatumAPP_GROUP:'),HEADER('DatumAPP_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumAPP_DATE:'),USE(?DKP:DatumAPP_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumAPP_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumAPP_DATE),RIGHT(1)
+DatumAPP_DATE                DATE
+!!> IDENT(71),PROMPT('DatumAPP_DATE:'),HEADER('DatumAPP_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumAPP_TIME:'),USE(?DKP:DatumAPP_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumAPP_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumAPP_TIME),RIGHT(1)
+DatumAPP_TIME                TIME
+!!> IDENT(72),PROMPT('DatumAPP_TIME:'),HEADER('DatumAPP_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(74)
+[SCREENCONTROLS]
+! PROMPT('NapakeUvoza:'),USE(?DKP:NapakeUvoza:Prompt)
+! ENTRY(@s20),USE(DKP:NapakeUvoza)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:NapakeUvoza)
+NapakeUvoza                CSTRING(21)
+!!> IDENT(73),PROMPT('NapakeUvoza:'),HEADER('NapakeUvoza'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('DDVIzvor:'),USE(?DKP:DDVIzvor:Prompt)
+! ENTRY(@s20),USE(DKP:DDVIzvor)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:DDVIzvor)
+DDVIzvor                   CSTRING(21)
+!!> IDENT(75),PROMPT('DDVIzvor:'),HEADER('DDVIzvor'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('DDVUporabnik:'),USE(?DKP:DDVUporabnik:Prompt)
+! ENTRY(@n-7),USE(DKP:DDVUporabnik),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(DKP:DDVUporabnik),RIGHT(1)
+DDVUporabnik               SHORT
+!!> IDENT(76),PROMPT('DDVUporabnik:'),HEADER('DDVUporabnik'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DDVLeto:'),USE(?DKP:DDVLeto:Prompt)
+! ENTRY(@n-7),USE(DKP:DDVLeto),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(DKP:DDVLeto),RIGHT(1)
+DDVLeto                    SHORT
+!!> IDENT(77),PROMPT('DDVLeto:'),HEADER('DDVLeto'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DDVObdobje:'),USE(?DKP:DDVObdobje:Prompt)
+! ENTRY(@n-14),USE(DKP:DDVObdobje),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:DDVObdobje),RIGHT(1)
+DDVObdobje                 LONG
+!!> IDENT(78),PROMPT('DDVObdobje:'),HEADER('DDVObdobje'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DDVStevilka:'),USE(?DKP:DDVStevilka:Prompt)
+! ENTRY(@n-14),USE(DKP:DDVStevilka),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:DDVStevilka),RIGHT(1)
+DDVStevilka                LONG
+!!> IDENT(79),PROMPT('DDVStevilka:'),HEADER('DDVStevilka'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DDVSifraSifrantaKontov:'),USE(?DKP:DDVSifraSifrantaKontov:Prompt)
+! ENTRY(@n-14),USE(DKP:DDVSifraSifrantaKontov),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:DDVSifraSifrantaKontov),RIGHT(1)
+DDVSifraSifrantaKontov     LONG
+!!> IDENT(80),PROMPT('DDVSifraSifrantaKontov:'),HEADER('DDVSifraSifrantaKontov'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ImeVnasalca:'),USE(?DKP:ImeVnasalca:Prompt)
+! ENTRY(@s20),USE(DKP:ImeVnasalca)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:ImeVnasalca)
+ImeVnasalca                CSTRING(21)
+!!> IDENT(81),PROMPT('ImeVnasalca:'),HEADER('ImeVnasalca'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('CasVnosa:'),USE(?DKP:CasVnosa:Prompt)
+! ENTRY(@s8),USE(DKP:CasVnosa)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:CasVnosa)
+CasVnosa                   STRING(8)
+!!> IDENT(82),PROMPT('CasVnosa:'),HEADER('CasVnosa'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('CasVnosa_GROUP:'),USE(?DKP:CasVnosa_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:CasVnosa_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:CasVnosa_GROUP)
+CasVnosa_GROUP             GROUP,OVER(CasVnosa)
+!!> IDENT(83),PROMPT('CasVnosa_GROUP:'),HEADER('CasVnosa_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('CasVnosa_DATE:'),USE(?DKP:CasVnosa_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:CasVnosa_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:CasVnosa_DATE),RIGHT(1)
+CasVnosa_DATE                DATE
+!!> IDENT(84),PROMPT('CasVnosa_DATE:'),HEADER('CasVnosa_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('CasVnosa_TIME:'),USE(?DKP:CasVnosa_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:CasVnosa_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:CasVnosa_TIME),RIGHT(1)
+CasVnosa_TIME                TIME
+!!> IDENT(85),PROMPT('CasVnosa_TIME:'),HEADER('CasVnosa_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(87)
+[SCREENCONTROLS]
+! PROMPT('ImePopravljalca:'),USE(?DKP:ImePopravljalca:Prompt)
+! ENTRY(@s20),USE(DKP:ImePopravljalca)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:ImePopravljalca)
+ImePopravljalca            CSTRING(21)
+!!> IDENT(86),PROMPT('ImePopravljalca:'),HEADER('ImePopravljalca'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('CasPopravljanja:'),USE(?DKP:CasPopravljanja:Prompt)
+! ENTRY(@s8),USE(DKP:CasPopravljanja)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:CasPopravljanja)
+CasPopravljanja            STRING(8)
+!!> IDENT(88),PROMPT('CasPopravljanja:'),HEADER('CasPopravljanja'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('CasPopravljanja_GROUP:'),USE(?DKP:CasPopravljanja_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:CasPopravljanja_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:CasPopravljanja_GROUP)
+CasPopravljanja_GROUP      GROUP,OVER(CasPopravljanja)
+!!> IDENT(89),PROMPT('CasPopravljanja_GROUP:'),HEADER('CasPopravljanja_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('CasPopravljanja_DATE:'),USE(?DKP:CasPopravljanja_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:CasPopravljanja_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:CasPopravljanja_DATE),RIGHT(1)
+CasPopravljanja_DATE         DATE
+!!> IDENT(90),PROMPT('CasPopravljanja_DATE:'),HEADER('CasPopravljanja_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('CasPopravljanja_TIME:'),USE(?DKP:CasPopravljanja_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:CasPopravljanja_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:CasPopravljanja_TIME),RIGHT(1)
+CasPopravljanja_TIME         TIME
+!!> IDENT(91),PROMPT('CasPopravljanja_TIME:'),HEADER('CasPopravljanja_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(93)
+[SCREENCONTROLS]
+! PROMPT('DatumZaEvidencne:'),USE(?DKP:DatumZaEvidencne:Prompt)
+! ENTRY(@s8),USE(DKP:DatumZaEvidencne)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumZaEvidencne)
+DatumZaEvidencne           STRING(8)
+!!> IDENT(92),PROMPT('DatumZaEvidencne:'),HEADER('DatumZaEvidencne'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumZaEvidencne_GROUP:'),USE(?DKP:DatumZaEvidencne_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumZaEvidencne_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumZaEvidencne_GROUP)
+DatumZaEvidencne_GROUP     GROUP,OVER(DatumZaEvidencne)
+!!> IDENT(94),PROMPT('DatumZaEvidencne_GROUP:'),HEADER('DatumZaEvidencne_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumZaEvidencne_DATE:'),USE(?DKP:DatumZaEvidencne_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumZaEvidencne_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumZaEvidencne_DATE),RIGHT(1)
+DatumZaEvidencne_DATE        DATE
+!!> IDENT(95),PROMPT('DatumZaEvidencne_DATE:'),HEADER('DatumZaEvidencne_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumZaEvidencne_TIME:'),USE(?DKP:DatumZaEvidencne_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumZaEvidencne_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumZaEvidencne_TIME),RIGHT(1)
+DatumZaEvidencne_TIME        TIME
+!!> IDENT(96),PROMPT('DatumZaEvidencne_TIME:'),HEADER('DatumZaEvidencne_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(98)
+[SCREENCONTROLS]
+! PROMPT('Kompenz_Oznacen:'),USE(?DKP:Kompenz_Oznacen:Prompt)
+! ENTRY(@n3),USE(DKP:Kompenz_Oznacen),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:Kompenz_Oznacen),RIGHT(1)
+Kompenz_Oznacen            BYTE
+!!> IDENT(97),PROMPT('Kompenz_Oznacen:'),HEADER('Kompenz_Oznacen'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Kompenz_Znesek:'),USE(?DKP:Kompenz_Znesek:Prompt)
+! ENTRY(@n10.2),USE(DKP:Kompenz_Znesek),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:Kompenz_Znesek),RIGHT(1)
+Kompenz_Znesek             REAL
+!!> IDENT(99),PROMPT('Kompenz_Znesek:'),HEADER('Kompenz_Znesek'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Evidencni:'),USE(?DKP:Evidencni:Prompt)
+! ENTRY(@n3),USE(DKP:Evidencni),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:Evidencni),RIGHT(1)
+Evidencni                  BYTE
+!!> IDENT(100),PROMPT('Evidencni:'),HEADER('Evidencni'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('PPSklic:'),USE(?DKP:PPSklic:Prompt)
+! ENTRY(@s24),USE(DKP:PPSklic)
+[REPORTCONTROLS]
+! STRING(@s24),USE(DKP:PPSklic)
+PPSklic                    CSTRING(25)
+!!> IDENT(101),PROMPT('PPSklic:'),HEADER('PPSklic'),PICTURE(@s24)
+[SCREENCONTROLS]
+! PROMPT('NetoRokPlacila:'),USE(?DKP:NetoRokPlacila:Prompt)
+! ENTRY(@s8),USE(DKP:NetoRokPlacila)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:NetoRokPlacila)
+NetoRokPlacila             STRING(8)
+!!> IDENT(102),PROMPT('NetoRokPlacila:'),HEADER('NetoRokPlacila'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('NetoRokPlacila_GROUP:'),USE(?DKP:NetoRokPlacila_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:NetoRokPlacila_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:NetoRokPlacila_GROUP)
+NetoRokPlacila_GROUP       GROUP,OVER(NetoRokPlacila)
+!!> IDENT(103),PROMPT('NetoRokPlacila_GROUP:'),HEADER('NetoRokPlacila_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('NetoRokPlacila_DATE:'),USE(?DKP:NetoRokPlacila_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:NetoRokPlacila_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:NetoRokPlacila_DATE),RIGHT(1)
+NetoRokPlacila_DATE          DATE
+!!> IDENT(104),PROMPT('NetoRokPlacila_DATE:'),HEADER('NetoRokPlacila_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('NetoRokPlacila_TIME:'),USE(?DKP:NetoRokPlacila_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:NetoRokPlacila_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:NetoRokPlacila_TIME),RIGHT(1)
+NetoRokPlacila_TIME          TIME
+!!> IDENT(105),PROMPT('NetoRokPlacila_TIME:'),HEADER('NetoRokPlacila_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(107)
+[SCREENCONTROLS]
+! PROMPT('SkontoProcent:'),USE(?DKP:SkontoProcent:Prompt)
+! ENTRY(@n10.2),USE(DKP:SkontoProcent),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:SkontoProcent),RIGHT(1)
+SkontoProcent              REAL
+!!> IDENT(106),PROMPT('SkontoProcent:'),HEADER('SkontoProcent'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('OpisTemeljnice:'),USE(?DKP:OpisTemeljnice:Prompt)
+! ENTRY(@s30),USE(DKP:OpisTemeljnice)
+[REPORTCONTROLS]
+! STRING(@s30),USE(DKP:OpisTemeljnice)
+OpisTemeljnice             CSTRING(31)
+!!> IDENT(108),PROMPT('OpisTemeljnice:'),HEADER('OpisTemeljnice'),PICTURE(@s30)
+[SCREENCONTROLS]
+! PROMPT('PRACLeto:'),USE(?DKP:PRACLeto:Prompt)
+! ENTRY(@n-7),USE(DKP:PRACLeto),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(DKP:PRACLeto),RIGHT(1)
+PRACLeto                   SHORT
+!!> IDENT(109),PROMPT('PRACLeto:'),HEADER('PRACLeto'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('PRACSifraKnjige:'),USE(?DKP:PRACSifraKnjige:Prompt)
+! ENTRY(@s20),USE(DKP:PRACSifraKnjige)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:PRACSifraKnjige)
+PRACSifraKnjige            CSTRING(21)
+!!> IDENT(110),PROMPT('PRACSifraKnjige:'),HEADER('PRACSifraKnjige'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('PRACStevilkaRacuna:'),USE(?DKP:PRACStevilkaRacuna:Prompt)
+! ENTRY(@n-14),USE(DKP:PRACStevilkaRacuna),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:PRACStevilkaRacuna),RIGHT(1)
+PRACStevilkaRacuna         LONG
+!!> IDENT(111),PROMPT('PRACStevilkaRacuna:'),HEADER('PRACStevilkaRacuna'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('KljucRacuna:'),USE(?DKP:KljucRacuna:Prompt)
+! ENTRY(@n-14),USE(DKP:KljucRacuna),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:KljucRacuna),RIGHT(1)
+KljucRacuna                LONG
+!!> IDENT(112),PROMPT('KljucRacuna:'),HEADER('KljucRacuna'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Priponka:'),USE(?DKP:Priponka:Prompt)
+! TEXT,USE(DKP:Priponka)
+[REPORTCONTROLS]
+! TEXT,USE(DKP:Priponka)
+Priponka                   CSTRING(256)
+!!> IDENT(113),PROMPT('Priponka:'),HEADER('Priponka'),PICTURE(@s255)
+[SCREENCONTROLS]
+! PROMPT('EvidencnoKnj:'),USE(?DKP:EvidencnoKnj:Prompt)
+! ENTRY(@n3),USE(DKP:EvidencnoKnj),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:EvidencnoKnj),RIGHT(1)
+EvidencnoKnj               BYTE
+!!> IDENT(114),PROMPT('EvidencnoKnj:'),HEADER('EvidencnoKnj'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumPrejema:'),USE(?DKP:DatumPrejema:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPrejema)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPrejema)
+DatumPrejema               STRING(8)
+!!> IDENT(115),PROMPT('DatumPrejema:'),HEADER('DatumPrejema'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPrejema_GROUP:'),USE(?DKP:DatumPrejema_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPrejema_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPrejema_GROUP)
+DatumPrejema_GROUP         GROUP,OVER(DatumPrejema)
+!!> IDENT(116),PROMPT('DatumPrejema_GROUP:'),HEADER('DatumPrejema_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPrejema_DATE:'),USE(?DKP:DatumPrejema_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumPrejema_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumPrejema_DATE),RIGHT(1)
+DatumPrejema_DATE            DATE
+!!> IDENT(117),PROMPT('DatumPrejema_DATE:'),HEADER('DatumPrejema_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumPrejema_TIME:'),USE(?DKP:DatumPrejema_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumPrejema_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumPrejema_TIME),RIGHT(1)
+DatumPrejema_TIME            TIME
+!!> IDENT(118),PROMPT('DatumPrejema_TIME:'),HEADER('DatumPrejema_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(120)
+[SCREENCONTROLS]
+! PROMPT('ZapStIzvirnegaPrometa:'),USE(?DKP:ZapStIzvirnegaPrometa:Prompt)
+! ENTRY(@n-14),USE(DKP:ZapStIzvirnegaPrometa),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:ZapStIzvirnegaPrometa),RIGHT(1)
+ZapStIzvirnegaPrometa      LONG
+!!> IDENT(119),PROMPT('ZapStIzvirnegaPrometa:'),HEADER('ZapStIzvirnegaPrometa'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DelezZaprto:'),USE(?DKP:DelezZaprto:Prompt)
+! ENTRY(@n10.2),USE(DKP:DelezZaprto),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:DelezZaprto),RIGHT(1)
+DelezZaprto                REAL
+!!> IDENT(121),PROMPT('DelezZaprto:'),HEADER('DelezZaprto'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumPP:'),USE(?DKP:DatumPP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPP)
+DatumPP                    STRING(8)
+!!> IDENT(122),PROMPT('DatumPP:'),HEADER('DatumPP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPP_GROUP:'),USE(?DKP:DatumPP_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumPP_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumPP_GROUP)
+DatumPP_GROUP              GROUP,OVER(DatumPP)
+!!> IDENT(123),PROMPT('DatumPP_GROUP:'),HEADER('DatumPP_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumPP_DATE:'),USE(?DKP:DatumPP_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumPP_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumPP_DATE),RIGHT(1)
+DatumPP_DATE                 DATE
+!!> IDENT(124),PROMPT('DatumPP_DATE:'),HEADER('DatumPP_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumPP_TIME:'),USE(?DKP:DatumPP_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumPP_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumPP_TIME),RIGHT(1)
+DatumPP_TIME                 TIME
+!!> IDENT(125),PROMPT('DatumPP_TIME:'),HEADER('DatumPP_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(127)
+[SCREENCONTROLS]
+! PROMPT('Opomin1Znesek:'),USE(?DKP:Opomin1Znesek:Prompt)
+! ENTRY(@n10.2),USE(DKP:Opomin1Znesek),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:Opomin1Znesek),RIGHT(1)
+Opomin1Znesek              REAL
+!!> IDENT(126),PROMPT('Opomin1Znesek:'),HEADER('Opomin1Znesek'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin3Datum:'),USE(?DKP:Opomin3Datum:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin3Datum)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin3Datum)
+Opomin3Datum               STRING(8)
+!!> IDENT(128),PROMPT('Opomin3Datum:'),HEADER('Opomin3Datum'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin3Datum_GROUP:'),USE(?DKP:Opomin3Datum_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin3Datum_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin3Datum_GROUP)
+Opomin3Datum_GROUP         GROUP,OVER(Opomin3Datum)
+!!> IDENT(129),PROMPT('Opomin3Datum_GROUP:'),HEADER('Opomin3Datum_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin3Datum_DATE:'),USE(?DKP:Opomin3Datum_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:Opomin3Datum_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:Opomin3Datum_DATE),RIGHT(1)
+Opomin3Datum_DATE            DATE
+!!> IDENT(130),PROMPT('Opomin3Datum_DATE:'),HEADER('Opomin3Datum_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin3Datum_TIME:'),USE(?DKP:Opomin3Datum_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:Opomin3Datum_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:Opomin3Datum_TIME),RIGHT(1)
+Opomin3Datum_TIME            TIME
+!!> IDENT(131),PROMPT('Opomin3Datum_TIME:'),HEADER('Opomin3Datum_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(133)
+[SCREENCONTROLS]
+! PROMPT('OpominStopnja:'),USE(?DKP:OpominStopnja:Prompt)
+! ENTRY(@n-14),USE(DKP:OpominStopnja),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:OpominStopnja),RIGHT(1)
+OpominStopnja              LONG
+!!> IDENT(132),PROMPT('OpominStopnja:'),HEADER('OpominStopnja'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('OpominTozba:'),USE(?DKP:OpominTozba:Prompt)
+! ENTRY(@n-14),USE(DKP:OpominTozba),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:OpominTozba),RIGHT(1)
+OpominTozba                LONG
+!!> IDENT(134),PROMPT('OpominTozba:'),HEADER('OpominTozba'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin1Datum:'),USE(?DKP:Opomin1Datum:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin1Datum)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin1Datum)
+Opomin1Datum               STRING(8)
+!!> IDENT(135),PROMPT('Opomin1Datum:'),HEADER('Opomin1Datum'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin1Datum_GROUP:'),USE(?DKP:Opomin1Datum_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin1Datum_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin1Datum_GROUP)
+Opomin1Datum_GROUP         GROUP,OVER(Opomin1Datum)
+!!> IDENT(136),PROMPT('Opomin1Datum_GROUP:'),HEADER('Opomin1Datum_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin1Datum_DATE:'),USE(?DKP:Opomin1Datum_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:Opomin1Datum_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:Opomin1Datum_DATE),RIGHT(1)
+Opomin1Datum_DATE            DATE
+!!> IDENT(137),PROMPT('Opomin1Datum_DATE:'),HEADER('Opomin1Datum_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin1Datum_TIME:'),USE(?DKP:Opomin1Datum_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:Opomin1Datum_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:Opomin1Datum_TIME),RIGHT(1)
+Opomin1Datum_TIME            TIME
+!!> IDENT(138),PROMPT('Opomin1Datum_TIME:'),HEADER('Opomin1Datum_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(140)
+[SCREENCONTROLS]
+! PROMPT('ZnesekTozbe:'),USE(?DKP:ZnesekTozbe:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekTozbe),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekTozbe),RIGHT(1)
+ZnesekTozbe                REAL
+!!> IDENT(139),PROMPT('ZnesekTozbe:'),HEADER('ZnesekTozbe'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin2Datum:'),USE(?DKP:Opomin2Datum:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin2Datum)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin2Datum)
+Opomin2Datum               STRING(8)
+!!> IDENT(141),PROMPT('Opomin2Datum:'),HEADER('Opomin2Datum'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin2Datum_GROUP:'),USE(?DKP:Opomin2Datum_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:Opomin2Datum_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:Opomin2Datum_GROUP)
+Opomin2Datum_GROUP         GROUP,OVER(Opomin2Datum)
+!!> IDENT(142),PROMPT('Opomin2Datum_GROUP:'),HEADER('Opomin2Datum_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('Opomin2Datum_DATE:'),USE(?DKP:Opomin2Datum_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:Opomin2Datum_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:Opomin2Datum_DATE),RIGHT(1)
+Opomin2Datum_DATE            DATE
+!!> IDENT(143),PROMPT('Opomin2Datum_DATE:'),HEADER('Opomin2Datum_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin2Datum_TIME:'),USE(?DKP:Opomin2Datum_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:Opomin2Datum_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:Opomin2Datum_TIME),RIGHT(1)
+Opomin2Datum_TIME            TIME
+!!> IDENT(144),PROMPT('Opomin2Datum_TIME:'),HEADER('Opomin2Datum_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(146)
+[SCREENCONTROLS]
+! PROMPT('Opomin2Znesek:'),USE(?DKP:Opomin2Znesek:Prompt)
+! ENTRY(@n10.2),USE(DKP:Opomin2Znesek),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:Opomin2Znesek),RIGHT(1)
+Opomin2Znesek              REAL
+!!> IDENT(145),PROMPT('Opomin2Znesek:'),HEADER('Opomin2Znesek'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('Opomin3Znesek:'),USE(?DKP:Opomin3Znesek:Prompt)
+! ENTRY(@n10.2),USE(DKP:Opomin3Znesek),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:Opomin3Znesek),RIGHT(1)
+Opomin3Znesek              REAL
+!!> IDENT(147),PROMPT('Opomin3Znesek:'),HEADER('Opomin3Znesek'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('IzvrsbaDatum:'),USE(?DKP:IzvrsbaDatum:Prompt)
+! ENTRY(@s8),USE(DKP:IzvrsbaDatum)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:IzvrsbaDatum)
+IzvrsbaDatum               STRING(8)
+!!> IDENT(148),PROMPT('IzvrsbaDatum:'),HEADER('IzvrsbaDatum'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('IzvrsbaDatum_GROUP:'),USE(?DKP:IzvrsbaDatum_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:IzvrsbaDatum_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:IzvrsbaDatum_GROUP)
+IzvrsbaDatum_GROUP         GROUP,OVER(IzvrsbaDatum)
+!!> IDENT(149),PROMPT('IzvrsbaDatum_GROUP:'),HEADER('IzvrsbaDatum_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('IzvrsbaDatum_DATE:'),USE(?DKP:IzvrsbaDatum_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:IzvrsbaDatum_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:IzvrsbaDatum_DATE),RIGHT(1)
+IzvrsbaDatum_DATE            DATE
+!!> IDENT(150),PROMPT('IzvrsbaDatum_DATE:'),HEADER('IzvrsbaDatum_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('IzvrsbaDatum_TIME:'),USE(?DKP:IzvrsbaDatum_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:IzvrsbaDatum_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:IzvrsbaDatum_TIME),RIGHT(1)
+IzvrsbaDatum_TIME            TIME
+!!> IDENT(151),PROMPT('IzvrsbaDatum_TIME:'),HEADER('IzvrsbaDatum_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(153)
+[SCREENCONTROLS]
+! PROMPT('FAKSifraKnjige:'),USE(?DKP:FAKSifraKnjige:Prompt)
+! ENTRY(@s20),USE(DKP:FAKSifraKnjige)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:FAKSifraKnjige)
+FAKSifraKnjige             CSTRING(21)
+!!> IDENT(152),PROMPT('FAKSifraKnjige:'),HEADER('FAKSifraKnjige'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('FAKStevilkaRacuna:'),USE(?DKP:FAKStevilkaRacuna:Prompt)
+! ENTRY(@n-14),USE(DKP:FAKStevilkaRacuna),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:FAKStevilkaRacuna),RIGHT(1)
+FAKStevilkaRacuna          LONG
+!!> IDENT(154),PROMPT('FAKStevilkaRacuna:'),HEADER('FAKStevilkaRacuna'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('IzvrsbaZnesek:'),USE(?DKP:IzvrsbaZnesek:Prompt)
+! ENTRY(@n10.2),USE(DKP:IzvrsbaZnesek),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:IzvrsbaZnesek),RIGHT(1)
+IzvrsbaZnesek              REAL
+!!> IDENT(155),PROMPT('IzvrsbaZnesek:'),HEADER('IzvrsbaZnesek'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('FAKLetoRacuna:'),USE(?DKP:FAKLetoRacuna:Prompt)
+! ENTRY(@n-7),USE(DKP:FAKLetoRacuna),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(DKP:FAKLetoRacuna),RIGHT(1)
+FAKLetoRacuna              SHORT
+!!> IDENT(156),PROMPT('FAKLetoRacuna:'),HEADER('FAKLetoRacuna'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('VezaIzvor:'),USE(?DKP:VezaIzvor:Prompt)
+! ENTRY(@s20),USE(DKP:VezaIzvor)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:VezaIzvor)
+VezaIzvor                  CSTRING(21)
+!!> IDENT(157),PROMPT('VezaIzvor:'),HEADER('VezaIzvor'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('VezaUporabnik:'),USE(?DKP:VezaUporabnik:Prompt)
+! ENTRY(@n-14),USE(DKP:VezaUporabnik),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:VezaUporabnik),RIGHT(1)
+VezaUporabnik              LONG
+!!> IDENT(158),PROMPT('VezaUporabnik:'),HEADER('VezaUporabnik'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('VrstaSklicaVD:'),USE(?DKP:VrstaSklicaVD:Prompt)
+! ENTRY(@s2),USE(DKP:VrstaSklicaVD)
+[REPORTCONTROLS]
+! STRING(@s2),USE(DKP:VrstaSklicaVD)
+VrstaSklicaVD              CSTRING(3)
+!!> IDENT(159),PROMPT('VrstaSklicaVD:'),HEADER('VrstaSklicaVD'),PICTURE(@s2)
+[SCREENCONTROLS]
+! PROMPT('DatumObracunaObresti:'),USE(?DKP:DatumObracunaObresti:Prompt)
+! ENTRY(@s8),USE(DKP:DatumObracunaObresti)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumObracunaObresti)
+DatumObracunaObresti       STRING(8)
+!!> IDENT(160),PROMPT('DatumObracunaObresti:'),HEADER('DatumObracunaObresti'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumObracunaObresti_GROUP:'),USE(?DKP:DatumObracunaObresti_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumObracunaObresti_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumObracunaObresti_GROUP)
+DatumObracunaObresti_GROUP GROUP,OVER(DatumObracunaObresti)
+!!> IDENT(161),PROMPT('DatumObracunaObresti_GROUP:'),HEADER('DatumObracunaObresti_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumObracunaObresti_DATE:'),USE(?DKP:DatumObracunaObresti_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumObracunaObresti_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumObracunaObresti_DATE),RIGHT(1)
+DatumObracunaObresti_DATE    DATE
+!!> IDENT(162),PROMPT('DatumObracunaObresti_DATE:'),HEADER('DatumObracunaObresti_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumObracunaObresti_TIME:'),USE(?DKP:DatumObracunaObresti_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumObracunaObresti_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumObracunaObresti_TIME),RIGHT(1)
+DatumObracunaObresti_TIME    TIME
+!!> IDENT(163),PROMPT('DatumObracunaObresti_TIME:'),HEADER('DatumObracunaObresti_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(165)
+[SCREENCONTROLS]
+! PROMPT('NeKnjizi:'),USE(?DKP:NeKnjizi:Prompt)
+! ENTRY(@n3),USE(DKP:NeKnjizi),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:NeKnjizi),RIGHT(1)
+NeKnjizi                   BYTE
+!!> IDENT(164),PROMPT('NeKnjizi:'),HEADER('NeKnjizi'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('ZnesekRezervacije:'),USE(?DKP:ZnesekRezervacije:Prompt)
+! ENTRY(@n10.2),USE(DKP:ZnesekRezervacije),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n10.2),USE(DKP:ZnesekRezervacije),RIGHT(1)
+ZnesekRezervacije          REAL
+!!> IDENT(166),PROMPT('ZnesekRezervacije:'),HEADER('ZnesekRezervacije'),PICTURE(@n10.2),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumRezervacije:'),USE(?DKP:DatumRezervacije:Prompt)
+! ENTRY(@s8),USE(DKP:DatumRezervacije)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumRezervacije)
+DatumRezervacije           STRING(8)
+!!> IDENT(167),PROMPT('DatumRezervacije:'),HEADER('DatumRezervacije'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumRezervacije_GROUP:'),USE(?DKP:DatumRezervacije_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumRezervacije_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumRezervacije_GROUP)
+DatumRezervacije_GROUP     GROUP,OVER(DatumRezervacije)
+!!> IDENT(168),PROMPT('DatumRezervacije_GROUP:'),HEADER('DatumRezervacije_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumRezervacije_DATE:'),USE(?DKP:DatumRezervacije_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumRezervacije_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumRezervacije_DATE),RIGHT(1)
+DatumRezervacije_DATE        DATE
+!!> IDENT(169),PROMPT('DatumRezervacije_DATE:'),HEADER('DatumRezervacije_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumRezervacije_TIME:'),USE(?DKP:DatumRezervacije_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumRezervacije_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumRezervacije_TIME),RIGHT(1)
+DatumRezervacije_TIME        TIME
+!!> IDENT(170),PROMPT('DatumRezervacije_TIME:'),HEADER('DatumRezervacije_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(172)
+[SCREENCONTROLS]
+! PROMPT('VezaLeto:'),USE(?DKP:VezaLeto:Prompt)
+! ENTRY(@n-14),USE(DKP:VezaLeto),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:VezaLeto),RIGHT(1)
+VezaLeto                   LONG
+!!> IDENT(171),PROMPT('VezaLeto:'),HEADER('VezaLeto'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('VezaStevilka:'),USE(?DKP:VezaStevilka:Prompt)
+! ENTRY(@n-14),USE(DKP:VezaStevilka),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:VezaStevilka),RIGHT(1)
+VezaStevilka               LONG
+!!> IDENT(173),PROMPT('VezaStevilka:'),HEADER('VezaStevilka'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DDVSifraStevilcenja:'),USE(?DKP:DDVSifraStevilcenja:Prompt)
+! ENTRY(@s20),USE(DKP:DDVSifraStevilcenja)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:DDVSifraStevilcenja)
+DDVSifraStevilcenja        CSTRING(21)
+!!> IDENT(174),PROMPT('DDVSifraStevilcenja:'),HEADER('DDVSifraStevilcenja'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('NiZaPlaciloDDV:'),USE(?DKP:NiZaPlaciloDDV:Prompt)
+! ENTRY(@n3),USE(DKP:NiZaPlaciloDDV),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:NiZaPlaciloDDV),RIGHT(1)
+NiZaPlaciloDDV             BYTE
+!!> IDENT(175),PROMPT('NiZaPlaciloDDV:'),HEADER('NiZaPlaciloDDV'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DFSObracunan:'),USE(?DKP:DFSObracunan:Prompt)
+! ENTRY(@n3),USE(DKP:DFSObracunan),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n3),USE(DKP:DFSObracunan),RIGHT(1)
+DFSObracunan               BYTE
+!!> IDENT(176),PROMPT('DFSObracunan:'),HEADER('DFSObracunan'),PICTURE(@n3),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('StevilkaPaketa:'),USE(?DKP:StevilkaPaketa:Prompt)
+! ENTRY(@n-14),USE(DKP:StevilkaPaketa),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(DKP:StevilkaPaketa),RIGHT(1)
+StevilkaPaketa             LONG
+!!> IDENT(177),PROMPT('StevilkaPaketa:'),HEADER('StevilkaPaketa'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('PRACObrok:'),USE(?DKP:PRACObrok:Prompt)
+! ENTRY(@n-7),USE(DKP:PRACObrok),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(DKP:PRACObrok),RIGHT(1)
+PRACObrok                  SHORT
+!!> IDENT(178),PROMPT('PRACObrok:'),HEADER('PRACObrok'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('SGUID:'),USE(?DKP:SGUID:Prompt)
+! ENTRY(@s36),USE(DKP:SGUID)
+[REPORTCONTROLS]
+! STRING(@s36),USE(DKP:SGUID)
+SGUID                      CSTRING(37)
+!!> IDENT(179),PROMPT('SGUID:'),HEADER('SGUID'),PICTURE(@s36)
+[SCREENCONTROLS]
+! PROMPT('DatumRino:'),USE(?DKP:DatumRino:Prompt)
+! ENTRY(@s8),USE(DKP:DatumRino)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumRino)
+DatumRino                  STRING(8)
+!!> IDENT(180),PROMPT('DatumRino:'),HEADER('DatumRino'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumRino_GROUP:'),USE(?DKP:DatumRino_GROUP:Prompt)
+! ENTRY(@s8),USE(DKP:DatumRino_GROUP)
+[REPORTCONTROLS]
+! STRING(@s8),USE(DKP:DatumRino_GROUP)
+DatumRino_GROUP            GROUP,OVER(DatumRino)
+!!> IDENT(181),PROMPT('DatumRino_GROUP:'),HEADER('DatumRino_GROUP'),PICTURE(@s8)
+[SCREENCONTROLS]
+! PROMPT('DatumRino_DATE:'),USE(?DKP:DatumRino_DATE:Prompt)
+! ENTRY(@d17),USE(DKP:DatumRino_DATE),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@d17),USE(DKP:DatumRino_DATE),RIGHT(1)
+DatumRino_DATE               DATE
+!!> IDENT(182),PROMPT('DatumRino_DATE:'),HEADER('DatumRino_DATE'),PICTURE(@d17),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('DatumRino_TIME:'),USE(?DKP:DatumRino_TIME:Prompt)
+! ENTRY(@t7),USE(DKP:DatumRino_TIME),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@t7),USE(DKP:DatumRino_TIME),RIGHT(1)
+DatumRino_TIME               TIME
+!!> IDENT(183),PROMPT('DatumRino_TIME:'),HEADER('DatumRino_TIME'),PICTURE(@t7),JUSTIFY(RIGHT,1)
+                           END
+!!> IDENT(185)
+[SCREENCONTROLS]
+! PROMPT('SifraAN1:'),USE(?DKP:SifraAN1:Prompt)
+! ENTRY(@s20),USE(DKP:SifraAN1)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraAN1)
+SifraAN1                   CSTRING(21)
+!!> IDENT(184),PROMPT('SifraAN1:'),HEADER('SifraAN1'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraAN3:'),USE(?DKP:SifraAN3:Prompt)
+! ENTRY(@s20),USE(DKP:SifraAN3)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraAN3)
+SifraAN3                   CSTRING(21)
+!!> IDENT(186),PROMPT('SifraAN3:'),HEADER('SifraAN3'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('SifraAN2:'),USE(?DKP:SifraAN2:Prompt)
+! ENTRY(@s20),USE(DKP:SifraAN2)
+[REPORTCONTROLS]
+! STRING(@s20),USE(DKP:SifraAN2)
+SifraAN2                   CSTRING(21)
+!!> IDENT(187),PROMPT('SifraAN2:'),HEADER('SifraAN2'),PICTURE(@s20)
+                         END
+                       END
+

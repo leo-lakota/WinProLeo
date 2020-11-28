@@ -1,0 +1,7 @@
+  AccessQ.screen = 'pddv'
+  AccessQ.name = ''
+  AccessQ.pos  = 0
+  AccessQ.level = 1
+  AccessQ.Application = 'pddv'
+  AccessQ.ThisIsApp = 1
+  add(AccessQ)

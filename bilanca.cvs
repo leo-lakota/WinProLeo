@@ -1,0 +1,79 @@
+"BILQ:QZAPOREDNA"	"BILQ:IME"	"BILQ:OPIS"	"BILQ:KONTI"	"BILQ:ZNESEK"	"BILQ:PREJZNESEK"	"BILQ:ZADNJE"	"BILQ:FONTIME"	"BILQ:FONTVELIKOST"	"BILQ:FONTBARVA"	"BILQ:FONTSTIL"	"BILQ:FONTNABORZNAKOV"
+110	"110"	"A. ÈISTI PRIHODKI OD PRODAJE (111+115+118)"	"_value('111') + _value('115') + _value('118')"	29167.16	26109.15	0	"Courier New"	8	0	700	238
+111	"111"	"1. Èisti prihodki od prodaje na domaèem trgu (112-114)"	"_value('112') + _value('113') + _value('114')"	29167.16	26109.15	0	"Courier New CE"	8	0	4796	0
+112	"112"	"1. Èisti prihodki od prodaje proizvodov in storitev razen"	"760.000,762.000"	29167.16	26109.15	0	""	0	0	0	0
+113	"113"	"2. Èisti prihodki od najemnin"	""	0	0	0	""	0	0	0	0
+114	"114"	"3. Èisti prihodki od prodaje blaga in materijala"	""	0	0	0	""	0	0	0	0
+115	"115"	"II. Èisti prihodki od prodaja na trgu EU"	"_value('116') + _value('117')"	0	0	0	"Arial CE"	8	0	4796	0
+116	"116"	"1. Èisti prihodki od prodaje proizvodov in storitev"	""	0	0	0	""	0	0	0	0
+117	"117"	"2. Èisti prihodki  od prodajje blaga in materijala"	""	0	0	0	""	0	0	0	0
+118	"118"	"III. Èisti prihodki od prodaje na trgu izven EU"	""	0	0	0	""	0	0	0	0
+119	"119"	"1. Èisti prihodki od prodaje proizvodov in storitev"	""	0	0	0	""	0	0	0	0
+120	"120"	"2. Èisti prihodki  od prodajje blaga in materijala"	""	0	0	0	""	0	0	0	0
+121	"121"	"B. POVEÈANJE VREDNOSTI ZALOG PROIZVODOV"	""	0	0	0	""	0	0	0	0
+122	"122"	"C. ZMANJŠANJE VREDNOSTI ZALOG PROIZVODOV"	""	0	0	0	""	0	0	0	0
+123	"123"	"È. USREDSTVENI LASTNI PROIZVODI IN LASTNE STORITVE"	""	0	0	0	""	0	0	0	0
+124	"124"	"D. KOMPEN. IN DRUGI PRIHODKI KI SO POVEZANI Z POS.UÈINKI"	""	0	0	0	""	0	0	0	0
+125	"125"	"E. DRUGI POSLOVNI UÈINKI"	""	0	0	0	""	0	0	0	0
+126	"126"	"F. KOSMATI DONOS OD POSLOVANJA (110+121+122+123+124+125)"	"_value('110') + _value('121') + _value('122')+_value('123') + _value('124') + _value('125')"	29167.16	26109.15	1	"Courier New CE"	8	0	4796	0
+127	"127"	"G. POSLOVNI ODHODKI  (128+139+144+148)"	"_value('128') + _value('139') + _value('144')+_value('148')"	600.49	11323.3	0	""	0	0	0	0
+128	"128"	"I. Stroški blaga, materijala in storitev"	"_value('129') + _value('130') + _value('134')"	600.49	905.98	0	""	0	0	0	0
+129	"129"	"1. Nabavna vrednost progranega blaga in materijala"	""	0	0	0	""	0	0	0	0
+130	"130"	"2. Stroški porabnega materijala (131 - 133)"	"_value('131') + _value('132') + _value('133')"	475.49	837.24	0	""	0	0	0	0
+131	"131"	"a) stroški materijala"	"401.002,402.002,403.00,404.000,406.000,409.000"	206.56	404.13	0	""	0	0	0	0
+132	"132"	"b) Stroški energije"	"402.001"	268.93	433.11	0	""	0	0	0	0
+133	"133"	"c) drugi stroški materijala"	"407.000"	0	0	0	""	0	0	0	0
+134	"134"	"3. Stroški storitev (135-138)"	"_value('135') + _value('136') + _value('137')+_value('138')"	125	68.74	0	""	0	0	0	0
+135	"135"	"a) Transportne storitve"	""	0	0	0	""	0	0	0	0
+136	"136"	"b) najemnine"	"413.000"	125	0	0	""	0	0	0	0
+137	"137"	"c) povraèila stroškov zaposlencem v zvezi d delom"	"414.000,414.003"	0	68.74	0	""	0	0	0	0
+138	"138"	"è) drugi stroški storitev"	""	0	0	0	""	0	0	0	0
+139	"139"	"II. Stroški dela (140 do 143)"	"_value('140') + _value('141') + _value('142')+_value('143')"	0	10417.32	0	""	0	0	0	0
+140	"140"	"1. Stroški plaè"	"470.000,470.001,470.002,470.003,470.004,470.005,470.006,470.007"	0	7968.97	0	""	0	0	0	0
+141	"141"	"2. Stroški pokojninski zavarovanj"	"474.001"	0	785.5	0	""	0	0	0	0
+142	"142"	"3. Stroški drugih socialnih zavarovanj"	"474.002,474.000,474.003,474.004"	0	643.51	0	""	0	0	0	0
+143	"143"	"4. Drugi stroški dela"	"475.000,473.001,473.000"	0	1019.34	0	""	0	0	0	0
+144	"144"	"III. Odpisi vrednosti (145 do 147)"	"_value('145') + _value('146') + _value('147')"	0	0	0	""	0	0	0	0
+145	"145"	"1. Amoritizacija"	""	0	0	0	""	0	0	0	0
+146	"146"	"2. Prevrednotovalni poslovni odhodki pri neopred.osn.sredst"	""	0	0	0	""	0	0	0	0
+147	"147"	"2. Prevrednotovalni poslovni odhodki pri neopred.obra.sreds"	""	0	0	0	""	0	0	0	0
+148	"148"	"IV. Drugi poslovni odhodki  (149 + 150)"	"_value('149') + _value('150')"	0	0	0	""	0	0	0	0
+149	"149"	"1. Rezervacije"	""	0	0	0	""	0	0	0	0
+150	"150"	"2. Drugi stroški"	""	0	0	0	""	0	0	0	0
+151	"151"	"H. DOBIÈEK IZ POSLOVANJA"	"_value('126') -  _value('127')"	0	0	0	""	0	0	0	0
+152	"152"	"I.  IZGUBA IZ POSLOVANJA"	"_value('127') -  _value('126')"	0	0	0	""	0	0	0	0
+153	"153"	"J. FINANÈNI PRIHODKI (155+160+163)"	"_value('155') +  _value('160')+  _value('163')"	0	0	0	""	0	0	0	0
+154	"154"	"  Finanèni prihodki od obresti upoštevano že v II"	""	0	0	0	""	0	0	0	0
+155	"155"	"I. Finanèni prihodki iz deležev (156 do 159)"	" _value('156')+  _value('157')+  _value('158')+  _value('159')"	0	0	0	""	0	0	0	0
+156	"156"	"1. Finanèni prihodki deležev v družbah v skupini"	""	0	0	0	""	0	0	0	0
+157	"157"	"2. Finanèni prihodki deležev v pridruženih družbah"	""	0	0	0	""	0	0	0	0
+158	"158"	"3. Finanèni prihodki iz deležev v drugih družbah"	""	0	0	0	""	0	0	0	0
+159	"159"	"4. Finanèni prihodki iz drugih naložb"	""	0	0	0	""	0	0	0	0
+160	"160"	"I. Finanèni prihodki iz danih posojil  (161 + 162)"	" _value('161')+  _value('162')"	0	0	0	""	0	0	0	0
+161	"161"	"1. Finanèni prihodki iz posojih danim  družbah v skupini"	""	0	0	0	""	0	0	0	0
+162	"162"	"2. Finanèni prihodki iz posojih danim  drugim"	""	0	0	0	""	0	0	0	0
+163	"163"	"III. Finanèni prihodki iz poslovnih terjatev  (164 + 165)"	" _value('164')+  _value('165')"	0	0	0	""	0	0	0	0
+164	"164"	"1. Finanèni prihodki iz posl.terjatev do družb v skupini"	""	0	0	0	""	0	0	0	0
+165	"165"	"2. Finanèni prihodki iz poslovnih tejatev do  drugim"	""	0	0	0	""	0	0	0	0
+166	"166"	"K. FINANÈNI ODHODKI  (168+169+174)"	"_value('168') +  _value('169')+  _value('174')"	0	0	0	""	0	0	0	0
+167	"167"	"  Finanèni prihodki od obresti upoštevano že v II in III"	""	0	0	0	""	0	0	0	0
+168	"168"	"I. Finanèni odhodki iz oslabitve in odpisov finanènih nalož"	""	0	0	0	""	0	0	0	0
+169	"169"	"II. Finanèni odhodki iz finanènih obveznosti (170 do 173)"	"_value('170') +  _value('171') +  _value('172') +  _value('173')"	0	0	0	""	0	0	0	0
+170	"170"	"1. Finanèni odhodki iz pos.prejetih od družb v skupini"	""	0	0	0	""	0	0	0	0
+171	"171"	"2. Finanèni odhodki iz pos.prejetih bank"	""	0	0	0	""	0	0	0	0
+172	"172"	"3. Finanèni odhodki iz izdanih obveznic"	""	0	0	0	""	0	0	0	0
+173	"173"	"4. Finanèni odhodki iz drugih finanènih obveznosti"	""	0	0	0	""	0	0	0	0
+174	"174"	"III. Finanèni odhodki iz poslovnih obveznosti (175 do 177)"	"_value('175') +  _value('176') +  _value('177')"	0	0	0	""	0	0	0	0
+175	"175"	"1. Finanèni odhodki iz posl.obvenosti do družb v skupini"	""	0	0	0	""	0	0	0	0
+176	"176"	"2. Finanèni odh.iz obveznosti do dobaviteljev in meniè.obve"	""	0	0	0	""	0	0	0	0
+177	"177"	"3. Finanèni odh. iz drugih poslovnih obveznosti"	""	0	0	0	""	0	0	0	0
+178	"178"	"L. DRUGI PRIHODKI (179+180)"	"_value('179') +  _value('180')"	0	0	0	""	0	0	0	0
+179	"179"	"I. Subvencije dot. in podobni prihodki ki niso pov. z posl."	""	0	0	0	""	0	0	0	0
+180	"180"	"II. Drugi finanèni prihodki in ostali prihodki"	""	0	0	0	""	0	0	0	0
+181	"181"	"M. DRUGI ODHODKI"	""	0	0	0	""	0	0	0	0
+182	"182"	"N. CELOTNI DOBIÈEK"	"_value('151') +  _value('152') + _value('153') +  _value('166') + _value('178') -  _value('181')"	0	0	0	""	0	0	0	0
+183	"183"	"O. CELOTNA IZGUBA"	"_value('151') -  _value('152') - _value('153') -  _value('166') - _value('178')+  _value('181')"	0	0	0	""	0	0	0	0
+184	"184"	"P. DAVEK IZ DOBIÈKA"	""	0	0	0	""	0	0	0	0
+185	"185"	"R. DOLOŽENI DAVKI"	""	0	0	0	""	0	0	0	0
+186	"186"	"S. ÈISTI DOBIÈEK OBRAÈUNSKEGA OBDOBJA"	"_value('182') -  _value('184') - _value('185')"	0	0	0	""	0	0	0	0
+187	"187"	"Š. ÈISTA IZGUBA OBRAÈUNSKEGA OBDOBJA"	"_value('183') +  _value('184') + _value('185')"	0	0	0	""	0	0	0	0

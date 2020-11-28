@@ -1,0 +1,7 @@
+  AccessQ.screen = 'datoteke'
+  AccessQ.name = ''
+  AccessQ.pos  = 0
+  AccessQ.level = 1
+  AccessQ.Application = 'datoteke'
+  AccessQ.ThisIsApp = 1
+  add(AccessQ)
